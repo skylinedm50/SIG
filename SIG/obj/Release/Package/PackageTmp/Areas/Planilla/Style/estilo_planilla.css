@@ -1,0 +1,11 @@
+﻿#tit-form-pla, #mensaje-pla {
+    text-align:center;
+}
+
+#mensaje-pla{
+    margin-top: 10px;
+}
+
+#content-form-pla, .AspxFormLayoutControlesPlanilla, .AspxgridViewPlanilla{
+    margin: 0 auto;
+}

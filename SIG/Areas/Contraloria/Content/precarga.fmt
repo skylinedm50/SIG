@@ -1,0 +1,7 @@
+10.0
+5
+1	SQLCHAR	0	10	","		2	pagina	""
+2	SQLCHAR	0	2	","		3	linea	""
+3	SQLCHAR	0	5	","		4	monto	""
+4	SQLCHAR	0	20	","		5	fecha	""
+5	SQLCHAR	0	1	"\r\n"	6	estado	""

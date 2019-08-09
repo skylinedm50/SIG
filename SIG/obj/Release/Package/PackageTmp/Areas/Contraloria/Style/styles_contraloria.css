@@ -1,0 +1,201 @@
+fieldset {
+    border: 1px solid #C2C4CB;
+    border-radius: 4px;
+    font: 11px Verdana, Geneva, sans-serif;
+    width: 441px;
+    padding: 6px;
+    /*
+    el historial de carga
+    	padding-right: 9px;
+    */
+}
+
+    fieldset.FildRecibosPagador {
+        width: inherit;
+    }
+
+
+
+table {
+    margin: 2px 0 2px 0;
+}
+
+legend {
+    color: #A1A3AA;
+    text-align: left;
+}
+
+
+
+.field-det {
+    width: 560px;
+}
+
+.field-rec {
+    width: 275px;
+}
+
+.field-recNro {
+  	width: 240px;
+}
+
+.col_40 {
+    width: 38%;
+    float: left;
+    margin:0 2% 0 0;
+}
+
+.col_50 {
+    width:48%;
+    margin:0 2% 0 0;
+    /*margin: 0 auto;*/
+    float:left;
+    /*display: inline-block;*/
+    /*
+    carga de archivos 
+    	vertical-align: top;
+    */
+}
+
+.col_60 {
+    width: 58%;
+    float: left;
+    margin:0 2% 0 0;
+}
+
+textarea{
+	height: 100px;
+	resize: none;
+	width: 97%;
+}
+
+.field-rec {
+    width: 548px;
+}
+
+.col_40 {
+    width: 38%;
+    float: left;
+    margin:0 2% 0 0;
+}
+
+#divControlesCarga {
+    padding-top: 5%;
+}
+
+#divControlesConsolidado {
+    width: 1100px;
+}
+
+#divGridView {
+    display:inline-block;
+}
+
+.col_100 {
+	  width:98%;
+	  margin:0 2% 0 0;
+}
+
+.buttonCarga {
+    margin: 10px 10px 0 10px;
+}
+
+.buttonReporteConsolidado {
+    /*margin: 20px 0 0 20px;*/
+    margin: 0 auto;
+}
+
+.buttonRepRecibosPagados {
+    margin: 20px 0 0 20px;
+}
+
+.buttonBusqueda {
+    margin-left: 100px;
+    margin-top: -110px;
+}
+
+.button2 {
+    /*margin: 20px 0 0 20px;*/
+    margin-right: 10px;
+}
+
+.example {
+  padding: 10px;
+  border: 1px solid #ccc;
+}
+
+.col_33 {
+	/*background-color: aqua;*/
+	display: inline-block;
+	/*height: 200px;*/
+	margin: 0.8% 0 0 0.6%;
+	width: 32%;
+    /*width: 297%;*/
+    vertical-align: top;
+}
+
+.col_66 {
+    display: inline-block;
+    margin: 0.8% 0 0 0.6%;
+    /*vertical-align: middle;*/
+    width: 63%;
+}
+
+#col_66_2 {
+    display: inline-block;
+    margin: 0.8% 0 0 0.6%;
+    /*vertical-align: middle;*/
+    width: 70%;
+
+}
+
+
+.dropdown {
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 10px;
+}
+
+.detalleAldea {
+    margin: 0 auto;
+}
+
+
+#toPopup {
+    width: auto;
+    margin-left: -150px;
+    top: auto;
+}
+
+div#popup_content {
+    overflow-y: hidden;
+    height: auto;
+}
+
+.col33 {
+		/*background-color: aqua;*/
+		display: inline-block;
+		/*height: 200px;*/
+		margin: 0.8% 0 0 0.6%;
+		/*width: 32%;*/
+	  /*width: 297%;*/
+	  vertical-align: top;
+}
+
+.col66 {
+    display: inline-block;
+    margin: 0.8% 0 0 0.6%;
+    vertical-align: middle;
+}
+
+.centrar {
+    width: 40%;
+    margin: 0 auto;
+}
+
+
+
+#divBotones {
+    width: 45%;
+    margin: 0 auto;
+}

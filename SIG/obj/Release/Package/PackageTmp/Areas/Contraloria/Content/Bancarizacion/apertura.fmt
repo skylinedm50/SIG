@@ -1,0 +1,27 @@
+12.0
+25
+1	SQLCHAR	0	50	"~"		2	cod_archivo					""
+2	SQLCHAR	0	50	"~"		3	tipo_bono					""
+3	SQLCHAR	0	50	"~"		4	cod_departamento			""
+4	SQLCHAR	0	50	"~"		5	desc_departamento			Modern_Spanish_CI_AS
+5	SQLCHAR	0	50	"~"		6	cod_municipio				""
+6	SQLCHAR	0	50	"~"		7	desc_municipio				Modern_Spanish_CI_AS
+7	SQLCHAR	0	50	"~"		8	cod_aldea					""
+8	SQLCHAR	0	50	"~"		9	desc_aldea					Modern_Spanish_CI_AS
+9	SQLCHAR	0	50	"~"		10	cod_caserio					""
+10	SQLCHAR	0	50	"~"		11	desc_caserio				Modern_Spanish_CI_AS
+11	SQLCHAR	0	50	"~"		12	cod_barrio_caserio			""
+12	SQLCHAR	0	50	"~"		13	desc_barrio_caserio			Modern_Spanish_CI_AS
+13	SQLCHAR	0	50	"~"		14	cod_hogar					""
+14	SQLCHAR	0	50	"~"		15	cod_persona					""
+15	SQLCHAR	0	50	"~"		16	identidad_persona			""
+16	SQLCHAR	0	50	"~"		17	primer_nombre				Modern_Spanish_CI_AS
+17	SQLCHAR	0	50	"~"		18	segundo_nombre				Modern_Spanish_CI_AS
+18	SQLCHAR	0	50	"~"		19	primer_apellido				Modern_Spanish_CI_AS
+19	SQLCHAR	0	50	"~"		20	segundo_apellido			Modern_Spanish_CI_AS
+20	SQLCHAR	0	50	"~"		21	proceso						""
+21	SQLCHAR	0	50	"~"		22	numero_gestion				""
+22	SQLCHAR	0	50	"~"		23	usuario_gestion				Modern_Spanish_CI_AS
+23	SQLCHAR	0	50	"~"		24	fecha_gestion				""
+24	SQLCHAR	0	50	"~"		25	usuario_aprueba_gestion		""
+25	SQLCHAR	0	50	"\r\n"	26	codigo_error				""

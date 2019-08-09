@@ -1,0 +1,1029 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{AE8D80A1-3F48-4875-B401-EC9FC2085AE8}</ProjectGuid>
+    <ProjectTypeGuids>{E3E379DF-F4C6-4180-9B81-6769533ABE47};{349c5851-65df-11da-9384-00065b846f21};{F184B08F-C81C-45F6-A57F-5ABD9991F28F}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <RootNamespace>SIG</RootNamespace>
+    <AssemblyName>SIG</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <OptionExplicit>On</OptionExplicit>
+    <OptionCompare>Binary</OptionCompare>
+    <OptionStrict>Off</OptionStrict>
+    <OptionInfer>On</OptionInfer>
+    <MvcBuildViews>false</MvcBuildViews>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+    <Use64BitIISExpress />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\</OutputPath>
+    <DocumentationFile>SIG.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DocumentationFile>SIG.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DevExpress.Charts.v16.1.Core, Version=16.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Data.v16.1, Version=16.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Office.v16.1.Core, Version=16.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.PivotGrid.v16.1.Core, Version=16.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Printing.v16.1.Core, Version=16.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.RichEdit.v16.1.Core, Version=16.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Sparkline.v16.1.Core, Version=16.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.SpellChecker.v16.1.Core, Version=16.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Utils.v16.1, Version=16.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Web.ASPxGauges.v16.1, Version=16.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Web.ASPxHtmlEditor.v16.1, Version=16.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Web.ASPxPivotGrid.v16.1, Version=16.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Web.ASPxScheduler.v16.1, Version=16.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Web.ASPxSpellChecker.v16.1, Version=16.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Web.ASPxThemes.v16.1, Version=16.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Web.ASPxTreeList.v16.1, Version=16.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Web.Mvc.v16.1, Version=16.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Web.v16.1, Version=16.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraCharts.v16.1, Version=16.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraCharts.v16.1.Web, Version=16.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraGauges.v16.1.Core, Version=16.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraGauges.v16.1.Presets, Version=16.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraPivotGrid.v16.1, Version=16.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.CodeParser.v16.1, Version=16.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraReports.v16.1, Version=16.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Web.Resources.v16.1, Version=16.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraReports.v16.1.Web, Version=16.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraScheduler.v16.1.Core, Version=16.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="EntityFramework">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.SignalR.Core">
+      <HintPath>..\packages\Microsoft.AspNet.SignalR.Core.2.2.0\lib\net45\Microsoft.AspNet.SignalR.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.SignalR.Owin">
+      <HintPath>..\packages\Microsoft.AspNet.SignalR.Owin.1.2.2\lib\net45\Microsoft.AspNet.SignalR.Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.SignalR.SystemWeb">
+      <HintPath>..\packages\Microsoft.AspNet.SignalR.SystemWeb.2.2.0\lib\net45\Microsoft.AspNet.SignalR.SystemWeb.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin">
+      <HintPath>..\packages\Microsoft.Owin.3.0.1\lib\net45\Microsoft.Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Host.SystemWeb">
+      <HintPath>..\packages\Microsoft.Owin.Host.SystemWeb.2.1.0\lib\net45\Microsoft.Owin.Host.SystemWeb.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security, Version=3.0.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.Owin.Security.3.0.1\lib\net45\Microsoft.Owin.Security.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.OAuth">
+      <HintPath>..\packages\Microsoft.Owin.Security.OAuth.3.0.1\lib\net45\Microsoft.Owin.Security.OAuth.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=7.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Newtonsoft.Json.7.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="Owin">
+      <HintPath>..\packages\Owin.1.0\lib\net40\Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.FtpClient, Version=1.0.5824.34026, Culture=neutral, PublicKeyToken=fa4be07daa57c2b7, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Net.FtpClient.1.0.5824.34026\lib\net40\System.Net.FtpClient.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Extensions.Design" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Abstractions" />
+    <Reference Include="System.Web.Routing" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Web.Mvc.FixedDisplayModes, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.FixedDisplayModes.1.0.0\lib\net40\Microsoft.Web.Mvc.FixedDisplayModes.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http">
+    </Reference>
+    <Reference Include="System.Net.Http.Formatting, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Client.4.0.20710.0\lib\net40\System.Net.Http.Formatting.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http.WebRequest">
+    </Reference>
+    <Reference Include="System.Web.Helpers, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.2.0.20710.0\lib\net40\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Core.4.0.20710.0\lib\net40\System.Web.Http.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http.WebHost, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.WebHost.4.0.20710.0\lib\net40\System.Web.Http.WebHost.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.4.0.20710.0\lib\net40\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Razor.2.0.20715.0\lib\net40\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.2.0.20710.0\lib\net40\System.Web.WebPages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.2.0.20710.0\lib\net40\System.Web.WebPages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.2.0.20710.0\lib\net40\System.Web.WebPages.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="WinSCPnet, Version=1.5.4.8265, Culture=neutral, PublicKeyToken=2271ec4a3c56d0bf, processorArchitecture=MSIL">
+      <HintPath>..\packages\WinSCP.5.13.1\lib\net\WinSCPnet.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Collections.Specialized" />
+    <Import Include="System.Configuration" />
+    <Import Include="System.Text" />
+    <Import Include="System.Text.RegularExpressions" />
+    <Import Include="System.Web" />
+    <Import Include="System.Web.Caching" />
+    <Import Include="System.Web.Mvc" />
+    <Import Include="System.Web.Mvc.Ajax" />
+    <Import Include="System.Web.Mvc.Html" />
+    <Import Include="System.Web.Routing" />
+    <Import Include="System.Web.SessionState" />
+    <Import Include="System.Web.Security" />
+    <Import Include="System.Web.Profile" />
+    <Import Include="System.Web.UI" />
+    <Import Include="System.Web.UI.WebControls" />
+    <Import Include="System.Web.UI.WebControls.WebParts" />
+    <Import Include="System.Web.UI.HtmlControls" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Areas\Contraloria\ContraloriaAreaRegistration.vb" />
+    <Compile Include="Areas\Contraloria\Controllers\ActasController.vb" />
+    <Compile Include="Areas\Contraloria\Controllers\CargarArchivoController.vb" />
+    <Compile Include="Areas\Contraloria\Controllers\CierrePlanillaController.vb" />
+    <Compile Include="Areas\Contraloria\Controllers\EscaneoController.vb" />
+    <Compile Include="Areas\Contraloria\Controllers\HomeController.vb" />
+    <Compile Include="Areas\Contraloria\Controllers\ReportesController.vb" />
+    <Compile Include="Areas\Contraloria\Models\Actas.vb" />
+    <Compile Include="Areas\Contraloria\Models\Carga.vb" />
+    <Compile Include="Areas\Contraloria\Models\Cierre_Planilla.vb" />
+    <Compile Include="Areas\Contraloria\Models\Conexion.vb" />
+    <Compile Include="Areas\Contraloria\Models\Escaneo.vb" />
+    <Compile Include="Areas\Contraloria\Models\Reportes.vb" />
+    <Compile Include="Areas\Contraloria\Models\Startup.vb" />
+    <Compile Include="Areas\Corresponsabilidad\Controllers\ConfiguracionController.vb" />
+    <Compile Include="Areas\Corresponsabilidad\Controllers\HomeController.vb" />
+    <Compile Include="Areas\Corresponsabilidad\Controllers\ReportesController.vb" />
+    <Compile Include="Areas\Corresponsabilidad\Controllers\SeguimientoSolicitudesController.vb" />
+    <Compile Include="Areas\Corresponsabilidad\CorresponsabilidadAreaRegistration.vb" />
+    <Compile Include="Areas\Corresponsabilidad\Models\cl_conexion_db.vb" />
+    <Compile Include="Areas\Corresponsabilidad\Models\cl_data_reporte.vb" />
+    <Compile Include="Areas\Corresponsabilidad\Models\cl_detalle_corresponsabilidad.vb" />
+    <Compile Include="Areas\Corresponsabilidad\Models\cl_gestion_observaciones.vb" />
+    <Compile Include="Areas\Corresponsabilidad\Models\cl_manejo_datos.vb" />
+    <Compile Include="Areas\Corresponsabilidad\Models\cl_report_busq_corres_benef.vb" />
+    <Compile Include="Areas\Corresponsabilidad\Models\cl_report_CAI.vb" />
+    <Compile Include="Areas\Corresponsabilidad\Models\cl_report_carg_edu_sal.vb" />
+    <Compile Include="Areas\Corresponsabilidad\Models\cl_report_error_petici_actuali.vb" />
+    <Compile Include="Areas\Corresponsabilidad\Models\cl_seguimiento_observaciones.vb" />
+    <Compile Include="Areas\Corresponsabilidad\Models\cl_tipo_corresponsabilidad.vb" />
+    <Compile Include="Areas\Corresponsabilidad\Models\Xtra_report_class\cl_xtra_report_busq_corres_benef.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Areas\Corresponsabilidad\Views\PaginasMaestras\Principal.Master.designer.vb">
+      <DependentUpon>Principal.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Areas\Corresponsabilidad\Views\PaginasMaestras\Principal.Master.vb">
+      <DependentUpon>Principal.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Areas\Incorporaciones\Class\Cl_ParamConexion.vb" />
+    <Compile Include="Areas\Incorporaciones\Class\Cl_ReadFile.vb" />
+    <Compile Include="Areas\Incorporaciones\Controllers\AdministracionController.vb" />
+    <Compile Include="Areas\Incorporaciones\Controllers\IncorporacionesController.vb" />
+    <Compile Include="Areas\Incorporaciones\Controllers\InicioController.vb" />
+    <Compile Include="Areas\Incorporaciones\Controllers\ReportesController.vb" />
+    <Compile Include="Areas\Incorporaciones\IncorporacionesAreaRegistration.vb" />
+    <Compile Include="Areas\Incorporaciones\Models\Dao\Cl_Conexion.vb" />
+    <Compile Include="Areas\Incorporaciones\Models\Dao\Cl_Hogar.vb" />
+    <Compile Include="Areas\Incorporaciones\Models\Dao\Cl_Hogar_Beneficiario.vb" />
+    <Compile Include="Areas\Incorporaciones\Models\Dao\Cl_Persona.vb" />
+    <Compile Include="Areas\Incorporaciones\Models\Dao\Cl_Persona_Editar.vb" />
+    <Compile Include="Areas\Incorporaciones\Models\Dao\Cl_Usuarios.vb" />
+    <Compile Include="Areas\Mineria\Controllers\ConfiguracionController.vb" />
+    <Compile Include="Areas\Mineria\Controllers\CorresponsabilidadController.vb" />
+    <Compile Include="Areas\Mineria\Controllers\HogaresController.vb" />
+    <Compile Include="Areas\Mineria\Controllers\HomeController.vb" />
+    <Compile Include="Areas\Mineria\Controllers\IndicadoresController.vb" />
+    <Compile Include="Areas\Mineria\Controllers\PlanillasPagoController.vb" />
+    <Compile Include="Areas\Mineria\Controllers\ProyeccionesController.vb" />
+    <Compile Include="Areas\Mineria\Controllers\SharedController.vb" />
+    <Compile Include="Areas\Mineria\MineriaAreaRegistration.vb" />
+    <Compile Include="Areas\Mineria\Models\Cl_Conexion.vb" />
+    <Compile Include="Areas\Mineria\Models\Cl_Configuracion.vb" />
+    <Compile Include="Areas\Mineria\Models\Cl_Corresponsabilidad.vb" />
+    <Compile Include="Areas\Mineria\Models\Cl_Hogares.vb" />
+    <Compile Include="Areas\Mineria\Models\Cl_Indicadores.vb" />
+    <Compile Include="Areas\Mineria\Models\Cl_PlanillasPago.vb" />
+    <Compile Include="Areas\Mineria\Models\Cl_Proyecciones.vb" />
+    <Compile Include="Areas\Mineria\Models\Cl_Shared.vb" />
+    <Compile Include="Areas\Planilla\Controllers\ConfiguracionesGeneralesController.vb" />
+    <Compile Include="Areas\Planilla\Controllers\EjecucionController.vb" />
+    <Compile Include="Areas\Planilla\Controllers\GeneracionDocumentosController.vb" />
+    <Compile Include="Areas\Planilla\Controllers\HomeController.vb" />
+    <Compile Include="Areas\Planilla\Controllers\ParametrosController.vb" />
+    <Compile Include="Areas\Planilla\Controllers\ProgramacionPagoController.vb" />
+    <Compile Include="Areas\Planilla\Controllers\ReportesController.vb" />
+    <Compile Include="Areas\Planilla\Controllers\SharedController.vb" />
+    <Compile Include="Areas\Planilla\Models\cl_aprobacion_esquema.vb" />
+    <Compile Include="Areas\Planilla\Models\cl_cobertura_planilla.vb" />
+    <Compile Include="Areas\Planilla\Models\cl_conexion_db.vb" />
+    <Compile Include="Areas\Planilla\Models\cl_corresponsabilidad_apercibimiento.vb" />
+    <Compile Include="Areas\Planilla\Models\cl_corresponsabilidad_transferencia.vb" />
+    <Compile Include="Areas\Planilla\Models\cl_ejecucion.vb" />
+    <Compile Include="Areas\Planilla\Models\cl_esquema.vb" />
+    <Compile Include="Areas\Planilla\Models\cl_establecimiento_fondo.vb" />
+    <Compile Include="Areas\Planilla\Models\cl_generacion_documentos.vb" />
+    <Compile Include="Areas\Planilla\Models\cl_manejo_datos.vb" />
+    <Compile Include="Areas\Planilla\Models\cl_mecanismo_pago.vb" />
+    <Compile Include="Areas\Planilla\Models\cl_otra_verificacion.vb" />
+    <Compile Include="Areas\Planilla\Models\cl_pago.vb" />
+    <Compile Include="Areas\Planilla\Models\cl_programacion_pago.vb" />
+    <Compile Include="Areas\Planilla\Models\cl_shared.vb" />
+    <Compile Include="Areas\Planilla\Models\cl_transferencia_actual.vb" />
+    <Compile Include="Areas\Planilla\Models\cl_transferencia_acumulada.vb" />
+    <Compile Include="Areas\Planilla\PlanillaAreaRegistration.vb" />
+    <Compile Include="Areas\Seguridad\Controllers\HomeController.vb" />
+    <Compile Include="Areas\Seguridad\Controllers\UsuariosController.vb" />
+    <Compile Include="Areas\Seguridad\Models\Cl_Conexion.vb" />
+    <Compile Include="Areas\Seguridad\Models\Usuarios.vb" />
+    <Compile Include="Areas\Seguridad\SeguridadAreaRegistration.vb" />
+    <Compile Include="Controllers\HomeController.vb" />
+    <Compile Include="Global.asax.vb">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Clase\Cl_ParamConexion.vb" />
+    <Compile Include="Models\Clase\Cl_ReadFile.vb" />
+    <Compile Include="Models\Cl_Conexion.vb" />
+    <Compile Include="Models\Cl_Login.vb" />
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_Start\FilterConfig.vb" />
+    <Compile Include="App_Start\RouteConfig.vb" />
+    <Compile Include="App_Start\WebApiConfig.vb" />
+    <Content Include="Areas\Contraloria\Content\precarga.fmt" />
+    <Content Include="Areas\Contraloria\Images\BannerLogin.png" />
+    <Content Include="Areas\Contraloria\Images\closebox.png" />
+    <Content Include="Areas\Contraloria\Images\FONDOCORE.jpg" />
+    <Content Include="Areas\Contraloria\Images\FondoCoreSig2.png" />
+    <Content Include="Areas\Contraloria\Images\FondoLogin.png" />
+    <Content Include="Areas\Contraloria\Images\FondoModulos.png" />
+    <Content Include="Areas\Contraloria\Images\icon_minus.png" />
+    <Content Include="Areas\Contraloria\Images\icon_plus.png" />
+    <Content Include="Areas\Contraloria\Images\loader.gif" />
+    <Content Include="Areas\Contraloria\Images\loading.gif" />
+    <Content Include="Areas\Contraloria\Images\SSIS.jpg" />
+    <Content Include="Areas\Contraloria\Scripts\actaDescargo.js" />
+    <Content Include="Areas\Contraloria\Scripts\actaInconsistencias.js" />
+    <Content Include="Areas\Contraloria\Scripts\actaRecepcionAgencia.js" />
+    <Content Include="Areas\Contraloria\Scripts\actaRecepcionMovil.js" />
+    <Content Include="Areas\Contraloria\Scripts\cargaArchivo.js" />
+    <Content Include="Areas\Contraloria\Scripts\cierrePlanilla.js" />
+    <Content Include="Areas\Contraloria\Scripts\cronometro.js" />
+    <Content Include="Areas\Contraloria\Scripts\escaneo.js" />
+    <None Include="Areas\Contraloria\Scripts\jquery-2.1.4.intellisense.js" />
+    <Content Include="Areas\Contraloria\Scripts\jquery-2.1.4.js" />
+    <Content Include="Areas\Contraloria\Scripts\jquery-2.1.4.min.js" />
+    <Content Include="Areas\Contraloria\Scripts\jquery.min.js" />
+    <Content Include="Areas\Contraloria\Scripts\jquery.signalR-2.2.0.js" />
+    <Content Include="Areas\Contraloria\Scripts\jquery.signalR-2.2.0.min.js" />
+    <Content Include="Areas\Contraloria\Scripts\jspdf.js" />
+    <Content Include="Areas\Contraloria\Scripts\jspdf.plugin.split_text_to_size.js" />
+    <Content Include="Areas\Contraloria\Scripts\jspdf.plugin.standard_fonts_metrics.js" />
+    <Content Include="Areas\Contraloria\Scripts\jspdf.plugin.total_pages.js" />
+    <Content Include="Areas\Contraloria\Scripts\main.js" />
+    <Content Include="Areas\Contraloria\Scripts\Menu.js" />
+    <Content Include="Areas\Contraloria\Scripts\pdfmake.min.js" />
+    <Content Include="Areas\Contraloria\Scripts\popup.js" />
+    <Content Include="Areas\Contraloria\Scripts\reportes.js" />
+    <Content Include="Areas\Contraloria\Scripts\sidemenu.js" />
+    <Content Include="Areas\Contraloria\Scripts\temporal.js" />
+    <Content Include="Areas\Contraloria\Scripts\vfs_fonts.js" />
+    <Content Include="Areas\Contraloria\Style\actas.css" />
+    <Content Include="Areas\Contraloria\Style\Home.css" />
+    <Content Include="Areas\Contraloria\Style\Main.css" />
+    <Content Include="Areas\Contraloria\Style\popup.css" />
+    <Content Include="Areas\Contraloria\Style\sidemenu.css" />
+    <Content Include="Areas\Contraloria\Style\styles_contraloria.css" />
+    <Content Include="Areas\Contraloria\Views\Actas\PartialSucursalView.ascx" />
+    <Content Include="Areas\Contraloria\Views\Actas\ViewDescargo.aspx" />
+    <Content Include="Areas\Contraloria\Views\Actas\ViewInconsistencias.aspx" />
+    <Content Include="Areas\Contraloria\Views\Actas\ViewRecepcionAgencia.aspx" />
+    <Content Include="Areas\Contraloria\Views\Actas\ViewRecepcionMovil.aspx" />
+    <Content Include="Areas\Contraloria\Views\CargarArchivo\consolidado.aspx" />
+    <Content Include="Areas\Contraloria\Views\CargarArchivo\Index.aspx" />
+    <Content Include="Areas\Contraloria\Views\CargarArchivo\PageDocumentView.aspx" />
+    <Content Include="Areas\Contraloria\Views\CargarArchivo\PagosGridViewPartial.ascx" />
+    <Content Include="Areas\Contraloria\Views\CargarArchivo\PartialConsolidado.ascx" />
+    <Content Include="Areas\Contraloria\Views\CargarArchivo\PartialGridViewCargas.ascx" />
+    <Content Include="Areas\Contraloria\Views\CargarArchivo\PartialMemo.ascx" />
+    <Content Include="Areas\Contraloria\Views\CargarArchivo\pbCarga.ascx" />
+    <Content Include="Areas\Contraloria\Views\CargarArchivo\pv_fmArchivos.ascx" />
+    <Content Include="Areas\Contraloria\Views\CargarArchivo\pv_gdvArchivosBancarizacion.ascx" />
+    <Content Include="Areas\Contraloria\Views\CargarArchivo\pv_gdvArchivosProcesados.ascx" />
+    <Content Include="Areas\Contraloria\Views\CargarArchivo\pv_gdvDetalleArchivoBancarizacion.ascx" />
+    <Content Include="Areas\Contraloria\Views\CargarArchivo\pv_memoBancarizacion.ascx" />
+    <Content Include="Areas\Contraloria\Views\CargarArchivo\pv_pvgConsolidadoCargaBancarizacion.ascx" />
+    <Content Include="Areas\Contraloria\Views\CargarArchivo\ViewHistorial.aspx" />
+    <Content Include="Areas\Contraloria\Views\CargarArchivo\v_cargaBancarizacion.aspx" />
+    <Content Include="Areas\Contraloria\Views\CargarArchivo\v_verificacionBancarizacion.aspx" />
+    <Content Include="Areas\Contraloria\Views\CierrePlanilla\Index.aspx" />
+    <Content Include="Areas\Contraloria\Views\CierrePlanilla\PartialDetailGridView.ascx" />
+    <Content Include="Areas\Contraloria\Views\CierrePlanilla\PartialGridViewPlanillas.ascx" />
+    <Content Include="Areas\Contraloria\Views\CierrePlanilla\ViewCierrePlanilla.aspx" />
+    <Content Include="Areas\Contraloria\Views\Escaneo\PartialCbxFondo.ascx" />
+    <Content Include="Areas\Contraloria\Views\Escaneo\PartialCbxLeitz.ascx" />
+    <Content Include="Areas\Contraloria\Views\Escaneo\PartialCbxPeriodo.ascx" />
+    <Content Include="Areas\Contraloria\Views\Escaneo\PartialGridDetalleDocumentosLeitz.ascx" />
+    <Content Include="Areas\Contraloria\Views\Escaneo\PartialGridMaestroLeitz.ascx" />
+    <Content Include="Areas\Contraloria\Views\Escaneo\PartialVisorDocumento.ascx" />
+    <Content Include="Areas\Contraloria\Views\Escaneo\pv_dgvAdministrarLeitz.ascx" />
+    <Content Include="Areas\Contraloria\Views\Escaneo\ViewBusquedaDocumentos.aspx" />
+    <Content Include="Areas\Contraloria\Views\Escaneo\ViewEscaneo.aspx" />
+    <Content Include="Areas\Contraloria\Views\Escaneo\v_administracionLeitz.aspx" />
+    <Content Include="Areas\Contraloria\Views\Home\Index.aspx" />
+    <Content Include="Areas\Contraloria\Views\Reportes\PartialAldeaView.ascx" />
+    <Content Include="Areas\Contraloria\Views\Reportes\PartialBancoView.ascx" />
+    <Content Include="Areas\Contraloria\Views\Reportes\PartialControlesPersonalizado.ascx" />
+    <Content Include="Areas\Contraloria\Views\Reportes\PartialControlesTipo.ascx" />
+    <Content Include="Areas\Contraloria\Views\Reportes\PartialDptoView.ascx" />
+    <Content Include="Areas\Contraloria\Views\Reportes\PartialFondoView.ascx" />
+    <Content Include="Areas\Contraloria\Views\Reportes\PartialGridPeriodos.ascx" />
+    <Content Include="Areas\Contraloria\Views\Reportes\PartialGridViewRecibosPagados.ascx" />
+    <Content Include="Areas\Contraloria\Views\Reportes\PartialMuniView.ascx" />
+    <Content Include="Areas\Contraloria\Views\Reportes\PartialPeriodosView.ascx" />
+    <Content Include="Areas\Contraloria\Views\Reportes\PartialSucursalView.ascx" />
+    <Content Include="Areas\Contraloria\Views\Reportes\pv_cbxAnyos.ascx" />
+    <Content Include="Areas\Contraloria\Views\Reportes\pv_cbxPagos.ascx" />
+    <Content Include="Areas\Contraloria\Views\Reportes\pv_esquemas.ascx" />
+    <Content Include="Areas\Contraloria\Views\Reportes\pv_gdvCuentasBasicas.ascx" />
+    <Content Include="Areas\Contraloria\Views\Reportes\pv_pvgConsolidado.ascx" />
+    <Content Include="Areas\Contraloria\Views\Reportes\pv_pvgCuentasActivadas.ascx" />
+    <Content Include="Areas\Contraloria\Views\Reportes\pv_Spinner.ascx" />
+    <Content Include="Areas\Contraloria\Views\Reportes\ViewConsolidado.aspx" />
+    <Content Include="Areas\Contraloria\Views\Reportes\ViewRecibosPagados.aspx" />
+    <Content Include="Areas\Contraloria\Views\Reportes\v_cuentasActivadas.aspx" />
+    <Content Include="Areas\Contraloria\Views\Reportes\v_cuentasBasicas.aspx" />
+    <Content Include="Areas\Corresponsabilidad\Images\BannerLogin.png" />
+    <Content Include="Areas\Corresponsabilidad\Images\FONDOCORE.jpg" />
+    <Content Include="Areas\Corresponsabilidad\Images\FondoCoreSig2.png" />
+    <Content Include="Areas\Corresponsabilidad\Images\FondoLogin.png" />
+    <Content Include="Areas\Corresponsabilidad\Images\FondoModulos.png" />
+    <Content Include="Areas\Corresponsabilidad\Images\Gif\gif_carga_data.GIF" />
+    <Content Include="Areas\Corresponsabilidad\Images\icon_minus.png" />
+    <Content Include="Areas\Corresponsabilidad\Images\icon_plus.png" />
+    <Content Include="Areas\Corresponsabilidad\Images\SSIS.jpg" />
+    <Content Include="Areas\Corresponsabilidad\Images\VidaMejorFondo.png" />
+    <Content Include="Areas\Corresponsabilidad\Scripts\AjaxLogin.js" />
+    <Content Include="Areas\Corresponsabilidad\Scripts\jquery-1.10.1.min.js" />
+    <Content Include="Areas\Contraloria\Content\Bancarizacion\apertura.fmt" />
+    <Content Include="Areas\Contraloria\Content\Bancarizacion\detalle_pagos.fmt" />
+    <Content Include="Areas\Contraloria\Content\Bancarizacion\SSIS_PK.ppk" />
+    <Content Include="Areas\Contraloria\Scripts\jquery-2.1.4.min.map" />
+    <Content Include="Areas\Contraloria\Views\Home\Index.aspx.bak" />
+    <Content Include="Areas\Contraloria\Views\Shared\Main.Master" />
+    <Content Include="Areas\Contraloria\Views\Web.config" />
+    <None Include="Areas\Corresponsabilidad\Scripts\jquery-1.6.2-vsdoc.js" />
+    <Content Include="Areas\Corresponsabilidad\Scripts\jquery-1.6.2.js" />
+    <Content Include="Areas\Corresponsabilidad\Scripts\jquery-1.6.2.min.js" />
+    <Content Include="Areas\Corresponsabilidad\Scripts\jquery-1.7.1.min.js" />
+    <None Include="Areas\Corresponsabilidad\Scripts\jquery-1.8.3.intellisense.js" />
+    <Content Include="Areas\Corresponsabilidad\Scripts\jquery-1.8.3.js" />
+    <Content Include="Areas\Corresponsabilidad\Scripts\jquery-1.8.3.min.js" />
+    <Content Include="Areas\Corresponsabilidad\Scripts\jquery-2.1.4.min.js" />
+    <Content Include="Areas\Corresponsabilidad\Scripts\jquery-3.1.1.js" />
+    <Content Include="Areas\Corresponsabilidad\Scripts\jquery-3.1.1.min.js" />
+    <Content Include="Areas\Corresponsabilidad\Scripts\jquery-ui-1.8.11.js" />
+    <Content Include="Areas\Corresponsabilidad\Scripts\jquery-ui-1.8.11.min.js" />
+    <Content Include="Areas\Corresponsabilidad\Scripts\jquery.min.js" />
+    <Content Include="Areas\Corresponsabilidad\Scripts\jquery.unobtrusive-ajax.js" />
+    <Content Include="Areas\Corresponsabilidad\Scripts\jquery.unobtrusive-ajax.min.js" />
+    <None Include="Areas\Corresponsabilidad\Scripts\jquery.validate-vsdoc.js" />
+    <Content Include="Areas\Corresponsabilidad\Scripts\jquery.validate.js" />
+    <Content Include="Areas\Corresponsabilidad\Scripts\jquery.validate.min.js" />
+    <Content Include="Areas\Corresponsabilidad\Scripts\jquery.validate.unobtrusive.js" />
+    <Content Include="Areas\Corresponsabilidad\Scripts\jquery.validate.unobtrusive.min.js" />
+    <Content Include="Areas\Corresponsabilidad\Scripts\knockout-2.0.0.debug.js" />
+    <Content Include="Areas\Corresponsabilidad\Scripts\knockout-2.0.0.js" />
+    <Content Include="Areas\Corresponsabilidad\Scripts\main.js" />
+    <Content Include="Areas\Corresponsabilidad\Scripts\Menu.js" />
+    <Content Include="Areas\Corresponsabilidad\Scripts\modernizr-2.0.6-development-only.js" />
+    <Content Include="Areas\Corresponsabilidad\Scripts\Report_CAI\report_cai.js" />
+    <Content Include="Areas\Corresponsabilidad\Scripts\Repor_Busq_Corres_Benef\report_busq_corres_benef.js" />
+    <Content Include="Areas\Corresponsabilidad\Scripts\Repor_Carg_Edu_Sal\report_carg_edu_sal.js" />
+    <Content Include="Areas\Corresponsabilidad\Scripts\Repor_err_petic_actuali\report_erro_peti_actu.js" />
+    <Content Include="Areas\Corresponsabilidad\Scripts\ScriptComBoxUbicacionSACE.js" />
+    <Content Include="Areas\Corresponsabilidad\Scripts\ScriptLevantamientoVisita.js" />
+    <Content Include="Areas\Corresponsabilidad\Scripts\ScriptsCorresponsabilidad.js" />
+    <Content Include="Areas\Corresponsabilidad\Scripts\ScriptsReportes.js" />
+    <Content Include="Areas\Corresponsabilidad\Scripts\Seguimiento_Solicitudes\script_gestion_observacion.js" />
+    <Content Include="Areas\Corresponsabilidad\Scripts\Seguimiento_Solicitudes\script_seguimiento_observacion.js" />
+    <Content Include="Areas\Corresponsabilidad\Scripts\Shared\combox_tip_car_car.js" />
+    <Content Include="Areas\Corresponsabilidad\Scripts\Shared\ScriptComBoxUbicacionSIG.js" />
+    <Content Include="Areas\Corresponsabilidad\Scripts\sidemenu.js" />
+    <Content Include="Areas\Corresponsabilidad\Style\estilo_corresponsabilidad.css" />
+    <Content Include="Areas\Corresponsabilidad\Views\Configuracion\Corresponsabilidad.aspx" />
+    <Content Include="Areas\Corresponsabilidad\Views\Configuracion\Corresponsabilidad\_FormLayoutViewPartialCorresponsabilidad.ascx" />
+    <Content Include="Areas\Corresponsabilidad\Views\Configuracion\Corresponsabilidad\_GridViewPartialDetalleCorresponsabilidad.ascx" />
+    <Content Include="Areas\Corresponsabilidad\Views\Configuracion\Corresponsabilidad\_GridViewPartialTipoCorresponsabilidad.ascx" />
+    <Content Include="Areas\Corresponsabilidad\Views\Configuracion\Corresponsabilidad\_PopupControlViewPartialBorrarCorrespo.ascx" />
+    <Content Include="Areas\Corresponsabilidad\Views\Configuracion\Corresponsabilidad\_PopupControlViewPartialEditCorrespo.ascx" />
+    <Content Include="Areas\Corresponsabilidad\Views\Home\Index.aspx" />
+    <Content Include="Areas\Corresponsabilidad\Views\Reportes\Busq_Correspon_Beneficia\_ControlesBusqCorresBenef.ascx" />
+    <Content Include="Areas\Corresponsabilidad\Views\Reportes\Busq_Correspon_Beneficia\_DocumentViewerBusqCorresBenef.ascx" />
+    <Content Include="Areas\Corresponsabilidad\Views\Reportes\Busq_Correspon_Beneficia\_GridResulBenef.ascx" />
+    <Content Include="Areas\Corresponsabilidad\Views\Reportes\Busq_Correspon_Beneficia\_PopupControlViewPartialReport.ascx" />
+    <Content Include="Areas\Corresponsabilidad\Views\Reportes\CAI\_ControlesReportCAI.ascx" />
+    <Content Include="Areas\Corresponsabilidad\Views\Reportes\CAI\_GridViewCAI.ascx" />
+    <Content Include="Areas\Corresponsabilidad\Views\Reportes\Carga_Educa_Sal\_ControlesCargaEduSal.ascx" />
+    <Content Include="Areas\Corresponsabilidad\Views\Reportes\Carga_Educa_Sal\_GridCargaEduSal.ascx" />
+    <Content Include="Areas\Corresponsabilidad\Views\Reportes\Carga_Educa_Sal\_GridDetallePorLog.ascx" />
+    <Content Include="Areas\Corresponsabilidad\Views\Reportes\Centro_Educativo\ViewPartialCentroEducativo.ascx" />
+    <Content Include="Areas\Corresponsabilidad\Views\Reportes\Centro_Salud\ViewPartialCentroSalud.ascx" />
+    <Content Include="Areas\Corresponsabilidad\Views\Reportes\Combox_Actualizacion\ViewPartialComboxActuali.ascx" />
+    <Content Include="Areas\Corresponsabilidad\Views\Reportes\Combox_Tip_Componente\ViewPartialComboxTipCompo.ascx" />
+    <Content Include="Areas\Corresponsabilidad\Views\Reportes\Control_corres\_ViewPartialGridViewCorres.ascx" />
+    <Content Include="Areas\Corresponsabilidad\Views\Reportes\Control_pago\_ViewPartialGridViewPago.ascx" />
+    <Content Include="Areas\Corresponsabilidad\Views\Reportes\Err_petic_actuali\_ControlesErroPeticActu.ascx" />
+    <Content Include="Areas\Corresponsabilidad\Views\Reportes\Err_petic_actuali\_GridErroPeticActu.ascx" />
+    <Content Include="Areas\Corresponsabilidad\Views\Reportes\Forma_Reporte\ViewPartialFormaReporte.ascx" />
+    <Content Include="Areas\Corresponsabilidad\Views\Reportes\Localizacion_Sace\ViewPartialAldeaSace.ascx" />
+    <Content Include="Areas\Corresponsabilidad\Views\Reportes\Localizacion_Sace\ViewPartialCaserioSace.ascx" />
+    <Content Include="Areas\Corresponsabilidad\Views\Reportes\Localizacion_Sace\ViewPartialDepartamentoSace.ascx" />
+    <Content Include="Areas\Corresponsabilidad\Views\Reportes\Localizacion_Sace\ViewPartialMunicipioSace.ascx" />
+    <Content Include="Areas\Corresponsabilidad\Views\Reportes\Localizacion_Sig\ViewPartialAldeaSIG.ascx" />
+    <Content Include="Areas\Corresponsabilidad\Views\Reportes\Localizacion_Sig\ViewPartialCaserioSIG.ascx" />
+    <Content Include="Areas\Corresponsabilidad\Views\Reportes\Localizacion_Sig\ViewPartialDepartamentoSIG.ascx" />
+    <Content Include="Areas\Corresponsabilidad\Views\Reportes\Localizacion_Sig\ViewPartialMunicipioSIG.ascx" />
+    <Content Include="Areas\Corresponsabilidad\Views\Reportes\ViewReportCargasEducaSalud.aspx" />
+    <Content Include="Areas\Corresponsabilidad\Views\Reportes\viewReporteCAI.aspx" />
+    <Content Include="Areas\Corresponsabilidad\Views\Reportes\viewReporteCorresBeneficia.aspx" />
+    <Content Include="Areas\Corresponsabilidad\Views\Reportes\viewReporteDetecErrPetActua.aspx" />
+    <Content Include="Areas\Corresponsabilidad\Views\SeguimientoSolicitudes\GetionObservacion\_ControlesGestionObservaciones.ascx" />
+    <Content Include="Areas\Corresponsabilidad\Views\SeguimientoSolicitudes\SeguimientoObservacion\_GridViewSeguimientoObservaciones.ascx" />
+    <Content Include="Areas\Corresponsabilidad\Views\SeguimientoSolicitudes\viewGetionObservaciones.aspx" />
+    <Content Include="Areas\Corresponsabilidad\Views\SeguimientoSolicitudes\viewSeguimientoObservaciones.aspx" />
+    <Content Include="Areas\Incorporaciones\Content\Images\arrow-31-16.png" />
+    <Content Include="Areas\Incorporaciones\Content\Images\BarAndLine.png" />
+    <Content Include="Areas\Incorporaciones\Content\Images\BarStacked.png" />
+    <Content Include="Areas\Incorporaciones\Content\Images\bono.png" />
+    <Content Include="Areas\Incorporaciones\Content\Images\bono2.png" />
+    <Content Include="Areas\Incorporaciones\Content\Images\cerrar4.png" />
+    <Content Include="Areas\Incorporaciones\Content\Images\close.png" />
+    <Content Include="Areas\Incorporaciones\Content\Images\DXR.gif" />
+    <Content Include="Areas\Incorporaciones\Content\Images\error.png" />
+    <Content Include="Areas\Incorporaciones\Content\Images\FONDOCORE.jpg" />
+    <Content Include="Areas\Incorporaciones\Content\Images\FondoCoreSig2.png" />
+    <Content Include="Areas\Incorporaciones\Content\Images\home162 %283%29.png" />
+    <Content Include="Areas\Incorporaciones\Content\Images\icon_minus.png" />
+    <Content Include="Areas\Incorporaciones\Content\Images\icon_plus.png" />
+    <Content Include="Areas\Incorporaciones\Content\Images\info.png" />
+    <Content Include="Areas\Incorporaciones\Content\Images\loader.gif" />
+    <Content Include="Areas\Incorporaciones\Content\Images\loading.gif" />
+    <Content Include="Areas\Incorporaciones\Content\Images\ManhattanBar.png" />
+    <Content Include="Areas\Incorporaciones\Content\Images\Pie.png" />
+    <Content Include="Areas\Incorporaciones\Content\Images\pie_chart.ico" />
+    <Content Include="Areas\Incorporaciones\Content\Images\pie_chart.png" />
+    <Content Include="Areas\Incorporaciones\Content\Images\Print-50.png" />
+    <Content Include="Areas\Incorporaciones\Content\Images\print.gif" />
+    <Content Include="Areas\Incorporaciones\Content\Images\Save As-50.png" />
+    <Content Include="Areas\Incorporaciones\Content\Images\Save-50.png" />
+    <Content Include="Areas\Incorporaciones\Content\Images\save.gif" />
+    <Content Include="Areas\Incorporaciones\Content\Images\saveas.gif" />
+    <Content Include="Areas\Incorporaciones\Content\Images\SSIS.jpg" />
+    <Content Include="Areas\Incorporaciones\Content\Images\success.png" />
+    <Content Include="Areas\Incorporaciones\Content\Images\Vida_Mejor.png" />
+    <Content Include="Areas\Incorporaciones\Content\Images\warning.png" />
+    <Content Include="Areas\Incorporaciones\Content\Scripts\Actualizacion_Hogares\Actualizacion_Hogares.js" />
+    <Content Include="Areas\Incorporaciones\Content\Scripts\Apertura_Actualizacion\Apertura_actualizacion.js" />
+    <Content Include="Areas\Incorporaciones\Content\Scripts\Clase\TestClass.js" />
+    <Content Include="Areas\Incorporaciones\Content\Scripts\Corte_Actualizacion\Corte_Actualizaciones.js" />
+    <Content Include="Areas\Incorporaciones\Content\Scripts\Imprimir_Nucleo_Hogar\Imprimir_Nucleo_Hogar.js" />
+    <Content Include="Areas\Incorporaciones\Content\Scripts\jquery-2.2.4.js" />
+    <Content Include="Areas\Incorporaciones\Content\Scripts\jquery-2.2.4.min.js" />
+    <Content Include="Areas\Incorporaciones\Content\Scripts\jquery.min.js" />
+    <Content Include="Areas\Incorporaciones\Content\Scripts\main.js" />
+    <Content Include="Areas\Incorporaciones\Content\Scripts\modernizr-2.5.3.js" />
+    <Content Include="Areas\Incorporaciones\Content\Scripts\pdfmake.min.js" />
+    <Content Include="Areas\Incorporaciones\Content\Scripts\Script_Funcion\bono.png" />
+    <Content Include="Areas\Incorporaciones\Content\Scripts\Script_Funcion\Controlador_Graficos.js" />
+    <Content Include="Areas\Incorporaciones\Content\Scripts\Script_Funcion\jquery.min.js" />
+    <Content Include="Areas\Incorporaciones\Content\Scripts\Script_Funcion\sidemenu.js" />
+    <Content Include="Areas\Incorporaciones\Content\Scripts\Script_Funcion\_Funcion_.js" />
+    <Content Include="Areas\Incorporaciones\Content\Scripts\sidemenu.js" />
+    <Content Include="Areas\Incorporaciones\Content\Scripts\Suspension_Hogares\SuspensionHogares.js" />
+    <Content Include="Areas\Incorporaciones\Content\Scripts\sweetalert.min.js" />
+    <Content Include="Areas\Incorporaciones\Content\Scripts\vfs_fonts.js" />
+    <Content Include="Areas\Incorporaciones\Content\Scripts\waitMe.js" />
+    <Content Include="Areas\Incorporaciones\Content\Scripts\waitMe.min.js" />
+    <Content Include="Areas\Incorporaciones\Content\Site.css" />
+    <Content Include="Areas\Incorporaciones\Content\Style\boostrap\bootstrap.min.css" />
+    <Content Include="Areas\Incorporaciones\Content\Style\boostrap\bootstrap.min.js" />
+    <Content Include="Areas\Incorporaciones\Content\Style\Main\main.css" />
+    <Content Include="Areas\Incorporaciones\Content\Style\Main\sweetalert.css" />
+    <Content Include="Areas\Incorporaciones\Content\Style\Main\waitMe.css" />
+    <Content Include="Areas\Incorporaciones\Content\Style\Modules\ImpresionFichas.css" />
+    <Content Include="Areas\Incorporaciones\Content\Style\Modules\Incorporacion.css" />
+    <Content Include="Areas\Incorporaciones\Content\Style\Modules\login.css" />
+    <Content Include="Areas\Incorporaciones\Content\Style\Modules\reporteFichas.css" />
+    <Content Include="Areas\Incorporaciones\Content\Style\Modules\ReportePersonal.css" />
+    <Content Include="Areas\Incorporaciones\Content\Style\Modules\suspensiones.css" />
+    <Content Include="Areas\Incorporaciones\Content\themes\base\images\ui-bg_flat_0_aaaaaa_40x100.png" />
+    <Content Include="Areas\Incorporaciones\Content\themes\base\images\ui-bg_flat_75_ffffff_40x100.png" />
+    <Content Include="Areas\Incorporaciones\Content\themes\base\images\ui-bg_glass_55_fbf9ee_1x400.png" />
+    <Content Include="Areas\Incorporaciones\Content\themes\base\images\ui-bg_glass_65_ffffff_1x400.png" />
+    <Content Include="Areas\Incorporaciones\Content\themes\base\images\ui-bg_glass_75_dadada_1x400.png" />
+    <Content Include="Areas\Incorporaciones\Content\themes\base\images\ui-bg_glass_75_e6e6e6_1x400.png" />
+    <Content Include="Areas\Incorporaciones\Content\themes\base\images\ui-bg_glass_95_fef1ec_1x400.png" />
+    <Content Include="Areas\Incorporaciones\Content\themes\base\images\ui-bg_highlight-soft_75_cccccc_1x100.png" />
+    <Content Include="Areas\Incorporaciones\Content\themes\base\images\ui-icons_222222_256x240.png" />
+    <Content Include="Areas\Incorporaciones\Content\themes\base\images\ui-icons_2e83ff_256x240.png" />
+    <Content Include="Areas\Incorporaciones\Content\themes\base\images\ui-icons_454545_256x240.png" />
+    <Content Include="Areas\Incorporaciones\Content\themes\base\images\ui-icons_888888_256x240.png" />
+    <Content Include="Areas\Incorporaciones\Content\themes\base\images\ui-icons_cd0a0a_256x240.png" />
+    <Content Include="Areas\Incorporaciones\Content\themes\base\jquery-ui.css" />
+    <Content Include="Areas\Incorporaciones\Content\themes\base\jquery.ui.accordion.css" />
+    <Content Include="Areas\Incorporaciones\Content\themes\base\jquery.ui.all.css" />
+    <Content Include="Areas\Incorporaciones\Content\themes\base\jquery.ui.autocomplete.css" />
+    <Content Include="Areas\Incorporaciones\Content\themes\base\jquery.ui.base.css" />
+    <Content Include="Areas\Incorporaciones\Content\themes\base\jquery.ui.button.css" />
+    <Content Include="Areas\Incorporaciones\Content\themes\base\jquery.ui.core.css" />
+    <Content Include="Areas\Incorporaciones\Content\themes\base\jquery.ui.datepicker.css" />
+    <Content Include="Areas\Incorporaciones\Content\themes\base\jquery.ui.dialog.css" />
+    <Content Include="Areas\Incorporaciones\Content\themes\base\jquery.ui.progressbar.css" />
+    <Content Include="Areas\Incorporaciones\Content\themes\base\jquery.ui.resizable.css" />
+    <Content Include="Areas\Incorporaciones\Content\themes\base\jquery.ui.selectable.css" />
+    <Content Include="Areas\Incorporaciones\Content\themes\base\jquery.ui.slider.css" />
+    <Content Include="Areas\Incorporaciones\Content\themes\base\jquery.ui.tabs.css" />
+    <Content Include="Areas\Incorporaciones\Content\themes\base\jquery.ui.theme.css" />
+    <Content Include="Areas\Incorporaciones\Content\themes\base\minified\images\ui-bg_flat_0_aaaaaa_40x100.png" />
+    <Content Include="Areas\Incorporaciones\Content\themes\base\minified\images\ui-bg_flat_75_ffffff_40x100.png" />
+    <Content Include="Areas\Incorporaciones\Content\themes\base\minified\images\ui-bg_glass_55_fbf9ee_1x400.png" />
+    <Content Include="Areas\Incorporaciones\Content\themes\base\minified\images\ui-bg_glass_65_ffffff_1x400.png" />
+    <Content Include="Areas\Incorporaciones\Content\themes\base\minified\images\ui-bg_glass_75_dadada_1x400.png" />
+    <Content Include="Areas\Incorporaciones\Content\themes\base\minified\images\ui-bg_glass_75_e6e6e6_1x400.png" />
+    <Content Include="Areas\Incorporaciones\Content\themes\base\minified\images\ui-bg_glass_95_fef1ec_1x400.png" />
+    <Content Include="Areas\Incorporaciones\Content\themes\base\minified\images\ui-bg_highlight-soft_75_cccccc_1x100.png" />
+    <Content Include="Areas\Incorporaciones\Content\themes\base\minified\images\ui-icons_222222_256x240.png" />
+    <Content Include="Areas\Incorporaciones\Content\themes\base\minified\images\ui-icons_2e83ff_256x240.png" />
+    <Content Include="Areas\Incorporaciones\Content\themes\base\minified\images\ui-icons_454545_256x240.png" />
+    <Content Include="Areas\Incorporaciones\Content\themes\base\minified\images\ui-icons_888888_256x240.png" />
+    <Content Include="Areas\Incorporaciones\Content\themes\base\minified\images\ui-icons_cd0a0a_256x240.png" />
+    <Content Include="Areas\Incorporaciones\Content\themes\base\minified\jquery-ui.min.css" />
+    <Content Include="Areas\Incorporaciones\Content\themes\base\minified\jquery.ui.accordion.min.css" />
+    <Content Include="Areas\Incorporaciones\Content\themes\base\minified\jquery.ui.autocomplete.min.css" />
+    <Content Include="Areas\Incorporaciones\Content\themes\base\minified\jquery.ui.button.min.css" />
+    <Content Include="Areas\Incorporaciones\Content\themes\base\minified\jquery.ui.core.min.css" />
+    <Content Include="Areas\Incorporaciones\Content\themes\base\minified\jquery.ui.datepicker.min.css" />
+    <Content Include="Areas\Incorporaciones\Content\themes\base\minified\jquery.ui.dialog.min.css" />
+    <Content Include="Areas\Incorporaciones\Content\themes\base\minified\jquery.ui.progressbar.min.css" />
+    <Content Include="Areas\Incorporaciones\Content\themes\base\minified\jquery.ui.resizable.min.css" />
+    <Content Include="Areas\Incorporaciones\Content\themes\base\minified\jquery.ui.selectable.min.css" />
+    <Content Include="Areas\Incorporaciones\Content\themes\base\minified\jquery.ui.slider.min.css" />
+    <Content Include="Areas\Incorporaciones\Content\themes\base\minified\jquery.ui.tabs.min.css" />
+    <Content Include="Areas\Incorporaciones\Content\themes\base\minified\jquery.ui.theme.min.css" />
+    <Content Include="Areas\Incorporaciones\Views\Administracion\Impresion_Nucleo\FormLayout_HogaresNucleos.ascx" />
+    <Content Include="Areas\Incorporaciones\Views\Administracion\Impresion_Nucleo\Imprimir_Nucleos_Hogar.aspx" />
+    <Content Include="Areas\Incorporaciones\Views\Administracion\Impresion_Nucleo\informacionPersonasHogar.ascx" />
+    <Content Include="Areas\Incorporaciones\Views\Administracion\Impresion_Nucleo\informacion_hogar.ascx" />
+    <Content Include="Areas\Incorporaciones\Views\Administracion\Supension Hogares\suspender_hogar.aspx" />
+    <Content Include="Areas\Incorporaciones\Views\Incorporaciones\Apertura_Periodo_Actualizacion\Apertura_Periodo_Actualizacion.aspx" />
+    <Content Include="Areas\Incorporaciones\Views\Incorporaciones\Corte_Actualizaciones\Cierre_Periodo_Actualizaciones.aspx" />
+    <Content Include="Areas\Incorporaciones\Views\Incorporaciones\Corte_Actualizaciones\Periodo_Actualizacion_Aperturado.ascx" />
+    <Content Include="Areas\Incorporaciones\Views\Incorporaciones\imageSlider.ascx" />
+    <Content Include="Areas\Incorporaciones\Views\Incorporaciones\Nuevas Personas Ingresadas\gv_PersonasNuevaIncorporacion.ascx" />
+    <Content Include="Areas\Incorporaciones\Views\Incorporaciones\Nuevas Personas Ingresadas\NuevasPersonasIngresadas.aspx" />
+    <Content Include="Areas\Incorporaciones\Views\Incorporaciones\Registrar_Pre_Actualizaciones\FormularioRegistroPreActualizaciones.ascx" />
+    <Content Include="Areas\Incorporaciones\Views\Incorporaciones\Registrar_Pre_Actualizaciones\personas_pre_actualizacion.ascx" />
+    <Content Include="Areas\Incorporaciones\Views\Incorporaciones\Registrar_Pre_Actualizaciones\pre_actualizaciones.aspx" />
+    <Content Include="Areas\Incorporaciones\Views\Incorporaciones\Validar_Pre_Actualizacion\ActualizarInformacion.aspx" />
+    <Content Include="Areas\Incorporaciones\Views\Incorporaciones\Validar_Pre_Actualizacion\GridSolicitudesActualizarInformacion.ascx" />
+    <Content Include="Areas\Incorporaciones\Views\Incorporaciones\Validar_Pre_Actualizacion\Grid_Detalle_Historico_Actualizaciones.ascx" />
+    <Content Include="Areas\Incorporaciones\Views\Incorporaciones\Validar_Pre_Actualizacion\HogarActualizar.ascx" />
+    <Content Include="Areas\Incorporaciones\Views\Incorporaciones\Validar_Pre_Actualizacion\ListarDescripcion.ascx" />
+    <Content Include="Areas\Incorporaciones\Views\Incorporaciones\Validar_Pre_Actualizacion\PersonasHogarActualizar.ascx" />
+    <Content Include="Areas\Incorporaciones\Views\Inicio\Index.aspx" />
+    <Content Include="Areas\Incorporaciones\Views\Reportes\ActualizacionesPorUsuario\ActualizacionUsuario.aspx" />
+    <Content Include="Areas\Incorporaciones\Views\Reportes\ActualizacionesPorUsuario\PivotGridReporteUsuario.ascx" />
+    <Content Include="Areas\Incorporaciones\Views\Reportes\Hogares Actualizados\Hogares_actualizados.aspx" />
+    <Content Include="Areas\Incorporaciones\Views\Reportes\Hogares Actualizados\pv_Hogares_actualizados.ascx" />
+    <Content Include="Areas\Incorporaciones\Views\Reportes\Hogares Nueva Incorporacion\HogarNuevaIncorporacion.aspx" />
+    <Content Include="Areas\Incorporaciones\Views\Reportes\Hogares Nueva Incorporacion\pv_HogaresNuevaIncorporacion.ascx" />
+    <Content Include="Areas\Incorporaciones\Views\Reportes\Hogares Verificados por Usuarios\HogaresVerificadosUsuario.aspx" />
+    <Content Include="Areas\Incorporaciones\Views\Reportes\Hogares Verificados por Usuarios\PivotGridReporteVerificado.ascx" />
+    <Content Include="Areas\Incorporaciones\Views\Shared\Error.aspx" />
+    <Content Include="Areas\Mineria\images\error.png" />
+    <Content Include="Areas\Mineria\images\info.png" />
+    <Content Include="Areas\Mineria\images\loader.gif" />
+    <Content Include="Areas\Mineria\images\success.png" />
+    <Content Include="Areas\Mineria\images\warning.png" />
+    <Content Include="Areas\Mineria\Scripts\configuracion.js" />
+    <Content Include="Areas\Mineria\Scripts\corresponsabilidad.js" />
+    <Content Include="Areas\Mineria\Scripts\drilldown.js" />
+    <Content Include="Areas\Mineria\Scripts\highmaps.js" />
+    <Content Include="Areas\Mineria\Scripts\highmaps.src.js" />
+    <Content Include="Areas\Mineria\Scripts\hn-all.js" />
+    <Content Include="Areas\Mineria\Scripts\hogares.js" />
+    <Content Include="Areas\Mineria\Scripts\Municipios.js" />
+    <Content Include="Areas\Mineria\Scripts\planillasPago.js" />
+    <Content Include="Areas\Mineria\Scripts\proyecciones.js" />
+    <Content Include="Areas\Mineria\Styles\font-awesome.css" />
+    <Content Include="Areas\Mineria\Styles\styles_mineria.css" />
+    <Content Include="Areas\Mineria\Views\Configuracion\v_AnoElegibilidadFichas.aspx" />
+    <Content Include="Areas\Mineria\Views\Corresponsabilidad\pv_gdvNinoIncumplenComp.ascx" />
+    <Content Include="Areas\Mineria\Views\Corresponsabilidad\pv_mapaDiferenciaAltasBajasEducacion.ascx" />
+    <Content Include="Areas\Mineria\Views\Corresponsabilidad\pv_mapaDiferenciaAltasBajasSalud.ascx" />
+    <Content Include="Areas\Mineria\Views\Corresponsabilidad\pv_pvgArrastreAltasBajasEduacion.ascx" />
+    <Content Include="Areas\Mineria\Views\Corresponsabilidad\pv_pvgArrastreAltasBajasSalud.ascx" />
+    <Content Include="Areas\Mineria\Views\Corresponsabilidad\pv_pvgTotalesNinosComponente.ascx" />
+    <Content Include="Areas\Mineria\Views\Corresponsabilidad\v_ArrastreAltasBajasEducacion.aspx" />
+    <Content Include="Areas\Mineria\Views\Corresponsabilidad\v_ArrastreAltasBajasSalud.aspx" />
+    <Content Include="Areas\Mineria\Views\Corresponsabilidad\v_PorcentajeNinosIncumpliendoCorr.aspx" />
+    <Content Include="Areas\Mineria\Views\Corresponsabilidad\v_TotalesNinosComponente.aspx" />
+    <Content Include="Areas\Mineria\Views\Hogares\pv_crtFichasNoRemitidas.ascx" />
+    <Content Include="Areas\Mineria\Views\Hogares\pv_DetalleCorreponsabalidadNino.ascx" />
+    <Content Include="Areas\Mineria\Views\Hogares\pv_gdvHistorialPagos.ascx" />
+    <Content Include="Areas\Mineria\Views\Hogares\pv_gdvListadoNinos.ascx" />
+    <Content Include="Areas\Mineria\Views\Hogares\pv_gdvPersonas.ascx" />
+    <Content Include="Areas\Mineria\Views\Hogares\pv_infoHogar.ascx" />
+    <Content Include="Areas\Mineria\Views\Hogares\pv_PagoHogar.ascx" />
+    <Content Include="Areas\Mineria\Views\Hogares\pv_pvgFichasPorCensoAno.ascx" />
+    <Content Include="Areas\Mineria\Views\Hogares\pv_pvgResultadoFichas.ascx" />
+    <Content Include="Areas\Mineria\Views\Hogares\v_FichasNoRemitidas.aspx" />
+    <Content Include="Areas\Mineria\Views\Hogares\v_FichasPorCensoAno.aspx" />
+    <Content Include="Areas\Mineria\Views\Hogares\v_HistorialPagos.aspx" />
+    <Content Include="Areas\Mineria\Views\Hogares\v_ResultadoFichas.aspx" />
+    <Content Include="Areas\Mineria\Views\Home\Index.aspx" />
+    <Content Include="Areas\Mineria\Views\Indicadores\v_Indicadores.aspx" />
+    <Content Include="Areas\Mineria\Views\PlanillasPago\pv_chrComparacionPlanillas.ascx" />
+    <Content Include="Areas\Mineria\Views\PlanillasPago\pv_chrConsolidadoPago.ascx" />
+    <Content Include="Areas\Mineria\Views\PlanillasPago\pv_ControlesAcumuladoPlanillas.ascx" />
+    <Content Include="Areas\Mineria\Views\PlanillasPago\pv_DetalleCorreponsabalidadNino.ascx" />
+    <Content Include="Areas\Mineria\Views\PlanillasPago\pv_EstadoCuentaTitular.ascx" />
+    <Content Include="Areas\Mineria\Views\PlanillasPago\pv_gdvECCAI.ascx" />
+    <Content Include="Areas\Mineria\Views\PlanillasPago\pv_gdvListadoNinos.ascx" />
+    <Content Include="Areas\Mineria\Views\PlanillasPago\pv_gdvListadoNinosPago.ascx" />
+    <Content Include="Areas\Mineria\Views\PlanillasPago\pv_gdvMaestroListadoTitulares.ascx" />
+    <Content Include="Areas\Mineria\Views\PlanillasPago\pv_mapaCantidadNinosPorCiclo.ascx" />
+    <Content Include="Areas\Mineria\Views\PlanillasPago\pv_mapaDiferenciaAltasBajasPlanillas.ascx" />
+    <Content Include="Areas\Mineria\Views\PlanillasPago\pv_pgvFichasCensoAno.ascx" />
+    <Content Include="Areas\Mineria\Views\PlanillasPago\pv_pgvNinosPagadosPorCiclos.ascx" />
+    <Content Include="Areas\Mineria\Views\PlanillasPago\pv_pvgBasePagado.ascx" />
+    <Content Include="Areas\Mineria\Views\PlanillasPago\pv_pvgComparacionPlanillas.ascx" />
+    <Content Include="Areas\Mineria\Views\PlanillasPago\pv_pvgConsolidadoPago.ascx" />
+    <Content Include="Areas\Mineria\Views\PlanillasPago\pv_pvgElegiblesVsProgramado.ascx" />
+    <Content Include="Areas\Mineria\Views\PlanillasPago\pv_pvgHogaresPagados.ascx" />
+    <Content Include="Areas\Mineria\Views\PlanillasPago\pv_pvgNucleoFamiliarMuestra.ascx" />
+    <Content Include="Areas\Mineria\Views\PlanillasPago\pv_pvgRazonCaidaHogares.ascx" />
+    <Content Include="Areas\Mineria\Views\PlanillasPago\pv_pvgRazonesExclusionHogares.ascx" />
+    <Content Include="Areas\Mineria\Views\PlanillasPago\v_BasePagado.aspx" />
+    <Content Include="Areas\Mineria\Views\PlanillasPago\v_CantidadFichasPorCensoAno.aspx" />
+    <Content Include="Areas\Mineria\Views\PlanillasPago\v_ComparacionPlanillas.aspx" />
+    <Content Include="Areas\Mineria\Views\PlanillasPago\v_ConsolidadoPago.aspx" />
+    <Content Include="Areas\Mineria\Views\PlanillasPago\v_ConsultaECCAI.aspx" />
+    <Content Include="Areas\Mineria\Views\PlanillasPago\v_ElegiblesContraProgramados.aspx" />
+    <Content Include="Areas\Mineria\Views\PlanillasPago\v_HogaresPagadosPeriodoTiempo.aspx" />
+    <Content Include="Areas\Mineria\Views\PlanillasPago\v_ListadoNinosPago.aspx" />
+    <Content Include="Areas\Mineria\Views\PlanillasPago\v_NinosPagadosPorCiclo.aspx" />
+    <Content Include="Areas\Mineria\Views\PlanillasPago\v_NucleoFamiliarMuestra.aspx" />
+    <Content Include="Areas\Mineria\Views\PlanillasPago\v_RazonesExclusionHogares.aspx" />
+    <Content Include="Areas\Mineria\Views\PlanillasPago\v_TitularesPago.aspx" />
+    <Content Include="Areas\Mineria\Views\Proyecciones\pv_pvgElegiblesVsProgramado.ascx" />
+    <Content Include="Areas\Mineria\Views\Proyecciones\pv_pvgRazonesExclusionHogares.ascx" />
+    <Content Include="Areas\Mineria\Views\Proyecciones\v_ElegiblesContraProgramados.aspx" />
+    <Content Include="Areas\Mineria\Views\Proyecciones\v_RazonesExclusionHogares.aspx" />
+    <Content Include="Areas\Mineria\Views\Shared\Area_Geografica\pv_cbxAldeas.ascx" />
+    <Content Include="Areas\Mineria\Views\Shared\Area_Geografica\pv_cbxDepartamentos.ascx" />
+    <Content Include="Areas\Mineria\Views\Shared\Area_Geografica\pv_cbxMunicipios.ascx" />
+    <Content Include="Areas\Mineria\Views\Shared\Area_Geografica\pv_ControlesAreaGeografica.ascx" />
+    <Content Include="Areas\Mineria\Views\Shared\Entidades_Pagadoras\pv_cbxAgencias.ascx" />
+    <Content Include="Areas\Mineria\Views\Shared\Entidades_Pagadoras\pv_cbxEntidadesPagadoras.ascx" />
+    <Content Include="Areas\Mineria\Views\Shared\Entidades_Pagadoras\pv_ControlesEntidadesPagadoras.ascx" />
+    <Content Include="Areas\Mineria\Views\Shared\Entidades_Pagadoras\pv_rblEntidadesPorPago.ascx" />
+    <Content Include="Areas\Mineria\Views\Shared\Fondos\pv_rblFondosPorPago.ascx" />
+    <Content Include="Areas\Mineria\Views\Shared\Pagos\pv_cbxAnos.ascx" />
+    <Content Include="Areas\Mineria\Views\Shared\Pagos\pv_cbxGridPagos.ascx" />
+    <Content Include="Areas\Mineria\Views\Shared\Pagos\pv_cbxPagosAno.ascx" />
+    <Content Include="Areas\Mineria\Views\Shared\Pagos\pv_ControlesPagos.ascx" />
+    <Content Include="Areas\Mineria\Views\Shared\pv_ControlesExportar.ascx" />
+    <Content Include="Areas\Mineria\Views\Shared\pv_ControlesExportChart.ascx" />
+    <Content Include="Areas\Mineria\Views\Shared\pv_ControlesTiposGrafico.ascx" />
+    <Content Include="Areas\Mineria\Views\Shared\pv_Spinner.ascx" />
+    <Content Include="Areas\Planilla\Images\error.png" />
+    <Content Include="Areas\Planilla\Images\info.png" />
+    <Content Include="Areas\Planilla\Images\loader.gif" />
+    <Content Include="Areas\Planilla\Images\success.png" />
+    <Content Include="Areas\Planilla\Images\warning.png" />
+    <Content Include="Areas\Planilla\Scripts\AjaxLogin.js" />
+    <Content Include="Areas\Planilla\Scripts\Aprobacion\aprobacion.js" />
+    <Content Include="Areas\Planilla\Scripts\Aprobacion\crimsontext.js" />
+    <Content Include="Areas\Planilla\Scripts\Aprobacion\crimsontext.map.js" />
+    <Content Include="Areas\Planilla\Scripts\Aprobacion\pdfmake.js" />
+    <Content Include="Areas\Planilla\Scripts\Aprobacion\pdfmake.min.js" />
+    <Content Include="Areas\Planilla\Scripts\Aprobacion\vfs_fonts.js" />
+    <Content Include="Areas\Planilla\Scripts\Cobertura_planilla\script_cobertura_planilla.js" />
+    <Content Include="Areas\Planilla\Scripts\Corresp_de\script_corresponsabilidad_de.js" />
+    <Content Include="Areas\Planilla\Scripts\ejecucion.js" />
+    <Content Include="Areas\Planilla\Scripts\Esquema\script_esquema.js" />
+    <Content Include="Areas\Planilla\Scripts\Estable_fondos\script_establecimiento_fondo.js" />
+    <Content Include="Areas\Planilla\Scripts\generacion_documentos.js" />
+    <Content Include="Areas\Corresponsabilidad\Views\PaginasMaestras\Principal.Master" />
+    <Content Include="Areas\Corresponsabilidad\Views\Web.config" />
+    <Content Include="Areas\Incorporaciones\Views\Shared\site.Master" />
+    <Content Include="Areas\Incorporaciones\Views\Web.config" />
+    <Content Include="Areas\Mineria\Views\Shared\Main.Master" />
+    <Content Include="Areas\Mineria\Views\Web.config" />
+    <None Include="Areas\Planilla\Scripts\jquery-1.6.2-vsdoc.js" />
+    <Content Include="Areas\Planilla\Scripts\jquery-1.6.2.js" />
+    <Content Include="Areas\Planilla\Scripts\jquery-1.6.2.min.js" />
+    <Content Include="Areas\Planilla\Scripts\jquery-1.7.1.min.js" />
+    <None Include="Areas\Planilla\Scripts\jquery-1.8.3.intellisense.js" />
+    <Content Include="Areas\Planilla\Scripts\jquery-1.8.3.js" />
+    <Content Include="Areas\Planilla\Scripts\jquery-1.8.3.min.js" />
+    <Content Include="Areas\Planilla\Scripts\jquery-ui-1.8.11.js" />
+    <Content Include="Areas\Planilla\Scripts\jquery-ui-1.8.11.min.js" />
+    <Content Include="Areas\Planilla\Scripts\jquery.min.js" />
+    <Content Include="Areas\Planilla\Scripts\jquery.signalR-2.2.0.js" />
+    <Content Include="Areas\Planilla\Scripts\jquery.unobtrusive-ajax.js" />
+    <Content Include="Areas\Planilla\Scripts\jquery.unobtrusive-ajax.min.js" />
+    <None Include="Areas\Planilla\Scripts\jquery.validate-vsdoc.js" />
+    <Content Include="Areas\Planilla\Scripts\jquery.validate.js" />
+    <Content Include="Areas\Planilla\Scripts\jquery.validate.min.js" />
+    <Content Include="Areas\Planilla\Scripts\jquery.validate.unobtrusive.js" />
+    <Content Include="Areas\Planilla\Scripts\jquery.validate.unobtrusive.min.js" />
+    <Content Include="Areas\Planilla\Scripts\knockout-2.0.0.debug.js" />
+    <Content Include="Areas\Planilla\Scripts\knockout-2.0.0.js" />
+    <Content Include="Areas\Planilla\Scripts\main.js" />
+    <Content Include="Areas\Planilla\Scripts\Mecani_pago\script_mecanismo_pago.js" />
+    <Content Include="Areas\Planilla\Scripts\Menu.js" />
+    <Content Include="Areas\Planilla\Scripts\modernizr-2.0.6-development-only.js" />
+    <Content Include="Areas\Planilla\Scripts\Otra_verifica\script_otra_verificacion.js" />
+    <Content Include="Areas\Planilla\Scripts\Pago\script_pago.js" />
+    <Content Include="Areas\Planilla\Scripts\programacion_pago.js" />
+    <Content Include="Areas\Planilla\Scripts\Shared\script_esquemas_enlazados.js" />
+    <Content Include="Areas\Planilla\Scripts\Shared\script_grid_esquema_pago.js" />
+    <Content Include="Areas\Planilla\Scripts\Shared\script_ubi_sig_grid.js" />
+    <Content Include="Areas\Planilla\Scripts\sidemenu.js" />
+    <Content Include="Areas\Planilla\Scripts\Transferencia_actual\script_transferencia_actual.js" />
+    <Content Include="Areas\Planilla\Scripts\Transfere_acumulada\script_transferencia_acumulada.js" />
+    <Content Include="Areas\Planilla\Style\estilo_planilla.css" />
+    <Content Include="Areas\Planilla\Views\Ejecucion\pv_gdvPlanillaGenerada.ascx" />
+    <Content Include="Areas\Planilla\Views\Ejecucion\ViewAnulacionPlanilla.aspx" />
+    <Content Include="Areas\Planilla\Views\Ejecucion\ViewEmisionPlanilla.aspx" />
+    <Content Include="Areas\Planilla\Views\GeneracionDocumentos\pv_fmArchivos.ascx" />
+    <Content Include="Areas\Planilla\Views\GeneracionDocumentos\ViewGeneracion.aspx" />
+    <Content Include="Areas\Planilla\Views\Home\Index.aspx" />
+    <Content Include="Areas\Planilla\Views\Parametros\Aprobacion\pv_detalle_esquema.ascx" />
+    <Content Include="Areas\Planilla\Views\Parametros\Cobertura_planilla\_GridViewPartialCargas.ascx" />
+    <Content Include="Areas\Planilla\Views\Parametros\Cobertura_planilla\_GridViewPartialPlanillas.ascx" />
+    <Content Include="Areas\Planilla\Views\Parametros\Esquema\_FormLayoutViewPartialDetalleEsquema.ascx" />
+    <Content Include="Areas\Planilla\Views\Parametros\Esquema\_GridViewPartialConfiguracionMontos.ascx" />
+    <Content Include="Areas\Planilla\Views\Parametros\Esquema\_GridViewPartialEsquema.ascx" />
+    <Content Include="Areas\Planilla\Views\Parametros\Esquema\_PopupConfirBorrarEsquema.ascx" />
+    <Content Include="Areas\Planilla\Views\Parametros\Esquema\_PopupControlViewPartialEditEquema.ascx" />
+    <Content Include="Areas\Planilla\Views\Parametros\Establecimiento_fondos\_ComBoxViewPartialFondo.ascx" />
+    <Content Include="Areas\Planilla\Views\Parametros\Mecanismo_pago\_ComBoxViewPartialPagador.ascx" />
+    <Content Include="Areas\Planilla\Views\Parametros\Otras_verificaciones\_ControlesViewPartialOtraVerifica.ascx" />
+    <Content Include="Areas\Planilla\Views\Parametros\Otras_verificaciones\_GridViewPartialDetalleOtrasVerifica.ascx" />
+    <Content Include="Areas\Planilla\Views\Parametros\Pago\_ControlesViewPartialPago.ascx" />
+    <Content Include="Areas\Planilla\Views\Parametros\Pago\_GridViewPartialPago.ascx" />
+    <Content Include="Areas\Planilla\Views\Parametros\Transferencias_actuales\_ControlesPartialViewTransfeActual.ascx" />
+    <Content Include="Areas\Planilla\Views\Parametros\Transferencias_actuales\_GridViewDetalleTransfeActual.ascx" />
+    <Content Include="Areas\Planilla\Views\Parametros\Transferencias_actuales\_PopupBorrarTransfe.ascx" />
+    <Content Include="Areas\Planilla\Views\Parametros\Transferencia_acumulada\_ControlesViewPartialTransferAcumu.ascx" />
+    <Content Include="Areas\Planilla\Views\Parametros\Transferencia_acumulada\_GridViewDetalleEsquemaAcumulado.ascx" />
+    <Content Include="Areas\Planilla\Views\Parametros\Transferencia_acumulada\_GridViewEsquemaAcumulado.ascx" />
+    <Content Include="Areas\Planilla\Views\Parametros\Transferencia_acumulada\_GridViewPagoAcumulado.ascx" />
+    <Content Include="Areas\Planilla\Views\Parametros\ViewAprobacionEsquema.aspx" />
+    <Content Include="Areas\Planilla\Views\Parametros\ViewCoberturaPlanilla.aspx" />
+    <Content Include="Areas\Planilla\Views\Parametros\ViewCorresponsabilidadApercibimiento.aspx" />
+    <Content Include="Areas\Planilla\Views\Parametros\ViewCorresponsabilidadTransferencia.aspx" />
+    <Content Include="Areas\Planilla\Views\Parametros\ViewEsquema.aspx" />
+    <Content Include="Areas\Planilla\Views\Parametros\ViewEstablecimientoFondo.aspx" />
+    <Content Include="Areas\Planilla\Views\Parametros\ViewMecanismoPago.aspx" />
+    <Content Include="Areas\Planilla\Views\Parametros\ViewOtraVerificacion.aspx" />
+    <Content Include="Areas\Planilla\Views\Parametros\ViewPago.aspx" />
+    <Content Include="Areas\Planilla\Views\Parametros\ViewTransferenciaActual.aspx" />
+    <Content Include="Areas\Planilla\Views\Parametros\ViewTransferenciaAcumulada.aspx" />
+    <Content Include="Areas\Planilla\Views\ProgramacionPago\pv_gdvPeriodoApertura.ascx" />
+    <Content Include="Areas\Planilla\Views\ProgramacionPago\ViewBancarizacion.aspx" />
+    <Content Include="Areas\Planilla\Views\Shared\Corresponsabilidad_de\_ComBoxViewPartialComponente.ascx" />
+    <Content Include="Areas\Planilla\Views\Shared\Corresponsabilidad_de\_ComBoxViewPartialCorresponsabilidad.ascx" />
+    <Content Include="Areas\Planilla\Views\Shared\Corresponsabilidad_de\_ControlesViewPartialCorresDe.ascx" />
+    <Content Include="Areas\Planilla\Views\Shared\Corresponsabilidad_de\_GridViewOrdenCorresTransfer.ascx" />
+    <Content Include="Areas\Planilla\Views\Shared\Corresponsabilidad_de\_GridViewTransferencias.ascx" />
+    <Content Include="Areas\Planilla\Views\Shared\Esquemas_enlazados\_ControlesPartialViewEsquemasEnlazados.ascx" />
+    <Content Include="Areas\Planilla\Views\Shared\Esquemas_enlazados\_FormLayoutDetalleEsquemaEnlazado.ascx" />
+    <Content Include="Areas\Planilla\Views\Shared\Esquemas_enlazados\_GridViewDetalleEsquemaEnlaza.ascx" />
+    <Content Include="Areas\Planilla\Views\Shared\Esquemas_enlazados\_GridViewEsquemasPorPago.ascx" />
+    <Content Include="Areas\Planilla\Views\Shared\Esquemas_enlazados\_MemoDescripcion.ascx" />
+    <Content Include="Areas\Planilla\Views\Shared\Esquemas_enlazados\_PopupDesEnlazarEsquema.ascx" />
+    <Content Include="Areas\Planilla\Views\Shared\Esquemas_enlazados\_RadioButtonSigno.ascx" />
+    <Content Include="Areas\Planilla\Views\Shared\pv_cbxEsquemas.ascx" />
+    <Content Include="Areas\Planilla\Views\Shared\pv_cbxPagos.ascx" />
+    <Content Include="Areas\Planilla\Views\Shared\pv_gdvEsquemas.ascx" />
+    <Content Include="Areas\Planilla\Views\Shared\pv_mensajes.ascx" />
+    <Content Include="Areas\Planilla\Views\Shared\pv_Spinner.ascx" />
+    <Content Include="Areas\Planilla\Views\Shared\UbicacionSIG\_GridViewPartialAldea.ascx" />
+    <Content Include="Areas\Planilla\Views\Shared\UbicacionSIG\_GridViewPartialCaserio.ascx" />
+    <Content Include="Areas\Planilla\Views\Shared\UbicacionSIG\_GridViewPartialDepartamento.ascx" />
+    <Content Include="Areas\Planilla\Views\Shared\UbicacionSIG\_GridViewPartialMunicipio.ascx" />
+    <Content Include="Areas\Seguridad\Scripts\cambioContraseña.js" />
+    <Content Include="Areas\Seguridad\Scripts\usuarios.js" />
+    <Content Include="Areas\Seguridad\Views\Home\Index.aspx" />
+    <Content Include="Areas\Seguridad\Views\Usuarios\PartialViewGridPermisos.ascx" />
+    <Content Include="Areas\Seguridad\Views\Usuarios\PartialViewTreeListPermisos.ascx" />
+    <Content Include="Areas\Seguridad\Views\Usuarios\ViewAdministrarUsuarios.aspx" />
+    <Content Include="Areas\Seguridad\Views\Usuarios\ViewCambioContraseña.aspx" />
+    <Content Include="Css\font-awesome.min.css" />
+    <Content Include="Css\home.css" />
+    <Content Include="Css\materialize.min.css" />
+    <Content Include="Css\Menu.css" />
+    <Content Include="Css\modulos.css" />
+    <Content Include="Css\Style.css" />
+    <Content Include="Fonts\fontawesome-webfont.svg" />
+    <Content Include="Global.asax" />
+    <Content Include="Imagen\BannerLogin.png" />
+    <Content Include="Imagen\FondoLogin.png" />
+    <Content Include="ClassDiagram1.cd" />
+    <Content Include="Fonts\fontawesome-webfont.eot" />
+    <Content Include="Fonts\fontawesome-webfont.ttf" />
+    <Content Include="Fonts\fontawesome-webfont.woff" />
+    <Content Include="Fonts\FontAwesome.otf" />
+    <Content Include="Config\Config.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Areas\Seguridad\Views\Web.config" />
+    <Content Include="Areas\Seguridad\Views\Shared\Main.Master" />
+    <Content Include="Areas\Planilla\Views\Shared\Main.Master" />
+    <Content Include="Areas\Planilla\Views\Web.config" />
+    <None Include="My Project\PublishProfiles\CarpetaSIG.pubxml" />
+    <None Include="My Project\PublishProfiles\perfil.pubxml" />
+    <None Include="My Project\PublishProfiles\SIG.pubxml" />
+    <Content Include="My Project\Settings.settings">
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </Content>
+    <None Include="Scripts\jquery-2.1.4.intellisense.js" />
+    <Content Include="Imagen\FondoModulos.png" />
+    <Content Include="Imagen\SSIS.png" />
+    <Content Include="Imagen\SSIS.jpg" />
+    <Content Include="Scripts\jquery-2.1.4.js" />
+    <Content Include="Scripts\jquery-2.1.4.min.js" />
+    <Content Include="Scripts\jquery.min.js" />
+    <Content Include="Scripts\jquery.signalR-2.2.0.js" />
+    <Content Include="Scripts\jquery.signalR-2.2.0.min.js" />
+    <Content Include="Scripts\main.js" />
+    <Content Include="Scripts\materialize.min.js" />
+    <Content Include="Scripts\Menu.js" />
+    <Content Include="Views\Home\Index.aspx" />
+    <Content Include="Views\Home\Login.aspx" />
+    <Content Include="Views\Home\MenuPrincipal.aspx" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Views\Web.config" />
+    <Content Include="Scripts\jquery-2.1.4.min.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+    <Folder Include="Areas\Contraloria\Content\Bancarizacion\SFTP_BANRURAL\Envio\" />
+    <Folder Include="Areas\Contraloria\Content\Bancarizacion\SFTP_BANRURAL\Historial\" />
+    <Folder Include="Areas\Contraloria\Content\Bancarizacion\SFTP_BANRURAL\Recepcion\" />
+    <Folder Include="Areas\Contraloria\Content\Digitalizacion\" />
+    <Folder Include="Areas\Contraloria\Content\Uploaded\Archivos\" />
+    <Folder Include="Areas\Corresponsabilidad\Views\Shared\" />
+    <Folder Include="Clases\" />
+    <Folder Include="Contenido\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\shared\site.Master" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Areas\Corresponsabilidad\Models\Xtra_report_class\cl_xtra_report_busq_corres_benef.resx">
+      <DependentUpon>cl_xtra_report_busq_corres_benef.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\licenses.licx" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.VisualBasic.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <Target Name="MvcBuildViews" AfterTargets="AfterBuild" Condition="'$(MvcBuildViews)'=='true'">
+    <AspNetCompiler VirtualPath="temp" PhysicalPath="$(WebProjectOutputDir)" />
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>1790</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:1095/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Import Project="..\packages\WinSCP.5.13.1\build\WinSCP.targets" Condition="Exists('..\packages\WinSCP.5.13.1\build\WinSCP.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>Este proyecto hace referencia a los paquetes NuGet que faltan en este equipo. Use la restauración de paquetes NuGet para descargarlos. Para obtener más información, consulte http://go.microsoft.com/fwlink/?LinkID=322105. El archivo que falta es {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\WinSCP.5.13.1\build\WinSCP.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\WinSCP.5.13.1\build\WinSCP.targets'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target> -->
+</Project>

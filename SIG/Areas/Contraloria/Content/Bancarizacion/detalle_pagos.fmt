@@ -1,0 +1,16 @@
+12.0
+14
+1	SQLCHAR	0	10	"~"		2	cod_archivo					""
+2	SQLCHAR	0	2	"~"		3	tipo_bono					""
+3	SQLCHAR	0	10	"~"		4	cod_persona					""
+4	SQLCHAR	0	13	"~"		5	identidad_persona			""
+5	SQLCHAR	0	150	"~"		6	nombre_fondo				SQL_Latin1_General_CP1_CI_AS
+6	SQLCHAR	0	100	"~"		7	nombre_componente			SQL_Latin1_General_CP1_CI_AS
+7	SQLCHAR	0	4	"~"		8	cod_esquema					""
+8	SQLCHAR	0	10	"~"		9	referencia					""
+9	SQLCHAR	0	10	"~"		10	total_pago					""
+10	SQLCHAR	0	10	"~"		11	numero_gestion				""
+11	SQLCHAR	0	50	"~"		12	usuario_gestion				SQL_Latin1_General_CP1_CI_AS
+12	SQLCHAR	0	30	"~"		13	fecha_gestion				""
+13	SQLCHAR	0	10	"~"		14	usuario_aprueba_gestion		SQL_Latin1_General_CP1_CI_AS
+14	SQLCHAR	0	3	"\r\n"	15	codigo_error				""

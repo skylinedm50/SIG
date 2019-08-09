@@ -1,0 +1,14 @@
+﻿body {
+    width:1350px;
+}
+
+.Content {
+  width: 1200px;
+}
+
+#SuspensionBtn {
+  margin: 0px;
+  padding: 0px;
+  float: left;
+  margin-left: -8%;
+}

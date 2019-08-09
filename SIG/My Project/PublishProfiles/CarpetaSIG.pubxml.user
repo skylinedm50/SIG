@@ -1,0 +1,1375 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+Este archivo es utilizado por el proceso de paquete/publicación de nuestro proyecto Web. Puede personalizar el comportamiento de este proceso
+editando este archivo MSBuild. Para conocer más acerca de esto, visite http://go.microsoft.com/fwlink/?LinkID=208121. 
+-->
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <TimeStampOfAssociatedLegacyPublishXmlFile />
+    <_PublishTargetUrl>C:\inetpub\wwwroot\SIG</_PublishTargetUrl>
+  </PropertyGroup>
+  <ItemGroup>
+    <File Include="Areas/Contraloria/Content/Uploaded/Archivos/R_Pla_EjecucionPorMonto.pdf">
+      <publishTime>09/24/2015 23:51:16</publishTime>
+    </File>
+    <File Include="Areas/Contraloria/Images/BannerLogin.png">
+      <publishTime>08/03/2015 15:10:05</publishTime>
+    </File>
+    <File Include="Areas/Contraloria/Images/closebox.png">
+      <publishTime>08/03/2015 15:10:05</publishTime>
+    </File>
+    <File Include="Areas/Contraloria/Images/FONDOCORE.jpg">
+      <publishTime>08/03/2015 15:10:05</publishTime>
+    </File>
+    <File Include="Areas/Contraloria/Images/FondoCoreSig2.png">
+      <publishTime>08/03/2015 15:10:05</publishTime>
+    </File>
+    <File Include="Areas/Contraloria/Images/FondoLogin.png">
+      <publishTime>08/03/2015 15:10:05</publishTime>
+    </File>
+    <File Include="Areas/Contraloria/Images/FondoModulos.png">
+      <publishTime>08/03/2015 15:10:05</publishTime>
+    </File>
+    <File Include="Areas/Contraloria/Images/icon_minus.png">
+      <publishTime>08/03/2015 15:10:05</publishTime>
+    </File>
+    <File Include="Areas/Contraloria/Images/icon_plus.png">
+      <publishTime>08/03/2015 15:10:05</publishTime>
+    </File>
+    <File Include="Areas/Contraloria/Images/loading.gif">
+      <publishTime>08/03/2015 15:10:05</publishTime>
+    </File>
+    <File Include="Areas/Contraloria/Images/SSIS.jpg">
+      <publishTime>08/03/2015 15:10:05</publishTime>
+    </File>
+    <File Include="Areas/Contraloria/Scripts/actaDescargo.js">
+      <publishTime>08/07/2015 14:23:01</publishTime>
+    </File>
+    <File Include="Areas/Contraloria/Scripts/actaInconsistencias.js">
+      <publishTime>08/07/2015 14:26:34</publishTime>
+    </File>
+    <File Include="Areas/Contraloria/Scripts/actaRecepcionAgencia.js">
+      <publishTime>08/07/2015 14:40:33</publishTime>
+    </File>
+    <File Include="Areas/Contraloria/Scripts/actaRecepcionMovil.js">
+      <publishTime>08/07/2015 14:27:35</publishTime>
+    </File>
+    <File Include="Areas/Contraloria/Scripts/cargaArchivo.js">
+      <publishTime>11/24/2015 15:46:35</publishTime>
+    </File>
+    <File Include="Areas/Contraloria/Scripts/cierrePlanilla.js">
+      <publishTime>02/01/2016 11:58:10</publishTime>
+    </File>
+    <File Include="Areas/Contraloria/Scripts/cronometro.js">
+      <publishTime>08/03/2015 15:10:06</publishTime>
+    </File>
+    <File Include="Areas/Contraloria/Scripts/escaneo.js">
+      <publishTime>10/12/2015 11:09:01</publishTime>
+    </File>
+    <File Include="Areas/Contraloria/Scripts/jquery-2.1.4.js">
+      <publishTime>08/03/2015 15:10:06</publishTime>
+    </File>
+    <File Include="Areas/Contraloria/Scripts/jquery-2.1.4.min.js">
+      <publishTime>08/03/2015 15:10:06</publishTime>
+    </File>
+    <File Include="Areas/Contraloria/Scripts/jquery-2.1.4.min.map">
+      <publishTime>08/03/2015 15:10:06</publishTime>
+    </File>
+    <File Include="Areas/Contraloria/Scripts/jquery.min.js">
+      <publishTime>08/03/2015 15:10:06</publishTime>
+    </File>
+    <File Include="Areas/Contraloria/Scripts/jquery.signalR-2.2.0.js">
+      <publishTime>08/03/2015 15:10:06</publishTime>
+    </File>
+    <File Include="Areas/Contraloria/Scripts/jquery.signalR-2.2.0.min.js">
+      <publishTime>08/03/2015 15:10:06</publishTime>
+    </File>
+    <File Include="Areas/Contraloria/Scripts/jspdf.js">
+      <publishTime>08/03/2015 15:10:06</publishTime>
+    </File>
+    <File Include="Areas/Contraloria/Scripts/jspdf.plugin.split_text_to_size.js">
+      <publishTime>08/03/2015 15:10:06</publishTime>
+    </File>
+    <File Include="Areas/Contraloria/Scripts/jspdf.plugin.standard_fonts_metrics.js">
+      <publishTime>08/03/2015 15:10:06</publishTime>
+    </File>
+    <File Include="Areas/Contraloria/Scripts/jspdf.plugin.total_pages.js">
+      <publishTime>08/03/2015 15:10:06</publishTime>
+    </File>
+    <File Include="Areas/Contraloria/Scripts/main.js">
+      <publishTime>08/03/2015 15:10:06</publishTime>
+    </File>
+    <File Include="Areas/Contraloria/Scripts/Menu.js">
+      <publishTime>08/03/2015 15:10:06</publishTime>
+    </File>
+    <File Include="Areas/Contraloria/Scripts/pdfmake.min.js">
+      <publishTime>06/12/2015 08:26:52</publishTime>
+    </File>
+    <File Include="Areas/Contraloria/Scripts/popup.js">
+      <publishTime>08/03/2015 15:10:06</publishTime>
+    </File>
+    <File Include="Areas/Contraloria/Scripts/reportes.js">
+      <publishTime>12/20/2015 15:46:43</publishTime>
+    </File>
+    <File Include="Areas/Contraloria/Scripts/sidemenu.js">
+      <publishTime>08/03/2015 15:10:06</publishTime>
+    </File>
+    <File Include="Areas/Contraloria/Scripts/temporal.js">
+      <publishTime>08/03/2015 15:10:05</publishTime>
+    </File>
+    <File Include="Areas/Contraloria/Scripts/vfs_fonts.js">
+      <publishTime>06/12/2015 08:26:52</publishTime>
+    </File>
+    <File Include="Areas/Contraloria/Style/actas.css">
+      <publishTime>08/03/2015 15:10:07</publishTime>
+    </File>
+    <File Include="Areas/Contraloria/Style/Home.css">
+      <publishTime>08/03/2015 15:10:07</publishTime>
+    </File>
+    <File Include="Areas/Contraloria/Style/Main.css">
+      <publishTime>08/03/2015 15:10:07</publishTime>
+    </File>
+    <File Include="Areas/Contraloria/Style/popup.css">
+      <publishTime>08/03/2015 15:10:07</publishTime>
+    </File>
+    <File Include="Areas/Contraloria/Style/sidemenu.css">
+      <publishTime>08/03/2015 15:10:07</publishTime>
+    </File>
+    <File Include="Areas/Contraloria/Style/styles_contraloria.css">
+      <publishTime>11/18/2015 11:08:38</publishTime>
+    </File>
+    <File Include="Areas/Contraloria/Views/Actas/PartialSucursalView.ascx">
+      <publishTime>08/03/2015 15:10:08</publishTime>
+    </File>
+    <File Include="Areas/Contraloria/Views/Actas/ViewDescargo.aspx">
+      <publishTime>08/07/2015 14:23:45</publishTime>
+    </File>
+    <File Include="Areas/Contraloria/Views/Actas/ViewInconsistencias.aspx">
+      <publishTime>08/07/2015 14:38:01</publishTime>
+    </File>
+    <File Include="Areas/Contraloria/Views/Actas/ViewRecepcionAgencia.aspx">
+      <publishTime>09/01/2015 15:43:15</publishTime>
+    </File>
+    <File Include="Areas/Contraloria/Views/Actas/ViewRecepcionMovil.aspx">
+      <publishTime>09/01/2015 15:43:12</publishTime>
+    </File>
+    <File Include="Areas/Contraloria/Views/CargarArchivo/consolidado.aspx">
+      <publishTime>08/03/2015 15:10:08</publishTime>
+    </File>
+    <File Include="Areas/Contraloria/Views/CargarArchivo/Index.aspx">
+      <publishTime>11/24/2015 14:07:41</publishTime>
+    </File>
+    <File Include="Areas/Contraloria/Views/CargarArchivo/PageDocumentView.aspx">
+      <publishTime>08/03/2015 15:10:08</publishTime>
+    </File>
+    <File Include="Areas/Contraloria/Views/CargarArchivo/PagosGridViewPartial.ascx">
+      <publishTime>09/07/2015 09:43:21</publishTime>
+    </File>
+    <File Include="Areas/Contraloria/Views/CargarArchivo/PartialConsolidado.ascx">
+      <publishTime>08/03/2015 15:10:08</publishTime>
+    </File>
+    <File Include="Areas/Contraloria/Views/CargarArchivo/PartialGridViewCargas.ascx">
+      <publishTime>11/18/2015 13:03:40</publishTime>
+    </File>
+    <File Include="Areas/Contraloria/Views/CargarArchivo/PartialMemo.ascx">
+      <publishTime>11/24/2015 15:47:44</publishTime>
+    </File>
+    <File Include="Areas/Contraloria/Views/CargarArchivo/pbCarga.ascx">
+      <publishTime>08/03/2015 15:10:08</publishTime>
+    </File>
+    <File Include="Areas/Contraloria/Views/CargarArchivo/ViewHistorial.aspx">
+      <publishTime>02/04/2016 19:09:03</publishTime>
+    </File>
+    <File Include="Areas/Contraloria/Views/CierrePlanilla/Index.aspx">
+      <publishTime>08/05/2015 10:38:23</publishTime>
+    </File>
+    <File Include="Areas/Contraloria/Views/CierrePlanilla/PartialDetailGridView.ascx">
+      <publishTime>08/03/2015 15:10:08</publishTime>
+    </File>
+    <File Include="Areas/Contraloria/Views/CierrePlanilla/PartialGridViewPlanillas.ascx">
+      <publishTime>08/03/2015 15:10:08</publishTime>
+    </File>
+    <File Include="Areas/Contraloria/Views/CierrePlanilla/ViewCierrePlanilla.aspx">
+      <publishTime>08/04/2015 18:27:44</publishTime>
+    </File>
+    <File Include="Areas/Contraloria/Views/Escaneo/PartialCbxFondo.ascx">
+      <publishTime>09/01/2015 16:35:30</publishTime>
+    </File>
+    <File Include="Areas/Contraloria/Views/Escaneo/PartialCbxLeitz.ascx">
+      <publishTime>08/03/2015 15:10:09</publishTime>
+    </File>
+    <File Include="Areas/Contraloria/Views/Escaneo/PartialCbxPeriodo.ascx">
+      <publishTime>08/03/2015 15:10:09</publishTime>
+    </File>
+    <File Include="Areas/Contraloria/Views/Escaneo/PartialGridDetalleDocumentosLeitz.ascx">
+      <publishTime>08/03/2015 15:10:09</publishTime>
+    </File>
+    <File Include="Areas/Contraloria/Views/Escaneo/PartialGridMaestroLeitz.ascx">
+      <publishTime>09/01/2015 16:39:03</publishTime>
+    </File>
+    <File Include="Areas/Contraloria/Views/Escaneo/PartialVisorDocumento.ascx">
+      <publishTime>09/07/2015 13:07:27</publishTime>
+    </File>
+    <File Include="Areas/Contraloria/Views/Escaneo/ViewBusquedaDocumentos.aspx">
+      <publishTime>09/25/2015 10:23:10</publishTime>
+    </File>
+    <File Include="Areas/Contraloria/Views/Escaneo/ViewEscaneo.aspx">
+      <publishTime>08/04/2015 15:28:45</publishTime>
+    </File>
+    <File Include="Areas/Contraloria/Views/Home/Index.aspx">
+      <publishTime>09/22/2015 11:11:14</publishTime>
+    </File>
+    <File Include="Areas/Contraloria/Views/Reportes/PartialAldeaView.ascx">
+      <publishTime>08/03/2015 15:10:10</publishTime>
+    </File>
+    <File Include="Areas/Contraloria/Views/Reportes/PartialBancoView.ascx">
+      <publishTime>08/03/2015 15:10:10</publishTime>
+    </File>
+    <File Include="Areas/Contraloria/Views/Reportes/PartialControlesPersonalizado.ascx">
+      <publishTime>08/03/2015 15:10:10</publishTime>
+    </File>
+    <File Include="Areas/Contraloria/Views/Reportes/PartialControlesTipo.ascx">
+      <publishTime>08/03/2015 15:10:10</publishTime>
+    </File>
+    <File Include="Areas/Contraloria/Views/Reportes/PartialDetailGridView.ascx">
+      <publishTime>08/03/2015 15:10:10</publishTime>
+    </File>
+    <File Include="Areas/Contraloria/Views/Reportes/PartialDptoView.ascx">
+      <publishTime>08/03/2015 15:10:10</publishTime>
+    </File>
+    <File Include="Areas/Contraloria/Views/Reportes/PartialFondoView.ascx">
+      <publishTime>09/01/2015 14:55:48</publishTime>
+    </File>
+    <File Include="Areas/Contraloria/Views/Reportes/PartialGridPeriodos.ascx">
+      <publishTime>08/03/2015 15:10:10</publishTime>
+    </File>
+    <File Include="Areas/Contraloria/Views/Reportes/PartialGridViewConsolidado.ascx">
+      <publishTime>08/17/2015 20:12:43</publishTime>
+    </File>
+    <File Include="Areas/Contraloria/Views/Reportes/PartialGridViewRecibosPagados.ascx">
+      <publishTime>08/03/2015 15:10:10</publishTime>
+    </File>
+    <File Include="Areas/Contraloria/Views/Reportes/PartialMuniView.ascx">
+      <publishTime>08/03/2015 15:10:10</publishTime>
+    </File>
+    <File Include="Areas/Contraloria/Views/Reportes/PartialPeriodosView.ascx">
+      <publishTime>08/03/2015 15:10:09</publishTime>
+    </File>
+    <File Include="Areas/Contraloria/Views/Reportes/partialReporteProgramado.ascx">
+      <publishTime>12/20/2015 15:30:39</publishTime>
+    </File>
+    <File Include="Areas/Contraloria/Views/Reportes/PartialSucursalView.ascx">
+      <publishTime>08/03/2015 15:10:09</publishTime>
+    </File>
+    <File Include="Areas/Contraloria/Views/Reportes/ViewConsolidado.aspx">
+      <publishTime>08/05/2015 11:07:27</publishTime>
+    </File>
+    <File Include="Areas/Contraloria/Views/Reportes/ViewRecibosPagados.aspx">
+      <publishTime>08/05/2015 11:00:39</publishTime>
+    </File>
+    <File Include="Areas/Contraloria/Views/Reportes/viewReporteProgramado.aspx">
+      <publishTime>12/20/2015 15:44:25</publishTime>
+    </File>
+    <File Include="Areas/Contraloria/Views/Shared/Main.Master">
+      <publishTime>08/04/2015 14:13:26</publishTime>
+    </File>
+    <File Include="Areas/Contraloria/Views/Web.config">
+      <publishTime>08/03/2015 15:10:07</publishTime>
+    </File>
+    <File Include="Areas/Corresponsabilidad/Images/BannerLogin.png">
+      <publishTime>08/21/2015 15:00:53</publishTime>
+    </File>
+    <File Include="Areas/Corresponsabilidad/Images/FONDOCORE.jpg">
+      <publishTime>08/21/2015 15:00:53</publishTime>
+    </File>
+    <File Include="Areas/Corresponsabilidad/Images/FondoCoreSig2.png">
+      <publishTime>08/21/2015 15:00:53</publishTime>
+    </File>
+    <File Include="Areas/Corresponsabilidad/Images/FondoLogin.png">
+      <publishTime>08/21/2015 15:00:53</publishTime>
+    </File>
+    <File Include="Areas/Corresponsabilidad/Images/FondoModulos.png">
+      <publishTime>08/21/2015 15:00:53</publishTime>
+    </File>
+    <File Include="Areas/Corresponsabilidad/Images/icon_minus.png">
+      <publishTime>08/21/2015 15:00:53</publishTime>
+    </File>
+    <File Include="Areas/Corresponsabilidad/Images/icon_plus.png">
+      <publishTime>08/21/2015 15:00:53</publishTime>
+    </File>
+    <File Include="Areas/Corresponsabilidad/Images/SSIS.jpg">
+      <publishTime>08/21/2015 15:00:53</publishTime>
+    </File>
+    <File Include="Areas/Corresponsabilidad/Images/VidaMejorFondo.png">
+      <publishTime>08/21/2015 15:00:53</publishTime>
+    </File>
+    <File Include="Areas/Corresponsabilidad/Scripts/AjaxLogin.js">
+      <publishTime>08/21/2015 15:00:53</publishTime>
+    </File>
+    <File Include="Areas/Corresponsabilidad/Scripts/jquery-1.6.2.js">
+      <publishTime>08/21/2015 15:00:53</publishTime>
+    </File>
+    <File Include="Areas/Corresponsabilidad/Scripts/jquery-1.6.2.min.js">
+      <publishTime>08/21/2015 15:00:53</publishTime>
+    </File>
+    <File Include="Areas/Corresponsabilidad/Scripts/jquery-1.7.1.min.js">
+      <publishTime>08/21/2015 15:00:53</publishTime>
+    </File>
+    <File Include="Areas/Corresponsabilidad/Scripts/jquery-1.8.3.js">
+      <publishTime>08/21/2015 15:00:53</publishTime>
+    </File>
+    <File Include="Areas/Corresponsabilidad/Scripts/jquery-1.8.3.min.js">
+      <publishTime>08/21/2015 15:00:53</publishTime>
+    </File>
+    <File Include="Areas/Corresponsabilidad/Scripts/jquery-ui-1.8.11.js">
+      <publishTime>08/21/2015 15:00:53</publishTime>
+    </File>
+    <File Include="Areas/Corresponsabilidad/Scripts/jquery-ui-1.8.11.min.js">
+      <publishTime>08/21/2015 15:00:53</publishTime>
+    </File>
+    <File Include="Areas/Corresponsabilidad/Scripts/jquery.min.js">
+      <publishTime>08/21/2015 15:00:53</publishTime>
+    </File>
+    <File Include="Areas/Corresponsabilidad/Scripts/jquery.unobtrusive-ajax.js">
+      <publishTime>08/21/2015 15:00:53</publishTime>
+    </File>
+    <File Include="Areas/Corresponsabilidad/Scripts/jquery.unobtrusive-ajax.min.js">
+      <publishTime>08/21/2015 15:00:53</publishTime>
+    </File>
+    <File Include="Areas/Corresponsabilidad/Scripts/jquery.validate.js">
+      <publishTime>08/21/2015 15:00:53</publishTime>
+    </File>
+    <File Include="Areas/Corresponsabilidad/Scripts/jquery.validate.min.js">
+      <publishTime>08/21/2015 15:00:53</publishTime>
+    </File>
+    <File Include="Areas/Corresponsabilidad/Scripts/jquery.validate.unobtrusive.js">
+      <publishTime>08/21/2015 15:00:53</publishTime>
+    </File>
+    <File Include="Areas/Corresponsabilidad/Scripts/jquery.validate.unobtrusive.min.js">
+      <publishTime>08/21/2015 15:00:53</publishTime>
+    </File>
+    <File Include="Areas/Corresponsabilidad/Scripts/knockout-2.0.0.debug.js">
+      <publishTime>08/21/2015 15:00:53</publishTime>
+    </File>
+    <File Include="Areas/Corresponsabilidad/Scripts/knockout-2.0.0.js">
+      <publishTime>08/21/2015 15:00:53</publishTime>
+    </File>
+    <File Include="Areas/Corresponsabilidad/Scripts/main.js">
+      <publishTime>08/21/2015 15:00:53</publishTime>
+    </File>
+    <File Include="Areas/Corresponsabilidad/Scripts/Menu.js">
+      <publishTime>08/21/2015 15:00:53</publishTime>
+    </File>
+    <File Include="Areas/Corresponsabilidad/Scripts/modernizr-2.0.6-development-only.js">
+      <publishTime>08/21/2015 15:00:53</publishTime>
+    </File>
+    <File Include="Areas/Corresponsabilidad/Scripts/ScriptsCiclos.js">
+      <publishTime>08/21/2015 15:00:53</publishTime>
+    </File>
+    <File Include="Areas/Corresponsabilidad/Scripts/ScriptsCorresponsabilidad.js">
+      <publishTime>08/21/2015 15:00:53</publishTime>
+    </File>
+    <File Include="Areas/Corresponsabilidad/Scripts/ScriptsReportes.js">
+      <publishTime>08/21/2015 15:00:53</publishTime>
+    </File>
+    <File Include="Areas/Corresponsabilidad/Scripts/script_combox_ubi_sace.js">
+      <publishTime>08/21/2015 15:00:53</publishTime>
+    </File>
+    <File Include="Areas/Corresponsabilidad/Scripts/script_combox_ubi_sig.js">
+      <publishTime>09/01/2015 12:22:47</publishTime>
+    </File>
+    <File Include="Areas/Corresponsabilidad/Scripts/script_levanta_visi.js">
+      <publishTime>09/01/2015 12:22:47</publishTime>
+    </File>
+    <File Include="Areas/Corresponsabilidad/Scripts/sidemenu.js">
+      <publishTime>08/21/2015 15:00:53</publishTime>
+    </File>
+    <File Include="Areas/Corresponsabilidad/Style/estilo_ciclos.css">
+      <publishTime>08/21/2015 15:00:53</publishTime>
+    </File>
+    <File Include="Areas/Corresponsabilidad/Style/estilo_principal.css">
+      <publishTime>08/21/2015 15:00:53</publishTime>
+    </File>
+    <File Include="Areas/Corresponsabilidad/Style/estilo_reportes.css">
+      <publishTime>08/21/2015 15:00:53</publishTime>
+    </File>
+    <File Include="Areas/Corresponsabilidad/Views/Configuracion/AgregarReporte.aspx">
+      <publishTime>08/21/2015 15:00:55</publishTime>
+    </File>
+    <File Include="Areas/Corresponsabilidad/Views/Configuracion/Ciclos.aspx">
+      <publishTime>08/21/2015 15:00:55</publishTime>
+    </File>
+    <File Include="Areas/Corresponsabilidad/Views/Configuracion/Corresponsabilidad.aspx">
+      <publishTime>08/21/2015 15:00:55</publishTime>
+    </File>
+    <File Include="Areas/Corresponsabilidad/Views/Configuracion/fnc_partial_view_edit_ciclos.ascx">
+      <publishTime>08/21/2015 15:00:55</publishTime>
+    </File>
+    <File Include="Areas/Corresponsabilidad/Views/Configuracion/LevantamientoCitas.aspx">
+      <publishTime>08/21/2015 15:00:55</publishTime>
+    </File>
+    <File Include="Areas/Corresponsabilidad/Views/Configuracion/WebService.aspx">
+      <publishTime>08/21/2015 15:00:55</publishTime>
+    </File>
+    <File Include="Areas/Corresponsabilidad/Views/Configuracion/_GridViewPartialCiclo.ascx">
+      <publishTime>08/21/2015 15:00:55</publishTime>
+    </File>
+    <File Include="Areas/Corresponsabilidad/Views/Configuracion/_GridViewPartialDetalleCorresponsabilidad.ascx">
+      <publishTime>08/21/2015 15:00:55</publishTime>
+    </File>
+    <File Include="Areas/Corresponsabilidad/Views/Configuracion/_GridViewPartialLevanCitas.ascx">
+      <publishTime>08/21/2015 15:00:55</publishTime>
+    </File>
+    <File Include="Areas/Corresponsabilidad/Views/Configuracion/_GridViewPartialReporte.ascx">
+      <publishTime>08/21/2015 15:00:55</publishTime>
+    </File>
+    <File Include="Areas/Corresponsabilidad/Views/Configuracion/_GridViewPartialTipoCiclo.ascx">
+      <publishTime>08/21/2015 15:00:55</publishTime>
+    </File>
+    <File Include="Areas/Corresponsabilidad/Views/Configuracion/_GridViewPartialTipoCorresponsabilidad.ascx">
+      <publishTime>08/21/2015 15:00:55</publishTime>
+    </File>
+    <File Include="Areas/Corresponsabilidad/Views/Configuracion/_GridViewPartialTipoReporte.ascx">
+      <publishTime>08/21/2015 15:00:55</publishTime>
+    </File>
+    <File Include="Areas/Corresponsabilidad/Views/Configuracion/_PopupControlViewPartialEditLevanCitas.ascx">
+      <publishTime>09/01/2015 12:22:47</publishTime>
+    </File>
+    <File Include="Areas/Corresponsabilidad/Views/Home/Index.aspx">
+      <publishTime>08/21/2015 15:00:55</publishTime>
+    </File>
+    <File Include="Areas/Corresponsabilidad/Views/PaginasMaestras/Principal.Master">
+      <publishTime>08/21/2015 15:00:55</publishTime>
+    </File>
+    <File Include="Areas/Corresponsabilidad/Views/Reportes/Centro_Educativo/ViewPartialCentroEducativo.ascx">
+      <publishTime>08/21/2015 15:00:56</publishTime>
+    </File>
+    <File Include="Areas/Corresponsabilidad/Views/Reportes/Centro_Educativo/ViewPartialMunicipioSace.ascx">
+      <publishTime>08/21/2015 15:00:56</publishTime>
+    </File>
+    <File Include="Areas/Corresponsabilidad/Views/Reportes/Centro_Salud/ViewPartialCentroSalud.ascx">
+      <publishTime>09/01/2015 12:22:47</publishTime>
+    </File>
+    <File Include="Areas/Corresponsabilidad/Views/Reportes/Educacion/Altas_bajas_cent/_ControlesAltasBajasMatricula.ascx">
+      <publishTime>09/01/2015 12:22:47</publishTime>
+    </File>
+    <File Include="Areas/Corresponsabilidad/Views/Reportes/Educacion/Altas_bajas_cent/_GridAltasBajasMatricula.ascx">
+      <publishTime>09/01/2015 12:22:47</publishTime>
+    </File>
+    <File Include="Areas/Corresponsabilidad/Views/Reportes/Educacion/Avan_academ_benefi/_CabeceraGridAvanceAcademicoBeneficiario.ascx">
+      <publishTime>08/21/2015 15:00:57</publishTime>
+    </File>
+    <File Include="Areas/Corresponsabilidad/Views/Reportes/Educacion/Avan_academ_benefi/_ControlesAvanceAcademicoBeneficiario.ascx">
+      <publishTime>08/21/2015 15:00:57</publishTime>
+    </File>
+    <File Include="Areas/Corresponsabilidad/Views/Reportes/Educacion/Avan_academ_benefi/_GridAvanceAcademicoBeneficiario.ascx">
+      <publishTime>08/21/2015 15:00:57</publishTime>
+    </File>
+    <File Include="Areas/Corresponsabilidad/Views/Reportes/Educacion/Resu_matri_cen/_ControlesResumMatriCentro.ascx">
+      <publishTime>08/21/2015 15:00:57</publishTime>
+    </File>
+    <File Include="Areas/Corresponsabilidad/Views/Reportes/Educacion/Resu_matri_cen/_GridResumMatriCentro.ascx">
+      <publishTime>08/21/2015 15:00:57</publishTime>
+    </File>
+    <File Include="Areas/Corresponsabilidad/Views/Reportes/estilo_reportes.css">
+      <publishTime>08/21/2015 15:00:55</publishTime>
+    </File>
+    <File Include="Areas/Corresponsabilidad/Views/Reportes/fnc_partial_view_localizacion.ascx">
+      <publishTime>08/21/2015 15:00:55</publishTime>
+    </File>
+    <File Include="Areas/Corresponsabilidad/Views/Reportes/Forma_Reporte/ViewPartialFormaReporte.ascx">
+      <publishTime>09/01/2015 12:22:47</publishTime>
+    </File>
+    <File Include="Areas/Corresponsabilidad/Views/Reportes/Index.aspx">
+      <publishTime>08/21/2015 15:00:55</publishTime>
+    </File>
+    <File Include="Areas/Corresponsabilidad/Views/Reportes/Levanta_cita_med/ViewPartialLevantaCitaMedica.ascx">
+      <publishTime>09/01/2015 12:22:47</publishTime>
+    </File>
+    <File Include="Areas/Corresponsabilidad/Views/Reportes/Localizacion/ViewPartialAldea.ascx">
+      <publishTime>08/21/2015 15:00:56</publishTime>
+    </File>
+    <File Include="Areas/Corresponsabilidad/Views/Reportes/Localizacion/ViewPartialCaserio.ascx">
+      <publishTime>08/21/2015 15:00:56</publishTime>
+    </File>
+    <File Include="Areas/Corresponsabilidad/Views/Reportes/Localizacion/ViewPartialDepartamento.ascx">
+      <publishTime>08/21/2015 15:00:56</publishTime>
+    </File>
+    <File Include="Areas/Corresponsabilidad/Views/Reportes/Localizacion/ViewPartialMunicipio.ascx">
+      <publishTime>08/21/2015 15:00:56</publishTime>
+    </File>
+    <File Include="Areas/Corresponsabilidad/Views/Reportes/Localizacion_Sace/ViewPartialAldeaSace.ascx">
+      <publishTime>08/21/2015 15:00:56</publishTime>
+    </File>
+    <File Include="Areas/Corresponsabilidad/Views/Reportes/Localizacion_Sace/ViewPartialCaserioSace.ascx">
+      <publishTime>08/21/2015 15:00:56</publishTime>
+    </File>
+    <File Include="Areas/Corresponsabilidad/Views/Reportes/Localizacion_Sace/ViewPartialDepartamentoSace.ascx">
+      <publishTime>08/21/2015 15:00:56</publishTime>
+    </File>
+    <File Include="Areas/Corresponsabilidad/Views/Reportes/Localizacion_Sace/ViewPartialMunicipioSace.ascx">
+      <publishTime>08/21/2015 15:00:56</publishTime>
+    </File>
+    <File Include="Areas/Corresponsabilidad/Views/Reportes/Localizacion_Sig/ViewPartialAldeaSIG.ascx">
+      <publishTime>09/01/2015 12:22:47</publishTime>
+    </File>
+    <File Include="Areas/Corresponsabilidad/Views/Reportes/Localizacion_Sig/ViewPartialCaserioSIG.ascx">
+      <publishTime>09/01/2015 12:22:47</publishTime>
+    </File>
+    <File Include="Areas/Corresponsabilidad/Views/Reportes/Localizacion_Sig/ViewPartialDepartamentoSIG.ascx">
+      <publishTime>09/01/2015 12:22:47</publishTime>
+    </File>
+    <File Include="Areas/Corresponsabilidad/Views/Reportes/Localizacion_Sig/ViewPartialMunicipioSIG.ascx">
+      <publishTime>09/01/2015 12:22:47</publishTime>
+    </File>
+    <File Include="Areas/Corresponsabilidad/Views/Reportes/Salud/Cant_visi_medi_centro/_ChartCantidadVisitaMedicaCentro.ascx">
+      <publishTime>09/01/2015 12:22:47</publishTime>
+    </File>
+    <File Include="Areas/Corresponsabilidad/Views/Reportes/Salud/Cant_visi_medi_centro/_ControlesCantidadVisitaMedicaCentro.ascx">
+      <publishTime>09/01/2015 12:22:47</publishTime>
+    </File>
+    <File Include="Areas/Corresponsabilidad/Views/Reportes/Salud/Cant_visi_medi_centro/_GridCantidadVisitaMedicaCentro.ascx">
+      <publishTime>09/01/2015 12:22:47</publishTime>
+    </File>
+    <File Include="Areas/Corresponsabilidad/Views/Reportes/_Chart_visitas_zona.ascx">
+      <publishTime>08/21/2015 15:00:55</publishTime>
+    </File>
+    <File Include="Areas/Corresponsabilidad/Views/Reportes/_ControlesAltasBajasMatricula.ascx">
+      <publishTime>08/21/2015 15:00:55</publishTime>
+    </File>
+    <File Include="Areas/Corresponsabilidad/Views/Reportes/_ControlesAvanceAcademicoBeneficiarios.ascx">
+      <publishTime>08/21/2015 15:00:55</publishTime>
+    </File>
+    <File Include="Areas/Corresponsabilidad/Views/Reportes/_ControlesAvanceAcademicoCentroEducativo.ascx">
+      <publishTime>08/21/2015 15:00:55</publishTime>
+    </File>
+    <File Include="Areas/Corresponsabilidad/Views/Reportes/_ControlesTotalMatriculaAño.ascx">
+      <publishTime>08/21/2015 15:00:55</publishTime>
+    </File>
+    <File Include="Areas/Corresponsabilidad/Views/Reportes/_ControlesTotalMatriculaCentroEducativo.ascx">
+      <publishTime>08/21/2015 15:00:55</publishTime>
+    </File>
+    <File Include="Areas/Corresponsabilidad/Views/Reportes/_ControlesVisitaMedica.ascx">
+      <publishTime>08/21/2015 15:00:55</publishTime>
+    </File>
+    <File Include="Areas/Corresponsabilidad/Views/Reportes/_controles_visitas_zona.ascx">
+      <publishTime>08/21/2015 15:00:55</publishTime>
+    </File>
+    <File Include="Areas/Corresponsabilidad/Views/Reportes/_GeneracionReporteVisitaMedica.ascx">
+      <publishTime>08/21/2015 15:00:55</publishTime>
+    </File>
+    <File Include="Areas/Corresponsabilidad/Views/Reportes/_GraficoHogaresParticipantesCorrEducacion.ascx">
+      <publishTime>08/21/2015 15:00:55</publishTime>
+    </File>
+    <File Include="Areas/Corresponsabilidad/Views/Reportes/_GraficoHogaresParticipantesCorrSalud.ascx">
+      <publishTime>08/21/2015 15:00:55</publishTime>
+    </File>
+    <File Include="Areas/Corresponsabilidad/Views/Reportes/_GridAltasBajasMatricula.ascx">
+      <publishTime>08/21/2015 15:00:55</publishTime>
+    </File>
+    <File Include="Areas/Corresponsabilidad/Views/Reportes/_GridAvanceAcademicoBeneficiarios.ascx">
+      <publishTime>08/21/2015 15:00:55</publishTime>
+    </File>
+    <File Include="Areas/Corresponsabilidad/Views/Reportes/_GridAvanceAcademicoCentroEducativo.ascx">
+      <publishTime>08/21/2015 15:00:55</publishTime>
+    </File>
+    <File Include="Areas/Corresponsabilidad/Views/Reportes/_GridTotalMatriculaAño.ascx">
+      <publishTime>08/21/2015 15:00:55</publishTime>
+    </File>
+    <File Include="Areas/Corresponsabilidad/Views/Reportes/_GridTotalMatriculaCentroEducativo.ascx">
+      <publishTime>08/21/2015 15:00:55</publishTime>
+    </File>
+    <File Include="Areas/Corresponsabilidad/Views/Reportes/_Grid_visitas_zona.ascx">
+      <publishTime>08/21/2015 15:00:55</publishTime>
+    </File>
+    <File Include="Areas/Corresponsabilidad/Views/Web.config">
+      <publishTime>08/21/2015 15:00:54</publishTime>
+    </File>
+    <File Include="Areas/Incorporaciones/Content/Images/arrow-31-16.png">
+      <publishTime>08/03/2015 15:10:19</publishTime>
+    </File>
+    <File Include="Areas/Incorporaciones/Content/Images/BarAndLine.png">
+      <publishTime>08/03/2015 15:10:19</publishTime>
+    </File>
+    <File Include="Areas/Incorporaciones/Content/Images/BarStacked.png">
+      <publishTime>08/03/2015 15:10:19</publishTime>
+    </File>
+    <File Include="Areas/Incorporaciones/Content/Images/bono.png">
+      <publishTime>08/03/2015 15:10:19</publishTime>
+    </File>
+    <File Include="Areas/Incorporaciones/Content/Images/cerrar4.png">
+      <publishTime>08/03/2015 15:10:19</publishTime>
+    </File>
+    <File Include="Areas/Incorporaciones/Content/Images/close.png">
+      <publishTime>08/03/2015 15:10:19</publishTime>
+    </File>
+    <File Include="Areas/Incorporaciones/Content/Images/DXR.gif">
+      <publishTime>08/03/2015 15:10:19</publishTime>
+    </File>
+    <File Include="Areas/Incorporaciones/Content/Images/FONDOCORE.jpg">
+      <publishTime>08/03/2015 15:10:19</publishTime>
+    </File>
+    <File Include="Areas/Incorporaciones/Content/Images/FondoCoreSig2.png">
+      <publishTime>08/03/2015 15:10:19</publishTime>
+    </File>
+    <File Include="Areas/Incorporaciones/Content/Images/home162 %283%29.png">
+      <publishTime>08/03/2015 15:10:19</publishTime>
+    </File>
+    <File Include="Areas/Incorporaciones/Content/Images/icon_minus.png">
+      <publishTime>08/03/2015 15:10:18</publishTime>
+    </File>
+    <File Include="Areas/Incorporaciones/Content/Images/icon_plus.png">
+      <publishTime>08/03/2015 15:10:18</publishTime>
+    </File>
+    <File Include="Areas/Incorporaciones/Content/Images/loading.gif">
+      <publishTime>02/04/2016 19:08:29</publishTime>
+    </File>
+    <File Include="Areas/Incorporaciones/Content/Images/ManhattanBar.png">
+      <publishTime>08/03/2015 15:10:18</publishTime>
+    </File>
+    <File Include="Areas/Incorporaciones/Content/Images/Pie.png">
+      <publishTime>08/03/2015 15:10:18</publishTime>
+    </File>
+    <File Include="Areas/Incorporaciones/Content/Images/pie_chart.ico">
+      <publishTime>08/03/2015 15:10:18</publishTime>
+    </File>
+    <File Include="Areas/Incorporaciones/Content/Images/pie_chart.png">
+      <publishTime>08/03/2015 15:10:18</publishTime>
+    </File>
+    <File Include="Areas/Incorporaciones/Content/Images/Print-50.png">
+      <publishTime>08/03/2015 15:10:18</publishTime>
+    </File>
+    <File Include="Areas/Incorporaciones/Content/Images/print.gif">
+      <publishTime>08/03/2015 15:10:18</publishTime>
+    </File>
+    <File Include="Areas/Incorporaciones/Content/Images/Save As-50.png">
+      <publishTime>08/03/2015 15:10:18</publishTime>
+    </File>
+    <File Include="Areas/Incorporaciones/Content/Images/Save-50.png">
+      <publishTime>08/03/2015 15:10:17</publishTime>
+    </File>
+    <File Include="Areas/Incorporaciones/Content/Images/save.gif">
+      <publishTime>08/03/2015 15:10:17</publishTime>
+    </File>
+    <File Include="Areas/Incorporaciones/Content/Images/saveas.gif">
+      <publishTime>08/03/2015 15:10:17</publishTime>
+    </File>
+    <File Include="Areas/Incorporaciones/Content/Images/SSIS.jpg">
+      <publishTime>08/03/2015 15:10:19</publishTime>
+    </File>
+    <File Include="Areas/Incorporaciones/Content/Scripts/jquery-1.7.1.js">
+      <publishTime>12/29/2015 09:57:23</publishTime>
+    </File>
+    <File Include="Areas/Incorporaciones/Content/Scripts/jquery-1.7.1.min.js">
+      <publishTime>08/03/2015 15:10:20</publishTime>
+    </File>
+    <File Include="Areas/Incorporaciones/Content/Scripts/jquery.elevateZoom-3.0.8.min.js">
+      <publishTime>08/03/2015 15:10:20</publishTime>
+    </File>
+    <File Include="Areas/Incorporaciones/Content/Scripts/jquery.elevatezoom.js">
+      <publishTime>11/01/2015 11:40:34</publishTime>
+    </File>
+    <File Include="Areas/Incorporaciones/Content/Scripts/jquery.min.js">
+      <publishTime>08/03/2015 15:10:20</publishTime>
+    </File>
+    <File Include="Areas/Incorporaciones/Content/Scripts/jquery.signalR-2.2.0.js">
+      <publishTime>08/03/2015 15:10:20</publishTime>
+    </File>
+    <File Include="Areas/Incorporaciones/Content/Scripts/jquery.signalR-2.2.0.min.js">
+      <publishTime>08/03/2015 15:10:20</publishTime>
+    </File>
+    <File Include="Areas/Incorporaciones/Content/Scripts/jspdf.min.js">
+      <publishTime>08/03/2015 15:10:20</publishTime>
+    </File>
+    <File Include="Areas/Incorporaciones/Content/Scripts/main.js">
+      <publishTime>08/03/2015 15:10:20</publishTime>
+    </File>
+    <File Include="Areas/Incorporaciones/Content/Scripts/modernizr-2.5.3.js">
+      <publishTime>12/29/2015 09:56:47</publishTime>
+    </File>
+    <File Include="Areas/Incorporaciones/Content/Scripts/pdfmake.min.js">
+      <publishTime>08/10/2015 16:06:47</publishTime>
+    </File>
+    <File Include="Areas/Incorporaciones/Content/Scripts/Script_Funcion/bono.png">
+      <publishTime>08/11/2015 18:34:31</publishTime>
+    </File>
+    <File Include="Areas/Incorporaciones/Content/Scripts/Script_Funcion/Controlador_Graficos.js">
+      <publishTime>08/03/2015 15:10:20</publishTime>
+    </File>
+    <File Include="Areas/Incorporaciones/Content/Scripts/Script_Funcion/Funcion.js">
+      <publishTime>02/05/2016 13:06:32</publishTime>
+    </File>
+    <File Include="Areas/Incorporaciones/Content/Scripts/Script_Funcion/jquery.min.js">
+      <publishTime>08/03/2015 15:10:20</publishTime>
+    </File>
+    <File Include="Areas/Incorporaciones/Content/Scripts/Script_Funcion/sidemenu.js">
+      <publishTime>08/03/2015 15:10:20</publishTime>
+    </File>
+    <File Include="Areas/Incorporaciones/Content/Scripts/sidemenu.js">
+      <publishTime>08/03/2015 15:10:20</publishTime>
+    </File>
+    <File Include="Areas/Incorporaciones/Content/Scripts/vfs_fonts.js">
+      <publishTime>12/29/2015 09:57:04</publishTime>
+    </File>
+    <File Include="Areas/Incorporaciones/Content/Site.css">
+      <publishTime>08/03/2015 15:10:17</publishTime>
+    </File>
+    <File Include="Areas/Incorporaciones/Content/Style/Main/main.css">
+      <publishTime>01/25/2016 15:45:46</publishTime>
+    </File>
+    <File Include="Areas/Incorporaciones/Content/Style/Modules/ImpresionFichas.css">
+      <publishTime>08/09/2015 22:19:16</publishTime>
+    </File>
+    <File Include="Areas/Incorporaciones/Content/Style/Modules/Incorporacion.css">
+      <publishTime>08/03/2015 15:10:21</publishTime>
+    </File>
+    <File Include="Areas/Incorporaciones/Content/Style/Modules/login.css">
+      <publishTime>08/03/2015 15:10:21</publishTime>
+    </File>
+    <File Include="Areas/Incorporaciones/Content/Style/Modules/reporteFichas.css">
+      <publishTime>08/03/2015 15:10:21</publishTime>
+    </File>
+    <File Include="Areas/Incorporaciones/Content/Style/Modules/ReportePersonal.css">
+      <publishTime>08/03/2015 15:10:21</publishTime>
+    </File>
+    <File Include="Areas/Incorporaciones/Content/Style/Modules/suspensiones.css">
+      <publishTime>08/03/2015 15:10:21</publishTime>
+    </File>
+    <File Include="Areas/Incorporaciones/Content/themes/base/images/ui-bg_flat_0_aaaaaa_40x100.png">
+      <publishTime>08/03/2015 15:10:25</publishTime>
+    </File>
+    <File Include="Areas/Incorporaciones/Content/themes/base/images/ui-bg_flat_75_ffffff_40x100.png">
+      <publishTime>08/03/2015 15:10:25</publishTime>
+    </File>
+    <File Include="Areas/Incorporaciones/Content/themes/base/images/ui-bg_glass_55_fbf9ee_1x400.png">
+      <publishTime>08/03/2015 15:10:25</publishTime>
+    </File>
+    <File Include="Areas/Incorporaciones/Content/themes/base/images/ui-bg_glass_65_ffffff_1x400.png">
+      <publishTime>08/03/2015 15:10:25</publishTime>
+    </File>
+    <File Include="Areas/Incorporaciones/Content/themes/base/images/ui-bg_glass_75_dadada_1x400.png">
+      <publishTime>08/03/2015 15:10:25</publishTime>
+    </File>
+    <File Include="Areas/Incorporaciones/Content/themes/base/images/ui-bg_glass_75_e6e6e6_1x400.png">
+      <publishTime>08/03/2015 15:10:25</publishTime>
+    </File>
+    <File Include="Areas/Incorporaciones/Content/themes/base/images/ui-bg_glass_95_fef1ec_1x400.png">
+      <publishTime>08/03/2015 15:10:25</publishTime>
+    </File>
+    <File Include="Areas/Incorporaciones/Content/themes/base/images/ui-bg_highlight-soft_75_cccccc_1x100.png">
+      <publishTime>08/03/2015 15:10:24</publishTime>
+    </File>
+    <File Include="Areas/Incorporaciones/Content/themes/base/images/ui-icons_222222_256x240.png">
+      <publishTime>08/03/2015 15:10:24</publishTime>
+    </File>
+    <File Include="Areas/Incorporaciones/Content/themes/base/images/ui-icons_2e83ff_256x240.png">
+      <publishTime>08/03/2015 15:10:24</publishTime>
+    </File>
+    <File Include="Areas/Incorporaciones/Content/themes/base/images/ui-icons_454545_256x240.png">
+      <publishTime>08/03/2015 15:10:24</publishTime>
+    </File>
+    <File Include="Areas/Incorporaciones/Content/themes/base/images/ui-icons_888888_256x240.png">
+      <publishTime>08/03/2015 15:10:24</publishTime>
+    </File>
+    <File Include="Areas/Incorporaciones/Content/themes/base/images/ui-icons_cd0a0a_256x240.png">
+      <publishTime>08/03/2015 15:10:24</publishTime>
+    </File>
+    <File Include="Areas/Incorporaciones/Content/themes/base/jquery-ui.css">
+      <publishTime>08/03/2015 15:10:24</publishTime>
+    </File>
+    <File Include="Areas/Incorporaciones/Content/themes/base/jquery.ui.accordion.css">
+      <publishTime>08/03/2015 15:10:24</publishTime>
+    </File>
+    <File Include="Areas/Incorporaciones/Content/themes/base/jquery.ui.all.css">
+      <publishTime>08/03/2015 15:10:23</publishTime>
+    </File>
+    <File Include="Areas/Incorporaciones/Content/themes/base/jquery.ui.autocomplete.css">
+      <publishTime>08/03/2015 15:10:23</publishTime>
+    </File>
+    <File Include="Areas/Incorporaciones/Content/themes/base/jquery.ui.base.css">
+      <publishTime>08/03/2015 15:10:23</publishTime>
+    </File>
+    <File Include="Areas/Incorporaciones/Content/themes/base/jquery.ui.button.css">
+      <publishTime>08/03/2015 15:10:23</publishTime>
+    </File>
+    <File Include="Areas/Incorporaciones/Content/themes/base/jquery.ui.core.css">
+      <publishTime>08/03/2015 15:10:23</publishTime>
+    </File>
+    <File Include="Areas/Incorporaciones/Content/themes/base/jquery.ui.datepicker.css">
+      <publishTime>08/03/2015 15:10:23</publishTime>
+    </File>
+    <File Include="Areas/Incorporaciones/Content/themes/base/jquery.ui.dialog.css">
+      <publishTime>08/03/2015 15:10:23</publishTime>
+    </File>
+    <File Include="Areas/Incorporaciones/Content/themes/base/jquery.ui.progressbar.css">
+      <publishTime>08/03/2015 15:10:22</publishTime>
+    </File>
+    <File Include="Areas/Incorporaciones/Content/themes/base/jquery.ui.resizable.css">
+      <publishTime>08/03/2015 15:10:22</publishTime>
+    </File>
+    <File Include="Areas/Incorporaciones/Content/themes/base/jquery.ui.selectable.css">
+      <publishTime>08/03/2015 15:10:22</publishTime>
+    </File>
+    <File Include="Areas/Incorporaciones/Content/themes/base/jquery.ui.slider.css">
+      <publishTime>08/03/2015 15:10:22</publishTime>
+    </File>
+    <File Include="Areas/Incorporaciones/Content/themes/base/jquery.ui.tabs.css">
+      <publishTime>08/03/2015 15:10:22</publishTime>
+    </File>
+    <File Include="Areas/Incorporaciones/Content/themes/base/jquery.ui.theme.css">
+      <publishTime>08/03/2015 15:10:22</publishTime>
+    </File>
+    <File Include="Areas/Incorporaciones/Content/themes/base/minified/images/ui-bg_flat_0_aaaaaa_40x100.png">
+      <publishTime>08/03/2015 15:10:28</publishTime>
+    </File>
+    <File Include="Areas/Incorporaciones/Content/themes/base/minified/images/ui-bg_flat_75_ffffff_40x100.png">
+      <publishTime>08/03/2015 15:10:28</publishTime>
+    </File>
+    <File Include="Areas/Incorporaciones/Content/themes/base/minified/images/ui-bg_glass_55_fbf9ee_1x400.png">
+      <publishTime>08/03/2015 15:10:28</publishTime>
+    </File>
+    <File Include="Areas/Incorporaciones/Content/themes/base/minified/images/ui-bg_glass_65_ffffff_1x400.png">
+      <publishTime>08/03/2015 15:10:28</publishTime>
+    </File>
+    <File Include="Areas/Incorporaciones/Content/themes/base/minified/images/ui-bg_glass_75_dadada_1x400.png">
+      <publishTime>08/03/2015 15:10:28</publishTime>
+    </File>
+    <File Include="Areas/Incorporaciones/Content/themes/base/minified/images/ui-bg_glass_75_e6e6e6_1x400.png">
+      <publishTime>08/03/2015 15:10:28</publishTime>
+    </File>
+    <File Include="Areas/Incorporaciones/Content/themes/base/minified/images/ui-bg_glass_95_fef1ec_1x400.png">
+      <publishTime>08/03/2015 15:10:28</publishTime>
+    </File>
+    <File Include="Areas/Incorporaciones/Content/themes/base/minified/images/ui-bg_highlight-soft_75_cccccc_1x100.png">
+      <publishTime>08/03/2015 15:10:27</publishTime>
+    </File>
+    <File Include="Areas/Incorporaciones/Content/themes/base/minified/images/ui-icons_222222_256x240.png">
+      <publishTime>08/03/2015 15:10:27</publishTime>
+    </File>
+    <File Include="Areas/Incorporaciones/Content/themes/base/minified/images/ui-icons_2e83ff_256x240.png">
+      <publishTime>08/03/2015 15:10:27</publishTime>
+    </File>
+    <File Include="Areas/Incorporaciones/Content/themes/base/minified/images/ui-icons_454545_256x240.png">
+      <publishTime>08/03/2015 15:10:27</publishTime>
+    </File>
+    <File Include="Areas/Incorporaciones/Content/themes/base/minified/images/ui-icons_888888_256x240.png">
+      <publishTime>08/03/2015 15:10:27</publishTime>
+    </File>
+    <File Include="Areas/Incorporaciones/Content/themes/base/minified/images/ui-icons_cd0a0a_256x240.png">
+      <publishTime>08/03/2015 15:10:27</publishTime>
+    </File>
+    <File Include="Areas/Incorporaciones/Content/themes/base/minified/jquery-ui.min.css">
+      <publishTime>08/03/2015 15:10:27</publishTime>
+    </File>
+    <File Include="Areas/Incorporaciones/Content/themes/base/minified/jquery.ui.accordion.min.css">
+      <publishTime>08/03/2015 15:10:27</publishTime>
+    </File>
+    <File Include="Areas/Incorporaciones/Content/themes/base/minified/jquery.ui.autocomplete.min.css">
+      <publishTime>08/03/2015 15:10:26</publishTime>
+    </File>
+    <File Include="Areas/Incorporaciones/Content/themes/base/minified/jquery.ui.button.min.css">
+      <publishTime>08/03/2015 15:10:26</publishTime>
+    </File>
+    <File Include="Areas/Incorporaciones/Content/themes/base/minified/jquery.ui.core.min.css">
+      <publishTime>08/03/2015 15:10:26</publishTime>
+    </File>
+    <File Include="Areas/Incorporaciones/Content/themes/base/minified/jquery.ui.datepicker.min.css">
+      <publishTime>08/03/2015 15:10:26</publishTime>
+    </File>
+    <File Include="Areas/Incorporaciones/Content/themes/base/minified/jquery.ui.dialog.min.css">
+      <publishTime>08/03/2015 15:10:26</publishTime>
+    </File>
+    <File Include="Areas/Incorporaciones/Content/themes/base/minified/jquery.ui.progressbar.min.css">
+      <publishTime>08/03/2015 15:10:26</publishTime>
+    </File>
+    <File Include="Areas/Incorporaciones/Content/themes/base/minified/jquery.ui.resizable.min.css">
+      <publishTime>08/03/2015 15:10:26</publishTime>
+    </File>
+    <File Include="Areas/Incorporaciones/Content/themes/base/minified/jquery.ui.selectable.min.css">
+      <publishTime>08/03/2015 15:10:26</publishTime>
+    </File>
+    <File Include="Areas/Incorporaciones/Content/themes/base/minified/jquery.ui.slider.min.css">
+      <publishTime>08/03/2015 15:10:26</publishTime>
+    </File>
+    <File Include="Areas/Incorporaciones/Content/themes/base/minified/jquery.ui.tabs.min.css">
+      <publishTime>08/03/2015 15:10:25</publishTime>
+    </File>
+    <File Include="Areas/Incorporaciones/Content/themes/base/minified/jquery.ui.theme.min.css">
+      <publishTime>08/03/2015 15:10:25</publishTime>
+    </File>
+    <File Include="Areas/Incorporaciones/Views/Administracion/AgregarDocumentos.aspx">
+      <publishTime>08/03/2015 15:10:31</publishTime>
+    </File>
+    <File Include="Areas/Incorporaciones/Views/Administracion/AgregarFichas.ascx">
+      <publishTime>08/09/2015 20:37:01</publishTime>
+    </File>
+    <File Include="Areas/Incorporaciones/Views/Administracion/AsignarFichas.aspx">
+      <publishTime>08/03/2015 15:10:31</publishTime>
+    </File>
+    <File Include="Areas/Incorporaciones/Views/Administracion/buscarReferencia.ascx">
+      <publishTime>08/03/2015 15:10:31</publishTime>
+    </File>
+    <File Include="Areas/Incorporaciones/Views/Administracion/CriticaLevantamientos.aspx">
+      <publishTime>08/03/2015 15:10:30</publishTime>
+    </File>
+    <File Include="Areas/Incorporaciones/Views/Administracion/DetalleGridPersonasFichas.ascx">
+      <publishTime>08/03/2015 15:10:30</publishTime>
+    </File>
+    <File Include="Areas/Incorporaciones/Views/Administracion/EditarInformacionPersonal.aspx">
+      <publishTime>08/03/2015 15:10:30</publishTime>
+    </File>
+    <File Include="Areas/Incorporaciones/Views/Administracion/EditarLevantamientos.aspx">
+      <publishTime>08/03/2015 15:10:30</publishTime>
+    </File>
+    <File Include="Areas/Incorporaciones/Views/Administracion/Editar_Informacion_Enviada.aspx">
+      <publishTime>08/03/2015 15:10:30</publishTime>
+    </File>
+    <File Include="Areas/Incorporaciones/Views/Administracion/fichasGrid.ascx">
+      <publishTime>01/19/2016 10:54:58</publishTime>
+    </File>
+    <File Include="Areas/Incorporaciones/Views/Administracion/Fichas_Levantamiento_Grid.ascx">
+      <publishTime>08/03/2015 15:10:30</publishTime>
+    </File>
+    <File Include="Areas/Incorporaciones/Views/Administracion/formularioDetalleEditar.ascx">
+      <publishTime>08/03/2015 15:10:30</publishTime>
+    </File>
+    <File Include="Areas/Incorporaciones/Views/Administracion/GridEditarLevantamientos.ascx">
+      <publishTime>08/03/2015 15:10:30</publishTime>
+    </File>
+    <File Include="Areas/Incorporaciones/Views/Administracion/GridEditarLevEnvio.ascx">
+      <publishTime>08/03/2015 15:10:30</publishTime>
+    </File>
+    <File Include="Areas/Incorporaciones/Views/Administracion/gridEditarPersonal.ascx">
+      <publishTime>09/28/2015 11:15:38</publishTime>
+    </File>
+    <File Include="Areas/Incorporaciones/Views/Administracion/GridFichasMap.ascx">
+      <publishTime>08/03/2015 15:10:30</publishTime>
+    </File>
+    <File Include="Areas/Incorporaciones/Views/Administracion/gridLevantamientoPendientes.ascx">
+      <publishTime>10/10/2015 11:49:17</publishTime>
+    </File>
+    <File Include="Areas/Incorporaciones/Views/Administracion/gridlevantamientosImprimir.ascx">
+      <publishTime>10/10/2015 17:46:41</publishTime>
+    </File>
+    <File Include="Areas/Incorporaciones/Views/Administracion/GridUsuarioDisponible.ascx">
+      <publishTime>08/03/2015 15:10:29</publishTime>
+    </File>
+    <File Include="Areas/Incorporaciones/Views/Administracion/grid_Tipo_levantamiento.ascx">
+      <publishTime>08/03/2015 15:10:29</publishTime>
+    </File>
+    <File Include="Areas/Incorporaciones/Views/Administracion/ImpresionLevantamientos.aspx">
+      <publishTime>10/10/2015 15:12:17</publishTime>
+    </File>
+    <File Include="Areas/Incorporaciones/Views/Administracion/Impresion_Nucleo/Imprimir_Nucleos_Hogar.aspx">
+      <publishTime>01/11/2016 10:05:16</publishTime>
+    </File>
+    <File Include="Areas/Incorporaciones/Views/Administracion/Impresion_Nucleo/informacionPersonasHogar.ascx">
+      <publishTime>01/08/2016 14:18:43</publishTime>
+    </File>
+    <File Include="Areas/Incorporaciones/Views/Administracion/Impresion_Nucleo/informacion_hogar.ascx">
+      <publishTime>01/07/2016 15:26:04</publishTime>
+    </File>
+    <File Include="Areas/Incorporaciones/Views/Administracion/infoLevantamiento.ascx">
+      <publishTime>09/13/2015 14:29:24</publishTime>
+    </File>
+    <File Include="Areas/Incorporaciones/Views/Administracion/LevantamientoPendiente.aspx">
+      <publishTime>08/03/2015 15:10:29</publishTime>
+    </File>
+    <File Include="Areas/Incorporaciones/Views/Administracion/NuevoPersona.aspx">
+      <publishTime>12/13/2015 01:27:26</publishTime>
+    </File>
+    <File Include="Areas/Incorporaciones/Views/Administracion/Nuevo_Levantamiento.aspx">
+      <publishTime>08/03/2015 15:10:29</publishTime>
+    </File>
+    <File Include="Areas/Incorporaciones/Views/Administracion/personasGrid.ascx">
+      <publishTime>09/28/2015 15:08:15</publishTime>
+    </File>
+    <File Include="Areas/Incorporaciones/Views/Administracion/suspender_hogar.aspx">
+      <publishTime>10/11/2015 21:33:48</publishTime>
+    </File>
+    <File Include="Areas/Incorporaciones/Views/Administracion/Tipo_Levantamiento.aspx">
+      <publishTime>08/03/2015 15:10:29</publishTime>
+    </File>
+    <File Include="Areas/Incorporaciones/Views/Administracion/VisualisarFichasMAP.ascx">
+      <publishTime>08/03/2015 15:10:29</publishTime>
+    </File>
+    <File Include="Areas/Incorporaciones/Views/Incorporaciones/Cambio_de_Titular/Cambio_Titular.aspx">
+      <publishTime>12/02/2015 15:41:05</publishTime>
+    </File>
+    <File Include="Areas/Incorporaciones/Views/Incorporaciones/Cambio_de_Titular/GridHogarCambioTitular.ascx">
+      <publishTime>01/04/2016 09:48:26</publishTime>
+    </File>
+    <File Include="Areas/Incorporaciones/Views/Incorporaciones/Cambio_de_Titular/GridSolicitudesCambioTitular.ascx">
+      <publishTime>10/28/2015 16:18:33</publishTime>
+    </File>
+    <File Include="Areas/Incorporaciones/Views/Incorporaciones/Cambio_de_Titular/TablaPersonasHogarParaCambiodeTitular.ascx">
+      <publishTime>12/30/2015 15:44:34</publishTime>
+    </File>
+    <File Include="Areas/Incorporaciones/Views/Incorporaciones/Cambio_Titular.aspx">
+      <publishTime>08/16/2015 17:05:44</publishTime>
+    </File>
+    <File Include="Areas/Incorporaciones/Views/Incorporaciones/CargarNuevosHogares.aspx">
+      <publishTime>03/08/2015 15:10:31</publishTime>
+    </File>
+    <File Include="Areas/Incorporaciones/Views/Incorporaciones/Cargar_Nuevos_Hogares/CargarNuevosHogares.aspx">
+      <publishTime>12/28/2015 10:33:21</publishTime>
+    </File>
+    <File Include="Areas/Incorporaciones/Views/Incorporaciones/FormularioNuevoNacimiento.ascx">
+      <publishTime>08/17/2015 10:57:16</publishTime>
+    </File>
+    <File Include="Areas/Incorporaciones/Views/Incorporaciones/GridHogarCambioTitular.ascx">
+      <publishTime>08/17/2015 09:49:03</publishTime>
+    </File>
+    <File Include="Areas/Incorporaciones/Views/Incorporaciones/GridHogaresExistentesValidar.ascx">
+      <publishTime>03/08/2015 15:10:31</publishTime>
+    </File>
+    <File Include="Areas/Incorporaciones/Views/Incorporaciones/GridNuevosNacimientos.ascx">
+      <publishTime>08/17/2015 11:50:56</publishTime>
+    </File>
+    <File Include="Areas/Incorporaciones/Views/Incorporaciones/gridValidacion.ascx">
+      <publishTime>10/09/2015 18:12:25</publishTime>
+    </File>
+    <File Include="Areas/Incorporaciones/Views/Incorporaciones/GridValidacionNuevosHogares.ascx">
+      <publishTime>03/08/2015 15:10:31</publishTime>
+    </File>
+    <File Include="Areas/Incorporaciones/Views/Incorporaciones/Hogares_Validar.aspx">
+      <publishTime>02/04/2016 20:23:43</publishTime>
+    </File>
+    <File Include="Areas/Incorporaciones/Views/Incorporaciones/Hogar_Existentes_Validar.aspx">
+      <publishTime>03/08/2015 15:10:31</publishTime>
+    </File>
+    <File Include="Areas/Incorporaciones/Views/Incorporaciones/InformacionHogarValidar.ascx">
+      <publishTime>12/28/2015 11:45:03</publishTime>
+    </File>
+    <File Include="Areas/Incorporaciones/Views/Incorporaciones/Nuevos_Nacimientos.aspx">
+      <publishTime>08/17/2015 08:36:59</publishTime>
+    </File>
+    <File Include="Areas/Incorporaciones/Views/Incorporaciones/Registrar_Pre_Actualizaciones/FormularioRegistroPreActualizaciones.ascx">
+      <publishTime>01/17/2016 01:12:49</publishTime>
+    </File>
+    <File Include="Areas/Incorporaciones/Views/Incorporaciones/Registrar_Pre_Actualizaciones/personas_pre_actualizacion.ascx">
+      <publishTime>01/18/2016 14:21:42</publishTime>
+    </File>
+    <File Include="Areas/Incorporaciones/Views/Incorporaciones/Registrar_Pre_Actualizaciones/pre_actualizaciones.aspx">
+      <publishTime>10/25/2015 11:13:06</publishTime>
+    </File>
+    <File Include="Areas/Incorporaciones/Views/Incorporaciones/Validar_Actualizaciones_Levantamiento/GridHogaresExistentesValidar.ascx">
+      <publishTime>12/28/2015 11:38:21</publishTime>
+    </File>
+    <File Include="Areas/Incorporaciones/Views/Incorporaciones/Validar_Actualizaciones_Levantamiento/Hogar_Existentes_Validar.aspx">
+      <publishTime>10/09/2015 16:19:36</publishTime>
+    </File>
+    <File Include="Areas/Incorporaciones/Views/Incorporaciones/Validar_Nuevos_Hogares/GridValidacionNuevosHogares.ascx">
+      <publishTime>08/03/2015 15:10:31</publishTime>
+    </File>
+    <File Include="Areas/Incorporaciones/Views/Incorporaciones/Validar_Nuevos_Hogares/Hogares_Validar.aspx">
+      <publishTime>12/23/2015 13:56:34</publishTime>
+    </File>
+    <File Include="Areas/Incorporaciones/Views/Incorporaciones/Validar_Pre_Actualizacion/ActualizarInformacion.aspx">
+      <publishTime>02/04/2016 20:24:06</publishTime>
+    </File>
+    <File Include="Areas/Incorporaciones/Views/Incorporaciones/Validar_Pre_Actualizacion/GridSolicitudesActualizarInformacion.ascx">
+      <publishTime>02/04/2016 19:24:16</publishTime>
+    </File>
+    <File Include="Areas/Incorporaciones/Views/Incorporaciones/Validar_Pre_Actualizacion/HogarActualizar.ascx">
+      <publishTime>02/04/2016 20:16:04</publishTime>
+    </File>
+    <File Include="Areas/Incorporaciones/Views/Incorporaciones/Validar_Pre_Actualizacion/PersonasHogarActualizar.ascx">
+      <publishTime>02/04/2016 20:31:24</publishTime>
+    </File>
+    <File Include="Areas/Incorporaciones/Views/Inicio/Index.aspx">
+      <publishTime>08/03/2015 15:10:31</publishTime>
+    </File>
+    <File Include="Areas/Incorporaciones/Views/Inicio/Login.aspx">
+      <publishTime>08/03/2015 15:10:31</publishTime>
+    </File>
+    <File Include="Areas/Incorporaciones/Views/Reportes/actualizaciones.aspx">
+      <publishTime>10/11/2015 11:14:21</publishTime>
+    </File>
+    <File Include="Areas/Incorporaciones/Views/Reportes/detalleLevantamiento.aspx">
+      <publishTime>10/11/2015 14:11:55</publishTime>
+    </File>
+    <File Include="Areas/Incorporaciones/Views/Reportes/DetalleReporteLevantamiento.ascx">
+      <publishTime>08/03/2015 15:10:33</publishTime>
+    </File>
+    <File Include="Areas/Incorporaciones/Views/Reportes/Excluidos.aspx">
+      <publishTime>08/03/2015 15:10:33</publishTime>
+    </File>
+    <File Include="Areas/Incorporaciones/Views/Reportes/GraficaNuevosHogares.ascx">
+      <publishTime>08/24/2015 18:23:41</publishTime>
+    </File>
+    <File Include="Areas/Incorporaciones/Views/Reportes/GraficoActualizaciones.ascx">
+      <publishTime>01/22/2016 13:08:41</publishTime>
+    </File>
+    <File Include="Areas/Incorporaciones/Views/Reportes/GraficoHogaresSuspendidosRegion.ascx">
+      <publishTime>08/03/2015 15:10:32</publishTime>
+    </File>
+    <File Include="Areas/Incorporaciones/Views/Reportes/GraficoHogaresSuspendidosTiempo.ascx">
+      <publishTime>08/03/2015 15:10:32</publishTime>
+    </File>
+    <File Include="Areas/Incorporaciones/Views/Reportes/GraficoPersonalLevantamientos.ascx">
+      <publishTime>08/03/2015 15:10:32</publishTime>
+    </File>
+    <File Include="Areas/Incorporaciones/Views/Reportes/Grafico_Vista.ascx">
+      <publishTime>08/12/2015 14:24:58</publishTime>
+    </File>
+    <File Include="Areas/Incorporaciones/Views/Reportes/GridHogaresSuspendidos.ascx">
+      <publishTime>08/03/2015 15:10:32</publishTime>
+    </File>
+    <File Include="Areas/Incorporaciones/Views/Reportes/hogaresExcluidos.ascx">
+      <publishTime>08/03/2015 15:10:32</publishTime>
+    </File>
+    <File Include="Areas/Incorporaciones/Views/Reportes/Hogares_Excluidos.aspx">
+      <publishTime>08/03/2015 15:10:32</publishTime>
+    </File>
+    <File Include="Areas/Incorporaciones/Views/Reportes/Hogares_Incorporados.aspx">
+      <publishTime>01/11/2016 10:04:37</publishTime>
+    </File>
+    <File Include="Areas/Incorporaciones/Views/Reportes/Hogares_Pagados.aspx">
+      <publishTime>10/11/2015 14:11:06</publishTime>
+    </File>
+    <File Include="Areas/Incorporaciones/Views/Reportes/Hogares_Suspendidos.aspx">
+      <publishTime>10/11/2015 13:01:57</publishTime>
+    </File>
+    <File Include="Areas/Incorporaciones/Views/Reportes/LevantamientoRealizados.aspx">
+      <publishTime>10/11/2015 14:08:45</publishTime>
+    </File>
+    <File Include="Areas/Incorporaciones/Views/Reportes/parcialGridReportesFSU.ascx">
+      <publishTime>08/03/2015 15:10:32</publishTime>
+    </File>
+    <File Include="Areas/Incorporaciones/Views/Reportes/ParciallevantamientosRealizados.ascx">
+      <publishTime>08/03/2015 15:10:32</publishTime>
+    </File>
+    <File Include="Areas/Incorporaciones/Views/Reportes/PersonalLevantamiento.aspx">
+      <publishTime>08/03/2015 15:10:32</publishTime>
+    </File>
+    <File Include="Areas/Incorporaciones/Views/Reportes/ReporteFSU.aspx">
+      <publishTime>10/11/2015 14:10:16</publishTime>
+    </File>
+    <File Include="Areas/Incorporaciones/Views/Reportes/ReporteGridDetalleLevantamiento.ascx">
+      <publishTime>08/03/2015 15:10:32</publishTime>
+    </File>
+    <File Include="Areas/Incorporaciones/Views/Reportes/ReporteGridHogaresPagados.ascx">
+      <publishTime>08/03/2015 15:10:32</publishTime>
+    </File>
+    <File Include="Areas/Incorporaciones/Views/Reportes/ReporteHogaresSuspendidos.ascx">
+      <publishTime>08/03/2015 15:10:32</publishTime>
+    </File>
+    <File Include="Areas/Incorporaciones/Views/Reportes/TabControlReporteLevantamientoUsuarios.ascx">
+      <publishTime>08/03/2015 15:10:32</publishTime>
+    </File>
+    <File Include="Areas/Incorporaciones/Views/Shared/Error.aspx">
+      <publishTime>08/03/2015 15:10:33</publishTime>
+    </File>
+    <File Include="Areas/Incorporaciones/Views/Shared/site.Master">
+      <publishTime>10/21/2015 14:17:31</publishTime>
+    </File>
+    <File Include="Areas/Incorporaciones/Views/Web.config">
+      <publishTime>12/13/2015 01:26:59</publishTime>
+    </File>
+    <File Include="Areas/Seguridad/Scripts/cambioContraseña.js">
+      <publishTime>08/31/2015 16:58:16</publishTime>
+    </File>
+    <File Include="Areas/Seguridad/Scripts/usuarios.js">
+      <publishTime>01/27/2016 12:01:02</publishTime>
+    </File>
+    <File Include="Areas/Seguridad/Views/Home/Index.aspx">
+      <publishTime>08/24/2015 16:12:49</publishTime>
+    </File>
+    <File Include="Areas/Seguridad/Views/Shared/Main.Master">
+      <publishTime>08/24/2015 13:43:25</publishTime>
+    </File>
+    <File Include="Areas/Seguridad/Views/Usuarios/PartialViewGridPermisos.ascx">
+      <publishTime>08/26/2015 19:34:27</publishTime>
+    </File>
+    <File Include="Areas/Seguridad/Views/Usuarios/PartialViewTreeListPermisos.ascx">
+      <publishTime>08/26/2015 12:20:00</publishTime>
+    </File>
+    <File Include="Areas/Seguridad/Views/Usuarios/ViewAdministrarUsuarios.aspx">
+      <publishTime>08/27/2015 10:13:50</publishTime>
+    </File>
+    <File Include="Areas/Seguridad/Views/Usuarios/ViewCambioContraseña.aspx">
+      <publishTime>08/31/2015 15:17:04</publishTime>
+    </File>
+    <File Include="Areas/Seguridad/Views/Web.config">
+      <publishTime>08/24/2015 13:41:59</publishTime>
+    </File>
+    <File Include="bin/EntityFramework.dll">
+      <publishTime>08/03/2015 15:09:48</publishTime>
+    </File>
+    <File Include="bin/EntityFramework.SqlServer.dll">
+      <publishTime>08/03/2015 15:09:47</publishTime>
+    </File>
+    <File Include="bin/es/System.Web.Helpers.resources.dll">
+      <publishTime>08/03/2015 15:09:58</publishTime>
+    </File>
+    <File Include="bin/es/System.Web.Mvc.resources.dll">
+      <publishTime>08/03/2015 15:09:49</publishTime>
+    </File>
+    <File Include="bin/es/System.Web.Razor.resources.dll">
+      <publishTime>08/03/2015 15:09:51</publishTime>
+    </File>
+    <File Include="bin/es/System.Web.WebPages.Deployment.resources.dll">
+      <publishTime>08/03/2015 15:09:58</publishTime>
+    </File>
+    <File Include="bin/es/System.Web.WebPages.Razor.resources.dll">
+      <publishTime>08/03/2015 15:09:57</publishTime>
+    </File>
+    <File Include="bin/es/System.Web.WebPages.resources.dll">
+      <publishTime>08/03/2015 15:09:57</publishTime>
+    </File>
+    <File Include="bin/Microsoft.AspNet.SignalR.Core.dll">
+      <publishTime>08/03/2015 15:09:52</publishTime>
+    </File>
+    <File Include="bin/Microsoft.AspNet.SignalR.Owin.dll">
+      <publishTime>08/03/2015 15:09:53</publishTime>
+    </File>
+    <File Include="bin/Microsoft.AspNet.SignalR.SystemWeb.dll">
+      <publishTime>08/03/2015 15:09:53</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Owin.dll">
+      <publishTime>08/03/2015 15:10:00</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Owin.Host.SystemWeb.dll">
+      <publishTime>08/03/2015 15:10:00</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Owin.Security.dll">
+      <publishTime>08/03/2015 15:10:01</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Owin.Security.OAuth.dll">
+      <publishTime>08/03/2015 15:10:01</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Web.Infrastructure.dll">
+      <publishTime>08/03/2015 15:10:01</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Web.Mvc.FixedDisplayModes.dll">
+      <publishTime>08/03/2015 15:09:51</publishTime>
+    </File>
+    <File Include="bin/Newtonsoft.Json.dll">
+      <publishTime>08/03/2015 15:10:02</publishTime>
+    </File>
+    <File Include="bin/Owin.dll">
+      <publishTime>08/03/2015 15:10:03</publishTime>
+    </File>
+    <File Include="bin/SIG.dll">
+      <publishTime>02/05/2016 14:50:41</publishTime>
+    </File>
+    <File Include="bin/SIG.xml">
+      <publishTime>02/05/2016 14:50:41</publishTime>
+    </File>
+    <File Include="bin/System.Web.Helpers.dll">
+      <publishTime>08/03/2015 15:09:57</publishTime>
+    </File>
+    <File Include="bin/System.Web.Mvc.dll">
+      <publishTime>08/03/2015 15:09:49</publishTime>
+    </File>
+    <File Include="bin/System.Web.Razor.dll">
+      <publishTime>08/03/2015 15:09:51</publishTime>
+    </File>
+    <File Include="bin/System.Web.WebPages.Deployment.dll">
+      <publishTime>08/03/2015 15:09:57</publishTime>
+    </File>
+    <File Include="bin/System.Web.WebPages.dll">
+      <publishTime>08/03/2015 15:09:57</publishTime>
+    </File>
+    <File Include="bin/System.Web.WebPages.Razor.dll">
+      <publishTime>08/03/2015 15:09:56</publishTime>
+    </File>
+    <File Include="ClassDiagram1.cd">
+      <publishTime>08/03/2015 15:10:04</publishTime>
+    </File>
+    <File Include="Config/Config.config">
+      <publishTime>02/03/2016 12:58:14</publishTime>
+    </File>
+    <File Include="Css/font-awesome.min.css">
+      <publishTime>08/03/2015 15:10:39</publishTime>
+    </File>
+    <File Include="Css/Menu.css">
+      <publishTime>09/22/2015 11:13:54</publishTime>
+    </File>
+    <File Include="Css/modulos.css">
+      <publishTime>08/03/2015 15:10:39</publishTime>
+    </File>
+    <File Include="Css/Style.css">
+      <publishTime>08/03/2015 15:10:39</publishTime>
+    </File>
+    <File Include="Fonts/fontawesome-webfont.eot">
+      <publishTime>08/03/2015 15:10:40</publishTime>
+    </File>
+    <File Include="Fonts/fontawesome-webfont.svg">
+      <publishTime>08/03/2015 15:10:40</publishTime>
+    </File>
+    <File Include="Fonts/fontawesome-webfont.ttf">
+      <publishTime>08/03/2015 15:10:40</publishTime>
+    </File>
+    <File Include="Fonts/fontawesome-webfont.woff">
+      <publishTime>08/03/2015 15:10:40</publishTime>
+    </File>
+    <File Include="Fonts/FontAwesome.otf">
+      <publishTime>08/03/2015 15:10:39</publishTime>
+    </File>
+    <File Include="Global.asax">
+      <publishTime>08/03/2015 15:10:04</publishTime>
+    </File>
+    <File Include="Imagen/BannerLogin.png">
+      <publishTime>08/03/2015 15:10:40</publishTime>
+    </File>
+    <File Include="Imagen/FondoLogin.png">
+      <publishTime>08/03/2015 15:10:40</publishTime>
+    </File>
+    <File Include="Imagen/FondoModulos.png">
+      <publishTime>08/03/2015 15:10:40</publishTime>
+    </File>
+    <File Include="Imagen/SSIS.jpg">
+      <publishTime>08/03/2015 15:10:40</publishTime>
+    </File>
+    <File Include="Imagen/SSIS.png">
+      <publishTime>08/03/2015 15:10:40</publishTime>
+    </File>
+    <File Include="packages.config">
+      <publishTime>08/03/2015 15:10:03</publishTime>
+    </File>
+    <File Include="Scripts/jquery-2.1.4.js">
+      <publishTime>08/03/2015 15:11:15</publishTime>
+    </File>
+    <File Include="Scripts/jquery-2.1.4.min.js">
+      <publishTime>08/03/2015 15:11:15</publishTime>
+    </File>
+    <File Include="Scripts/jquery-2.1.4.min.map">
+      <publishTime>08/03/2015 15:11:15</publishTime>
+    </File>
+    <File Include="Scripts/jquery.min.js">
+      <publishTime>08/03/2015 15:11:15</publishTime>
+    </File>
+    <File Include="Scripts/jquery.signalR-2.2.0.js">
+      <publishTime>08/03/2015 15:11:15</publishTime>
+    </File>
+    <File Include="Scripts/jquery.signalR-2.2.0.min.js">
+      <publishTime>08/03/2015 15:11:15</publishTime>
+    </File>
+    <File Include="Scripts/main.js">
+      <publishTime>08/03/2015 15:11:15</publishTime>
+    </File>
+    <File Include="Scripts/Menu.js">
+      <publishTime>08/03/2015 15:11:15</publishTime>
+    </File>
+    <File Include="Views/Home/Index.aspx">
+      <publishTime>08/03/2015 15:11:15</publishTime>
+    </File>
+    <File Include="Views/Home/Login.aspx">
+      <publishTime>08/03/2015 15:11:15</publishTime>
+    </File>
+    <File Include="Views/Home/MenuPrincipal.aspx">
+      <publishTime>08/03/2015 15:11:15</publishTime>
+    </File>
+    <File Include="Views/shared/site.Master">
+      <publishTime>08/03/2015 15:11:15</publishTime>
+    </File>
+    <File Include="Views/Web.config">
+      <publishTime>08/03/2015 15:11:15</publishTime>
+    </File>
+    <File Include="Web.config">
+      <publishTime>02/05/2016 14:50:42</publishTime>
+    </File>
+  </ItemGroup>
+</Project>

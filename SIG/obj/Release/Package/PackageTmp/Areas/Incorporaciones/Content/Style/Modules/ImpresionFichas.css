@@ -1,0 +1,92 @@
+﻿body 
+{
+    width:1400px;
+}
+
+.marginleft 
+{
+    margin-left:10px;
+}
+p {
+    margin-left:-1000px;
+}
+
+section {
+  display:block;
+  max-width:1524px; 
+
+
+/*border: 1px solid green;*/
+height:auto;
+margin: 0 auto;
+position:relative;
+overflow:auto;
+
+}
+
+
+.table-print 
+{
+    width:1050px;
+}
+
+.table-print , .table-print th , .table-print td
+{
+  border: 1px solid #ddd;
+  border-radius : 5px;
+  border-collapse: collapse;
+  padding:8px;
+
+}
+
+@media print 
+{
+    @page {
+        margin-top: 100px;
+        margin-bottom: 100px;
+          
+        margin-bottom:100px;
+    }
+}
+
+
+#descripcion {
+    width:980px;
+    text-align: justify;
+    text-justify: inter-word;
+}
+
+#memorando p ,#memorando div, #memorando span
+{
+    font-size:18px;
+}
+
+div#memorando p {
+  margin-left: 0px;
+}
+
+.table-print thead tr th {
+   font-family: "Times New Roman", Times, serif;
+   font-size :13px;
+}
+
+#table-print td :nth-last-child(-n+2)
+{
+    padding-bottom:8px;
+}
+
+
+.captionPrint 
+{
+    color: #7c795d; font-family: 'Trocchi', serif; font-size: 25px; font-weight: normal; line-height: 48px; margin: 0;
+}
+
+#break 
+{
+     page-break-after:always;
+}
+
+#end 
+{
+     page-break-inside: avoid;
+}

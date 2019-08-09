@@ -1,0 +1,14 @@
+﻿.col_75 {
+    display: inline-block;
+    width: 72%;
+    /*float: left;*/
+    margin:0 2% 0 0;
+    vertical-align: top;
+}
+
+.col_25 {
+    display: inline-block;
+    width: 23%;
+    /*float: left;*/
+    margin:0 2% 0 0;
+}

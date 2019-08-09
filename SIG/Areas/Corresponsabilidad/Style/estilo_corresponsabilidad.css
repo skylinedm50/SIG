@@ -1,0 +1,34 @@
+﻿body {
+}
+
+#tit-form-corres {
+    text-align:center;
+}
+
+.FormLayoutPantallas, .FormLayoutControlesReportes, #contenido-reporte, .GridViewCorres{
+    margin: 0 auto;
+}
+
+.GridViewReportes{
+    margin: 0 auto;
+}
+
+#error-reporte{
+    color:red;
+    text-align:center;
+}
+
+#div-bloqueo-carga {
+    visibility:hidden;
+    width: 100%;
+    height: 100%;
+}
+
+#gif-carga-datos {
+    display:block;
+    margin: 0 auto;
+    width:45px;
+    height:45px;
+}
+
+
