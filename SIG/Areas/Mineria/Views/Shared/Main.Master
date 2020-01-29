@@ -5,6 +5,11 @@
 <html>
 <head runat="server">
     <meta name="viewport" content="width=device-width" />
+<<<<<<< HEAD
+=======
+    <!----ESTILOS MENU--> 
+<%--    <link rel="stylesheet" type="text/css" href="<%: ResolveUrl("~/Css/Mineria/Menu.css")%>"/>--%>
+>>>>>>> 951c825fa1e75313dcfacc2e2df6d3d158a54c40
     <link rel="stylesheet" type="text/css" href="<%: ResolveUrl("~/Css/font-awesome.min.css")%>"/>    
     <link rel="stylesheet" type="text/css" href="<%: ResolveUrl("~/Areas/Mineria/Styles/mineria.css")%>"/>
     <link rel="stylesheet" type="text/css" href="<%: ResolveUrl("~/Areas/Mineria/Styles/bootstrap.min.css")%>"/>
@@ -13,6 +18,7 @@
     <script type="text/javascript" src="<%: ResolveUrl("~/Scripts/Main.js")%>" async></script> 
     <title><asp:ContentPlaceHolder ID="TitleContent" runat="server" /></title>    
 </head>
+<<<<<<< HEAD
 <body style="padding-bottom:40px">
          <header>
                 <nav class="navbar navbar-expand-lg navbar-light" style=" background: rgba(100,162,255,1);
@@ -26,6 +32,28 @@
                    >
                     <div class="collapse navbar-collapse" id="navbarSupportedContent">
                         <ul class="navbar-nav mr-auto" >
+=======
+<body style="padding-bottom:40px">    
+        <%--<header>
+            <ul id="NavBarMineria">
+                <li id="ModuloNombre"><h2 id="TitModulo"><p>SIG | Módulo de Minería de Datos</p></h2></li>
+                <li id="NombrePantalla" ><div id="NombreReporte"><p></p></div></li>
+                <li id="UsuarioNombre" >
+                    <center>                                  
+                        <i class="fa fa-user"></i>
+                        <label id="Sysname" > <%: Session("username") %></label>
+                    </center>
+                </li>
+            </ul>
+        </header>
+        <nav id="MenuContainer">
+            <%: MvcHtmlString.Create(Session("menu"))%>
+        </nav>--%>
+         <header>
+                <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #6666ff;">
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav mr-auto">
+>>>>>>> 951c825fa1e75313dcfacc2e2df6d3d158a54c40
                             <li class="nav-item active">
                                 <asp:ContentPlaceHolder ID="ButtonNavBar" runat="server" />
                             </li>

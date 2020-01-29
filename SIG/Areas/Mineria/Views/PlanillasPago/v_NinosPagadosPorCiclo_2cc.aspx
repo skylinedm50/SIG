@@ -34,7 +34,7 @@ Niños Pagados Por Ciclo
     </style>
     <div id="hide">
       <%--  <h2>Cantidad de Niños Pagados Por Ciclo</h2>--%>
-        <% Html.BeginForm("exportarNinosPagadosPorCiclo", "PlanillasPago", New With {Key .variante = ViewData("variante")})%>
+        <% Html.BeginForm("exportarNinosPagadosPorCiclo", "PlanillasPago")%>
         <div>
             <% Html.DevExpress.FormLayout(
                            Sub(frmLayoutNinosPagados)
@@ -56,26 +56,26 @@ Niños Pagados Por Ciclo
         <br />
         <div>
              <% Html.DevExpress().FormLayout(
-                   Sub(frmLayoutButtons)
-                       frmLayoutButtons.Name = "frmLayoutButtons"
-                       frmLayoutButtons.ColCount = 3
-                       frmLayoutButtons.Width = Unit.Percentage(50)
-                       frmLayoutButtons.Items.Add(
-                           Sub(item)
-                               item.ShowCaption = DefaultBoolean.False
-                               item.SetNestedContent(
-                                   Sub()
-                                       Html.DevExpress().Button(
-                                           Sub(btnConsultar)
-                                               btnConsultar.Width = 1050
-                                               btnConsultar.Name = "btnConsultarNinosPagadosCiclo"
-                                               btnConsultar.UseSubmitBehavior = False
-                                               btnConsultar.Text = "Consultar"
-                                               btnConsultar.ClientSideEvents.Click = " function(s,e){ btnConsultarNinosPagadosCicloClick(s,e," + ViewData("variante").ToString() + ") }"
-                                           End Sub).GetHtml()
-                                   End Sub)
-                           End Sub)
-                   End Sub).GetHtml()%>
+                       Sub(frmLayoutButtons)
+                           frmLayoutButtons.Name = "frmLayoutButtons"
+                           frmLayoutButtons.ColCount = 3
+                           frmLayoutButtons.Width = Unit.Percentage(50)
+                           frmLayoutButtons.Items.Add(
+                               Sub(item)
+                                   item.ShowCaption = DefaultBoolean.False
+                                   item.SetNestedContent(
+                                       Sub()
+                                           Html.DevExpress().Button(
+                                               Sub(btnConsultar)
+                                                   btnConsultar.Width = 1050
+                                                   btnConsultar.Name = "btnConsultarNinosPagadosCiclo"
+                                                   btnConsultar.UseSubmitBehavior = False
+                                                   btnConsultar.Text = "Consultar"
+                                                   btnConsultar.ClientSideEvents.Click = "btnConsultarNinosPagadosCicloClick(s,e," + ViewData("variante").ToString() + ")"
+                                               End Sub).GetHtml()
+                                       End Sub)
+                               End Sub)
+                       End Sub).GetHtml()%>
         </div>
         <br />
    

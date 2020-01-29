@@ -6333,6 +6333,7 @@ F:\SIG\SIG\obj\Debug\SIG.dll.licenses
 F:\SIG\SIG\obj\Debug\SIG.dll
 F:\SIG\SIG\obj\Debug\SIG.xml
 F:\SIG\SIG\obj\Debug\SIG.pdb
+<<<<<<< HEAD
 D:\downloads\SIG\SIG\bin\WinSCP.exe
 D:\downloads\SIG\SIG\bin\SIG.dll.config
 D:\downloads\SIG\SIG\bin\SIG.dll
@@ -6576,3 +6577,5 @@ D:\downloads\SIG\SIG\obj\Debug\SIG.dll
 D:\downloads\SIG\SIG\obj\Debug\SIG.xml
 D:\downloads\SIG\SIG\obj\Debug\SIG.pdb
 D:\downloads\SIG\SIG\obj\Debug\SIG.vbprojResolveAssemblyReference.cache
+=======
+>>>>>>> 951c825fa1e75313dcfacc2e2df6d3d158a54c40

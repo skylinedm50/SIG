@@ -11,8 +11,13 @@ Planillas de Pago
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
     <div class="container text-center">
         <div class="row">
+<<<<<<< HEAD
             <div class="col-lg-4 col-md-6 col-sm-10 pb-4 d-block m-auto">
                 <div style="box-shadow: 0px 0px 30px -7px rgba(0,0,0,0.29);">
+=======
+            <div class="col-lg-4 col-md-6 col-sm-10 pb-4 d-block m-auto"    ">
+                <div style="box-shadow: 0px 0px 30px -7px rgba(0,0,0,0.29); height:100%;">
+>>>>>>> 951c825fa1e75313dcfacc2e2df6d3d158a54c40
                     <div class="pt-4 pb-3" style="letter-spacing: 2px">
                         <h4>Arrastre, Altas y Bajas Entre Dos Pagos</h4>
                     </div>
@@ -22,8 +27,13 @@ Planillas de Pago
                 </div>
             </div>
 
+<<<<<<< HEAD
             <div class="col-lg-4 col-md-6 col-sm-10 pb-4 d-block m-auto">
                 <div style="box-shadow: 0px 0px 30px -7px rgba(0,0,0,0.29);">
+=======
+            <div class="col-lg-4 col-md-6 col-sm-10 pb-4 d-block m-auto" >
+                <div style="box-shadow: 0px 0px 30px -7px rgba(0,0,0,0.29); height:100%;">
+>>>>>>> 951c825fa1e75313dcfacc2e2df6d3d158a54c40
                     <div class="pt-4 pb-3" style="letter-spacing: 2px">
                         <h4>Base Pagado</h4>
                     </div>
@@ -58,10 +68,50 @@ Planillas de Pago
             <div class="col-lg-4 col-md-6 col-sm-10 pb-4 d-block m-auto">
                 <div style="box-shadow: 0px 0px 30px -7px rgba(0,0,0,0.29);">
                     <div class="pt-4 pb-3" style="letter-spacing: 2px">
+<<<<<<< HEAD
                         <h4>Cantidad de Niños Pagos por Ciclo</h4>
                     </div>
                     <div class="pb-4">
                         <button type="button" class="btn btn-outline-primary bt-sm" onclick="location.href='/Mineria/PlanillasPago/v_NinosPagadosPorCiclo'">Acceder</button>
+=======
+                        <h4>Global Niños pagados</h4>
+                    </div>
+                    <div class="pb-4">
+                        <button type="button" class="btn btn-outline-primary bt-sm" onclick="location.href='/Mineria/PlanillasPago/v_NinosPagadosPorCiclo?variante=1'">Acceder</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 col-sm-10 pb-4 d-block m-auto">
+                <div style="box-shadow: 0px 0px 30px -7px rgba(0,0,0,0.29);">
+                    <div class="pt-4 pb-3" style="letter-spacing: 2px">
+                        <h4>Niños pagados por ciclo</h4>
+                    </div>
+                    <div class="pb-4">
+                        <button type="button" class="btn btn-outline-primary bt-sm" onclick="location.href='/Mineria/PlanillasPago/v_NinosPagadosPorCiclo?variante=2'">Acceder</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 col-sm-10 pb-4 d-block m-auto">
+                <div style="box-shadow: 0px 0px 30px -7px rgba(0,0,0,0.29);">
+                    <div class="pt-4 pb-3" style="letter-spacing: 2px">
+                        <h4>Cumplimiento de niños</h4>
+                    </div>
+                    <div class="pb-4">
+                        <button type="button" class="btn btn-outline-primary bt-sm" onclick="location.href='/Mineria/PlanillasPago/v_NinosPagadosPorCiclo?variante=3'">Acceder</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 col-sm-10 pb-4 d-block m-auto">
+                <div style="box-shadow: 0px 0px 30px -7px rgba(0,0,0,0.29);">
+                    <div class="pt-4 pb-3" style="letter-spacing: 2px">
+                        <h4>Niños pagados desagregados</h4>
+                    </div>
+                    <div class="pb-4">
+                        <button type="button" class="btn btn-outline-primary bt-sm" onclick="location.href='/Mineria/PlanillasPago/v_NinosPagadosPorCiclo?variante=4'">Acceder</button>
+>>>>>>> 951c825fa1e75313dcfacc2e2df6d3d158a54c40
                     </div>
                 </div>
             </div>
