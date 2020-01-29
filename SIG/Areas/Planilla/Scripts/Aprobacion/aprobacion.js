@@ -505,6 +505,6 @@ function btnImprimirClick(s, e) {
         dd.content[8].table.body.push(row);
     }
 
-    pdfMake.createPdf(dd).open();
+    pdfMake.createPdf(dd).download();
 
 }

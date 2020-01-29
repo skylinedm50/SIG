@@ -76,12 +76,12 @@
 
             'el código de usuario 8 pertenece a Don Luis, verifico que la aprovación de los parámetros del esquema se hayan hecho con su usuario
             Dim MyResult As New Boolean
-            Dim sql As String = "" + vbCr + _
-                "SELECT *" + vbCr + _
-                "	FROM SIG_T.dbo.f_pla_esquema AS esq" + vbCr + _
-                "		INNER JOIN SIG_T.dbo.f_pla_esquemaH AS esqh ON esqh.esq_codigo = esq.esq_codigo" + vbCr + _
-                "	WHERE esq.esq_aprobado = 1 AND esqh.esq_desc_cambio = 'Aprobado' AND esqh.esq_aprobado = 0 " + vbCr + _
-                "		AND esqh.esq_usuario_accion = 8 AND esq.esq_codigo = " + esquema
+            Dim sql As String = "" + vbCr +
+                "SELECT *" + vbCr +
+                "	FROM SIG_T.dbo.f_pla_esquema AS esq" + vbCr +
+                "		INNER JOIN SIG_T.dbo.f_pla_esquemaH AS esqh ON esqh.esq_codigo = esq.esq_codigo" + vbCr +
+                "	WHERE esq.esq_aprobado = 1 AND esqh.esq_desc_cambio = 'Aprobado' AND esqh.esq_aprobado = 0 " + vbCr +
+                "		AND esq.esq_codigo = " + esquema
 
             Try
                 MyResult = conexion.fnc_verificar_existe_registros(sql)
@@ -199,6 +199,7 @@
                 End If
 
             Catch ex As Exception
+                Dim o = 0
             End Try
 
             Return MyResult

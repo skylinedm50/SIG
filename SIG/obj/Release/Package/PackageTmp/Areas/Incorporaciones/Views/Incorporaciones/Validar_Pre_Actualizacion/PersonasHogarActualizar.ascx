@@ -11,18 +11,7 @@
                                    setting.CallbackRouteValues = New With {Key .Controller = "Incorporaciones", Key .Action = "CallbackPersonasActualizar"}
                                    setting.SettingsEditing.UpdateRowRouteValues = New With {Key .Controller = "Incorporaciones", Key .Action = "editarInformacionPersonasActualizar", Key .hogar = ViewData("hogar")}
                                    setting.SettingsEditing.DeleteRowRouteValues = New With {Key .Controller = "Incorporaciones", Key .Action = "Fnc_EliminarRegistroNuevo"}
-                                   setting.Theme = "DevEx"
                                    setting.KeyFieldName = "PK"
-                                   setting.Styles.Header.Font.Bold = True
-                                   setting.Styles.Header.Font.Italic = True
-                                   setting.Styles.Header.Font.Name = "Arial"
-                                   setting.Styles.Header.Font.Size = 10
-                                   setting.StylesPager.Pager.Paddings.PaddingBottom = 20
-                                   setting.StylesPager.Pager.Paddings.PaddingLeft = 10
-                                   setting.StylesPager.Pager.Paddings.PaddingRight = 5
-                                   setting.SettingsPager.PageSize = 25
-                                   setting.Styles.Header.Border.BorderColor = System.Drawing.Color.Black
-                                   setting.Styles.Header.Border.BorderStyle = WebControls.BorderStyle.Outset
                                    setting.Width = 800
                                    setting.CommandColumn.ShowNewButtonInHeader = True
                                    setting.Columns.Add(Sub(columna)

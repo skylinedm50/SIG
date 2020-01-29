@@ -3,7 +3,7 @@
 <% Html.DevExpress().ComboBox(
     Sub(settings)
         settings.Name = "cbxAnos"
-        settings.Width = 180
+        settings.Width = 900
         settings.CallbackRouteValues = New With {.Controller = "Shared", .Action = "pv_cbxAnosPago"}
         settings.Properties.DropDownStyle = DropDownStyle.DropDownList
         settings.Properties.TextField = "año_pago"

@@ -44,7 +44,7 @@
                                  configuracionGridView.SettingsPager.PageSizeItemSettings.Visible = True
                                  configuracionGridView.SettingsPager.PageSize = 18
                                  configuracionGridView.SettingsPager.PageSizeItemSettings.Items = {"20", "40", "70", "100"}
-                                 configuracionGridView.Width = 1550
+                                 configuracionGridView.Width = Unit.Percentage(100)
                                  configuracionGridView.CommandColumn.Visible = True
                                  configuracionGridView.CommandColumn.ShowClearFilterButton = True
 

@@ -30,6 +30,7 @@
             Session.Remove("Rol")
             Session.Remove("usuario")
             Session.Remove("Asignacion")
+            Session.RemoveAll()
             Return RedirectToAction("Index")
 
 

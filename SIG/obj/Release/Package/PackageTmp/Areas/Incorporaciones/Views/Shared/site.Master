@@ -13,7 +13,7 @@
     <link rel="stylesheet" type="text/css" href="/Areas/Incorporaciones/Content/Style/Modules/ImpresionFichas.css"/>
     <link rel="stylesheet" type="text/css" href="/Areas/Incorporaciones/Content/Style/Main/sweetalert.css" />
     
-    <script type="text/javascript" src="/Scripts/jquery.min.js"></script>
+    <script type="text/javascript" src="/Scripts/jquery/jquery.min.js"></script>
     <script type="text/javascript" src="/Scripts/Main.js"></script>
     <script src="/Areas/Incorporaciones/Content/Scripts/jquery-2.2.4.js"></script>
     <script src="/Areas/Incorporaciones/Content/Scripts/pdfmake.min.js"></script>
@@ -48,16 +48,16 @@
         %>
     
         <% 
-             Html.DevExpress().RenderScripts(Page,
-             New Script With {.ExtensionSuite = ExtensionSuite.GridView},
-             New Script With {.ExtensionSuite = ExtensionSuite.PivotGrid},
-             New Script With {.ExtensionSuite = ExtensionSuite.HtmlEditor},
-             New Script With {.ExtensionSuite = ExtensionSuite.Editors},
-             New Script With {.ExtensionSuite = ExtensionSuite.NavigationAndLayout},
-             New Script With {.ExtensionSuite = ExtensionSuite.Chart},
-             New Script With {.ExtensionSuite = ExtensionSuite.Report},
-             New Script With {.ExtensionSuite = ExtensionSuite.Scheduler},
-             New Script With {.ExtensionSuite = ExtensionSuite.TreeList})
+            Html.DevExpress().RenderScripts(Page,
+            New Script With {.ExtensionSuite = ExtensionSuite.GridView},
+            New Script With {.ExtensionSuite = ExtensionSuite.PivotGrid},
+            New Script With {.ExtensionSuite = ExtensionSuite.HtmlEditor},
+            New Script With {.ExtensionSuite = ExtensionSuite.Editors},
+            New Script With {.ExtensionSuite = ExtensionSuite.NavigationAndLayout},
+            New Script With {.ExtensionSuite = ExtensionSuite.Chart},
+            New Script With {.ExtensionSuite = ExtensionSuite.Report},
+            New Script With {.ExtensionSuite = ExtensionSuite.Scheduler},
+            New Script With {.ExtensionSuite = ExtensionSuite.TreeList})
          %>
  
 
@@ -67,18 +67,16 @@
     <div id="Container">
 
      <header>
-            <h2>SIG | Módulo de Incorporación y Actualización
-                <center >
+            <h2 id="TitModulo">SIG | Módulo de Incorporación y Actualización
+                <center>
                      <i class="fa fa-user"></i>
                      <label id="Sysname" > <%: Session("username") %></label>
-                <center> 
-             </h2> 
-
-     
-             <nav id="MenuContainer">                   
+                </center> 
+             </h2>    
+    </header>
+        <nav id="MenuContainer">                   
                        <%: MvcHtmlString.Create(Session("menu"))%>
               </nav>
-    </header>
             <div id="content">
                 <asp:ContentPlaceHolder ID="MainContent" runat="server">
                       <div class="ContenedorBanner" ></div>
@@ -87,6 +85,5 @@
 
             </div>
         </div>
-    </div>
 </body>
 </html>

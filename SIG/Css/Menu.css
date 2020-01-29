@@ -1,19 +1,14 @@
-﻿     html {
-      
+﻿     html {      
          background-position: center center;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-size: cover;
-  background-image:url("../../Imagen/FondoModulos.png");
-  
-  
-            font-family: "Helvetica Neue", FontAwesome, Helvetica, Arial, sans-serif;
-padding:0;
-margin:0;
-
- position: relative;
-    min-height: 100%;
-
+         background-repeat: no-repeat;
+         background-attachment: fixed;
+         background-size: cover;
+         background-image:url("../../Imagen/FondoModulos.png");  
+         font-family: "Helvetica Neue", FontAwesome, Helvetica, Arial, sans-serif;
+         padding:0;
+         margin:0;
+         position: relative;
+         min-height: 100%;
     }
 
 
@@ -38,26 +33,22 @@ padding:30px 30px 30px 30px;
 
     }
 
-    header {
-
- 
-      background: white;
+header {
+    background: #077CC0;
     box-shadow: 0 0 5px rgba(0,0,0,0.1);
-  
-  /*border-bottom: 1px solid #666;*/
-  border-color: #e5e5e5;
-width: 100%;
-	height: 65px;
-
-    padding:0;
-    margin:0;
-    }
+    /*border-bottom: 1px solid #666;*/
+    border-color: #e5e5e5;
+    width: 100%;
+    height: 65px;
+    padding: 0;
+    margin: 0;
+}
 
     center {
     font-size: 16px;
     text-transform: capitalize;
     /*color: #A4A4A4;*/
-    color:#424242;
+    color:white;
     margin:0 auto;
     vertical-align:middle;
     float:right;
@@ -86,16 +77,24 @@ width: 100%;
 }
 
 
-h2 {
+#TitModulo {
 
 /*color:#A4A4A4;*/
-color:#424242;
+color:white;
 line-height:65px;
 margin:0 40px;
 font-weight: bold;
 font-size:18px;
 }
 
+h2 {
+    /*color:#A4A4A4;*/
+    color: #1787C8;
+    line-height: 65px;
+    margin: 0 40px;
+    font-weight: bold;
+    font-size: 20px;
+}
 nav {
 
 width:300px;
@@ -151,31 +150,18 @@ a {
 
 
 
-.accordion .link {
-
-	cursor: pointer;
-
-	display: block;
-
-	padding: 15px 15px 15px 42px;
-
-	color: #4D4D4D;
-
-font-size:16px;
-
-
-
-	border-bottom: 1px solid #CCC;
-
-	position: relative;
-
-	-webkit-transition: all 0.4s ease;
-
-	-o-transition: all 0.4s ease;
-
-	transition: all 0.4s ease;
-
-}
+    .accordion .link {
+        cursor: pointer;
+        display: block;
+        padding: 15px 15px 15px 42px;
+        color: #077CC0;
+        font-size: 16px;
+        border-bottom: 1px solid #CCC;
+        position: relative;
+        -webkit-transition: all 0.4s ease;
+        -o-transition: all 0.4s ease;
+        transition: all 0.4s ease;
+    }
 
 
 
@@ -187,25 +173,17 @@ font-size:16px;
 
 
 
-.accordion li i {
-
-	position: absolute;
-
-	top: 16px;
-
-	left: 12px;
-        top:16px;
-	font-size:16px;
-
-	color: #595959;
-
-	-webkit-transition: all 0.4s ease;
-
-	-o-transition: all 0.4s ease;
-
-	transition: all 0.4s ease;
-
-}
+    .accordion li i {
+        position: absolute;
+        top: 16px;
+        left: 12px;
+        top: 16px;
+        font-size: 16px;
+        color: #077CC0;
+        -webkit-transition: all 0.4s ease;
+        -o-transition: all 0.4s ease;
+        transition: all 0.4s ease;
+    }
 
 
 
@@ -248,22 +226,19 @@ font-size:16px;
 }
 
 #btnLogout {
-
-width: 150px;
-height: 40px;
-outline: none;
-border: none;
-color:white;
-font-size:15px;
-font-weight: bold;
-margin: 45px 100px;
-cursor: pointer;
-float:right;
-clear:both;
-padding:10px;
-
-background-color: #1787C8;
-
+    width: 150px;
+    height: 40px;
+    outline: none;
+    border: none;
+    color: white;
+    font-size: 15px;
+    font-weight: bold;
+    margin: 45px 100px;
+    cursor: pointer;
+    float: right;
+    clear: both;
+    padding: 10px;
+    background-color: #3B59DB;
 }
 
 #btnLogout:hover{
@@ -278,29 +253,29 @@ background-color: #1787C8;
 
 .submenu {
     display: none;
-    background: #444359;
+    background: #3B59DB;
     font-size: 14px;
- }
- 
- .submenu li {
-    border-bottom: 1px solid #4b4a5e;
- }
+}
+
+    .submenu li {
+        border-bottom: 1px solid #3B59DB;
+    }
  
  .submenu a {
     display: block;
     text-decoration: none;
-    color: #d9d9d9;
+    color: white;
     padding: 12px;
     padding-left: 42px;
     -webkit-transition: all 0.25s ease;
     -o-transition: all 0.25s ease;
     transition: all 0.25s ease;
  }
- 
- .submenu a:hover {
-    background:#1787C8;
-    color: #FFF;
- }
+
+    .submenu a:hover {
+        background: #1787C8;
+        color: white;
+    }
 
   .ContenedorBanner {
     
@@ -324,10 +299,12 @@ background-color: #1787C8;
     vertical-align:top;
     width:80%;*/  
 
+
     width: 960px;
 
 left: 400px;
-position: absolute;
+
+
     /*border: 1px solid green;*/
     /*height:750px;*/
     margin:20px auto;

@@ -310,15 +310,15 @@ function btnConsultarFichasCensoAnoClick(s, e) {
 
 ///////////////////////////////////////////////////////////////////////////////////////////////
 
-function btnConsultarNinosPagadosCicloClick(s, e) {
+function btnConsultarNinosPagadosCicloClick(s, e , variante) {
     var pago = cbxPagosAno.GetValue();
-
+  
     if (pago !== null) {
         $.ajax({
             url: "/Mineria/PlanillasPago/pv_pgvNinosPagadosPorCiclos",
             type: 'POST',
             dataType: 'html',
-            data: { pago: pago },
+            data: { pago: pago, variante: variante },
             beforeSend: function () {
                 $(".modal").show();
             }
@@ -340,6 +340,7 @@ function btnConsultarNinosPagadosCicloClick(s, e) {
             })
             .done(function (mapa) {
                 $('#divMapa').html(mapa);
+                $("#hide").hide()
             });
 
         })

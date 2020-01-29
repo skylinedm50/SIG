@@ -40,6 +40,7 @@ function btnConsultarPorcentajeNinosIncumplenClick(s, e) {
         .done(function (response) {
             //console.log("success");
             $('#divGridView').html(response);
+            $("#hide").hide()
         })
         .fail(function () {
             console.log("error");
@@ -81,6 +82,7 @@ function btnConsultarArrastreAltasBajasEducacionClick(s, e) {
             })
             .done(function (mapa) {
                 $('#divMapa').html(mapa);
+                $("#hide").hide();
             });
             
         })
@@ -125,6 +127,7 @@ function btnConsultarArrastreAltasBajasSaludClick(s, e) {
             })
             .done(function (mapa) {
                 $('#divMapa').html(mapa);
+                $("#hide").hide();
             });
             
         })

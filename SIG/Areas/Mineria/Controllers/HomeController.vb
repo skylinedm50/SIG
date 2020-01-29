@@ -24,5 +24,18 @@
 
         End Function
 
+        Function Logout() As ActionResult
+
+            Session.Remove("modulo")
+            Session.Remove("Rol")
+            Session.Remove("usuario")
+            Session.Remove("Asignacion")
+            Session.RemoveAll()
+            Return RedirectToAction("Index")
+
+
+            Return View()
+        End Function
+
     End Class
 End Namespace

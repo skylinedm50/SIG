@@ -50,22 +50,18 @@ Public Class Cl_Login
     End Function
 
     Sub Fnc_MenuPrincipal()
-        'For Each Fila As DataRow In HttpContext.Current.Session("modulo").Rows
-        '    HttpContext.Current.Response.Write("<a href=" + Fila(6) + ">" + Fila(5) + "</a>")
-        'Next
 
 
         HttpContext.Current.Response.Write("<nav id='Menu'>")
         HttpContext.Current.Response.Write("<ul>")
-        HttpContext.Current.Response.Write("<li id='tituloMenu' style='text-align:center;   box-shadow: 0 0 5px rgba(0,0,0,0.1); background-color: #1787C8; color:white; width:300px; height:40px; line-height:40px; margin: 0 auto; '>MENU PRINCIPAL</li>")
+        HttpContext.Current.Response.Write("<li id='tituloMenu' style='text-align:center;   box-shadow: 0 0 5px rgba(0,0,0,0.1); background-color: #3B59DB; color:white; width:300px; height:40px; line-height:40px; margin: 0 auto; '><b>MENU PRINCIPAL</b></li>")
 
         For Each Fila As DataRow In HttpContext.Current.Session("modulo").Rows
-            HttpContext.Current.Response.Write("<li><a class='list' href=" + Fila(6) + ">" + Fila(5) + "</a><li>")
+            HttpContext.Current.Response.Write("<li><b><a class='list' href=" + Fila(6) + "><i class = 'fa fa-" + Fila(9) + "'></i>&nbsp;" + Fila(5) + "</a></b><li>")
         Next
 
         HttpContext.Current.Response.Write("</ul>")
         HttpContext.Current.Response.Write("</nav>")
-
 
     End Sub
 
@@ -93,10 +89,10 @@ Public Class Cl_Login
             End If
         Next
         Return False
-        'Return True
     End Function
 
     Function Fnc_MenuModulo(modulo)
+
 
         Dim StringMenu As String = ""
 
@@ -104,7 +100,7 @@ Public Class Cl_Login
         Dim opcion As String = ""
 
         StringMenu += "<ul id='accordion' class='accordion'>"
-        StringMenu += " <li id='tituloMenu' style='text-align:center;  box-shadow: 0 0 5px rgba(0,0,0,0.1); background-color: #1787C8; color:white; width:300px; height:40px; line-height:40px; margin: 0 auto;'>MENU MODULO</li>"
+        StringMenu += " <li id='tituloMenu' style='text-align:center;  box-shadow: 0 0 5px rgba(0,0,0,0.1); background-color: #3B59DB; color:white; width:300px; height:40px; line-height:40px; margin: 0 auto;'><b>MENU MODULO</b></li>"
         StringMenu += " <li>"
         For Each Fila As DataRow In HttpContext.Current.Session("MenuModulo").Rows
             If modulo = Fila(3) Then
@@ -112,11 +108,11 @@ Public Class Cl_Login
                     If opcion <> "" Then
                         StringMenu += " </ul>"
                     End If
-                    StringMenu += " <div class='link'><i class='fa fa-list-ul'></i>" + Fila(2) + "<i class='fa fa-chevron-down'></i></div>"
+                    StringMenu += " <div class='link'><b><i class='fa fa-list-ul'></i>" + Fila(2) + "<i class='fa fa-chevron-down'></i></b></div>"
                     StringMenu += " <ul class='submenu'>"
-                    StringMenu += " <li><a href=" + Fila(1) + ">" + Fila(0) + "</a></li>"
+                    StringMenu += " <b><li><a href=" + Fila(1) + ">" + Fila(0) + "</a></li></b>"
                 Else
-                    StringMenu += " <li><a href=" + Fila(1) + ">" + Fila(0) + "</a></li>"
+                    StringMenu += " <b><li><a href=" + Fila(1) + ">" + Fila(0) + "</a></li></b>"
                 End If
                 opcion = Fila(2)
 
@@ -125,7 +121,7 @@ Public Class Cl_Login
 
         StringMenu += " </ul>"
         StringMenu += " </li>"
-        StringMenu += " <li class='link'><i class='fa fa-reply-all'></i><a style='color:#4D4D4D;' href='/Home/MenuPrincipal'>Regresar al Menu Principal</a></li>"
+        StringMenu += " <b><li class='link'><i class='fa fa-reply-all'></i><a style='color:#077CC0;' href='/Home/MenuPrincipal/?ref=428" + HttpContext.Current.Session("usuario").ToString() + "'>Regresar al Menu Principal</a></li></b>"
 
         StringMenu += " </ul>"
 
@@ -147,6 +143,22 @@ Public Class Cl_Login
         Return Me.Fnc_ExecQuery()
 
     End Function
+
+    Function Fnc_Ultimo_Intento(ByVal usr As String)
+        Try
+            Dim fecha As Date
+            Dim a As Boolean
+            Me.Str_Query = "SELECT TOP 1 [fecha_intento_logeo] FROM [SIG_T].[dbo].[t_log_intento_logeo]" + vbCr +
+                            "WHERE nombre_usuario_intento_logeo = '" + usr + "' ORDER BY fecha_intento_logeo desc "
+            Dim table As DataTable = Me.FncGetTableQuery()
+            fecha = table.Rows(0).Item("fecha_intento_logeo")
+
+            Return DateDiff(DateInterval.Minute, fecha, Date.Now)
+        Catch ex As Exception
+            Return 0
+        End Try
+    End Function
+
 
     Function Fnc_user_opciones_planilla(ByVal codUser As String) As String
 
@@ -219,42 +231,42 @@ Public Class Cl_Login
 
     End Function
 
-    Function fnc_guardar_intento_logeo(ByVal usuario As String, ByVal contraseña As String, ByVal hostname As String, ByVal mac As String, ByVal ip As String, ByVal ipProxy As String) As Integer
+    Function fnc_guardar_intento_logeo(ByVal usuario As String, ByVal hostname As String, ByVal mac As String, ByVal ip As String, ByVal ipProxy As String) As Integer
 
-        Me.Str_Query = "" + vbCr + _
-            "INSERT INTO [SIG_L].[dbo].[t_log_intento_logeo]" + vbCr + _
-            "           ([nombre_usuario_intento_logeo]" + vbCr + _
-            "           ,[clv_usuario_intento_logeo]" + vbCr + _
-            "           ,[mac_intento_logeo]" + vbCr + _
-            "           ,[ip_intento_logeo]" + vbCr + _
-            "           ,[ip_proxy_intento_logeo]" + vbCr + _
-            "           ,[hostname_intento_logeo])" + vbCr + _
-            "        VALUES" + vbCr + _
-            "           ('" + usuario + "'" + vbCr + _
-            "           ,'" + contraseña + "'" + vbCr + _
-            "           ,'" + mac + "'" + vbCr + _
-            "           ,'" + ip + "'" + vbCr + _
-            "           ,'" + ipProxy + "'" + vbCr + _
-            "           ,'" + hostname + "')" + vbCr + _
-            "" + vbCr + _
+        Me.Str_Query = "" + vbCr +
+            "INSERT INTO [SIG_T].[dbo].[t_log_intento_logeo]" + vbCr +
+            "           ([nombre_usuario_intento_logeo]" + vbCr +
+            "           ,[mac_intento_logeo]" + vbCr +
+            "           ,[ip_intento_logeo]" + vbCr +
+            "           ,[ip_proxy_intento_logeo]" + vbCr +
+            "           ,[hostname_intento_logeo]" + vbCr +
+            "           ,[fecha_intento_logeo])" + vbCr +
+            "        VALUES" + vbCr +
+            "           ('" + usuario + "'" + vbCr +
+            "           ,'" + mac + "'" + vbCr +
+            "           ,'" + ip + "'" + vbCr +
+            "           ,'" + ipProxy + "'" + vbCr +
+            "           ,'" + hostname + "'" + vbCr +
+            "           ,GETDATE())" + vbCr +
+            "" + vbCr +
             "SELECT @@IDENTITY"
 
         Return Me.Fnc_GetSingledataConexion()
 
     End Function
 
-    Function fnc_guardar_intento_logeo(ByVal usuario As String, ByVal contraseña As String, ByVal ip As String) As Integer
+    Function fnc_guardar_intento_logeo(ByVal usuario As String, ByVal ip As String) As Integer
 
-        Me.Str_Query = "" + vbCr + _
-            "INSERT INTO [SIG_L].[dbo].[t_log_intento_logeo]" + vbCr + _
-            "           ([nombre_usuario_intento_logeo]" + vbCr + _
-            "           ,[clv_usuario_intento_logeo]" + vbCr + _
-            "           ,[ip_intento_logeo])" + vbCr + _
-            "        VALUES" + vbCr + _
-            "           ('" + usuario + "'" + vbCr + _
-            "           ,'" + contraseña + "'" + vbCr + _
-            "           ,'" + ip + "')" + vbCr + _
-            "" + vbCr + _
+        Me.Str_Query = "" + vbCr +
+            "INSERT INTO [SIG_T].[dbo].[t_log_intento_logeo]" + vbCr +
+            "           ([nombre_usuario_intento_logeo]" + vbCr +
+            "           ,[ip_intento_logeo]" + vbCr +
+            "           ,[fecha_intento_logeo])" + vbCr +
+            "        VALUES" + vbCr +
+            "           ('" + usuario + "'" + vbCr +
+            "           ,'" + ip + "'" + vbCr +
+            "           ,GETDATE())" + vbCr +
+            "" + vbCr +
             "SELECT @@IDENTITY"
 
         Return Me.Fnc_GetSingledataConexion()
@@ -263,12 +275,12 @@ Public Class Cl_Login
 
     Sub fnc_guardar_inicio_sesion(ByVal cod_intento As String, ByVal nombre As String)
 
-        Me.Str_Query = "" + vbCr + _
-            "INSERT INTO [SIG_L].[dbo].[t_log_inicios_sesion]" + vbCr + _
-            "           ([cod_intento_logeo]" + vbCr + _
-            "           ,[nombre_persona_inicio_sesion])" + vbCr + _
-            "        VALUES" + vbCr + _
-            "           (" + cod_intento + vbCr + _
+        Me.Str_Query = "" + vbCr +
+            "INSERT INTO [SIG_T].[dbo].[t_log_inicios_sesion]" + vbCr +
+            "           ([cod_intento_logeo]" + vbCr +
+            "           ,[nombre_persona_inicio_sesion])" + vbCr +
+            "        VALUES" + vbCr +
+            "           (" + cod_intento + vbCr +
             "           ,'" + nombre + "')"
 
         Me.Fnc_GetSingledataConexion()

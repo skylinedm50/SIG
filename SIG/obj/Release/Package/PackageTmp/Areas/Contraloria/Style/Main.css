@@ -94,16 +94,7 @@ height:750px;
     border: 1px solid black;
 }
 
-#content {
-    display: inline-block;
-    vertical-align:top;
-    width:76%;  
-    /*border: 1px solid green;*/
-    /*height:750px;*/
-    margin: 2% 0 0 2%;
 
-/*overflow:auto;*/
-}
 
 #footer {
     text-align:left;

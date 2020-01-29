@@ -10,20 +10,7 @@ MenuPrincipal
     <link href="../../Css/modulos.css" rel="stylesheet" />
     <script src="../../Scripts/jquery.min.js"></script>
 
-    <%--<a href='<%= Url.Action("ContraloriaIndex", "Home") %>' id="1">Contraloria<a>--%>
-    <%--<br />
-    <br />
-    <a href='<%= Url.Action("IncorporacionesIndex", "Home") %>' id="2">Incorporaciones<a>--%>
-
     <input type="button" value="Cerrar Sesión" id="btnLogout" onclick="location.href='<%=  Url.Action("Logout", "Home")%> '" />
-
-<%--    
-    iconos menu
-    map  &#xf0c0;
-    contra &#xf0f6;
-    
-    
-    --%>
 
 
 <div id="Container">
@@ -43,7 +30,7 @@ MenuPrincipal
 </div>
 
 
-        <div id="content">
+        <div id="content" align ="center">
               <div class="ContenedorBanner" ></div>
 
             </div>
@@ -55,6 +42,18 @@ MenuPrincipal
             //$("#MenuContainer").append($("#cssmenu"))
             document.getElementById("MenuContainer").appendChild(document.getElementById("Menu"))
         });
+        if (!window.location.href.match("ref")) {
+       
+            window.onload = nobackbutton;
+
+            function nobackbutton() {
+                window.location.hash = '/?';
+                window.location.hash = '/0/?';
+                window.onhashchange = function () {
+                    window.location.hash = '/?';
+                }
+            }
+}
     </script>
 
 

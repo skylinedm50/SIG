@@ -307,15 +307,24 @@
     <Compile Include="Areas\Planilla\Models\cl_transferencia_actual.vb" />
     <Compile Include="Areas\Planilla\Models\cl_transferencia_acumulada.vb" />
     <Compile Include="Areas\Planilla\PlanillaAreaRegistration.vb" />
+    <Compile Include="Areas\Seguridad\Controllers\AccesosController.vb" />
+    <Compile Include="Areas\Seguridad\Controllers\MonitoreoController.vb" />
     <Compile Include="Areas\Seguridad\Controllers\HomeController.vb" />
+    <Compile Include="Areas\Seguridad\Controllers\ModulosController.vb" />
+    <Compile Include="Areas\Seguridad\Controllers\RolesController.vb" />
     <Compile Include="Areas\Seguridad\Controllers\UsuariosController.vb" />
+    <Compile Include="Areas\Seguridad\Models\Accesos.vb" />
     <Compile Include="Areas\Seguridad\Models\Cl_Conexion.vb" />
+    <Compile Include="Areas\Seguridad\Models\Modulos.vb" />
+    <Compile Include="Areas\Seguridad\Models\Monitoreo.vb" />
+    <Compile Include="Areas\Seguridad\Models\Roles.vb" />
     <Compile Include="Areas\Seguridad\Models\Usuarios.vb" />
     <Compile Include="Areas\Seguridad\SeguridadAreaRegistration.vb" />
     <Compile Include="Controllers\HomeController.vb" />
     <Compile Include="Global.asax.vb">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\Clase\cTripleDES.vb" />
     <Compile Include="Models\Clase\Cl_ParamConexion.vb" />
     <Compile Include="Models\Clase\Cl_ReadFile.vb" />
     <Compile Include="Models\Cl_Conexion.vb" />
@@ -670,7 +679,6 @@
     <Content Include="Areas\Incorporaciones\Views\Incorporaciones\Validar_Pre_Actualizacion\GridSolicitudesActualizarInformacion.ascx" />
     <Content Include="Areas\Incorporaciones\Views\Incorporaciones\Validar_Pre_Actualizacion\Grid_Detalle_Historico_Actualizaciones.ascx" />
     <Content Include="Areas\Incorporaciones\Views\Incorporaciones\Validar_Pre_Actualizacion\HogarActualizar.ascx" />
-    <Content Include="Areas\Incorporaciones\Views\Incorporaciones\Validar_Pre_Actualizacion\ListarDescripcion.ascx" />
     <Content Include="Areas\Incorporaciones\Views\Incorporaciones\Validar_Pre_Actualizacion\PersonasHogarActualizar.ascx" />
     <Content Include="Areas\Incorporaciones\Views\Inicio\Index.aspx" />
     <Content Include="Areas\Incorporaciones\Views\Reportes\ActualizacionesPorUsuario\ActualizacionUsuario.aspx" />
@@ -687,6 +695,8 @@
     <Content Include="Areas\Mineria\images\loader.gif" />
     <Content Include="Areas\Mineria\images\success.png" />
     <Content Include="Areas\Mineria\images\warning.png" />
+    <Content Include="Areas\Mineria\Scripts\bootstrap.bundle.min.js" />
+    <Content Include="Areas\Mineria\Scripts\bootstrap.min.js" />
     <Content Include="Areas\Mineria\Scripts\configuracion.js" />
     <Content Include="Areas\Mineria\Scripts\corresponsabilidad.js" />
     <Content Include="Areas\Mineria\Scripts\drilldown.js" />
@@ -697,9 +707,12 @@
     <Content Include="Areas\Mineria\Scripts\Municipios.js" />
     <Content Include="Areas\Mineria\Scripts\planillasPago.js" />
     <Content Include="Areas\Mineria\Scripts\proyecciones.js" />
+    <Content Include="Areas\Mineria\Styles\bootstrap.min.css" />
     <Content Include="Areas\Mineria\Styles\font-awesome.css" />
+    <Content Include="Areas\Mineria\Styles\mineria.css" />
     <Content Include="Areas\Mineria\Styles\styles_mineria.css" />
     <Content Include="Areas\Mineria\Views\Configuracion\v_AnoElegibilidadFichas.aspx" />
+    <Content Include="Areas\Mineria\Views\Corresponsabilidad\Home.aspx" />
     <Content Include="Areas\Mineria\Views\Corresponsabilidad\pv_gdvNinoIncumplenComp.ascx" />
     <Content Include="Areas\Mineria\Views\Corresponsabilidad\pv_mapaDiferenciaAltasBajasEducacion.ascx" />
     <Content Include="Areas\Mineria\Views\Corresponsabilidad\pv_mapaDiferenciaAltasBajasSalud.ascx" />
@@ -710,6 +723,7 @@
     <Content Include="Areas\Mineria\Views\Corresponsabilidad\v_ArrastreAltasBajasSalud.aspx" />
     <Content Include="Areas\Mineria\Views\Corresponsabilidad\v_PorcentajeNinosIncumpliendoCorr.aspx" />
     <Content Include="Areas\Mineria\Views\Corresponsabilidad\v_TotalesNinosComponente.aspx" />
+    <Content Include="Areas\Mineria\Views\Hogares\Home.aspx" />
     <Content Include="Areas\Mineria\Views\Hogares\pv_crtFichasNoRemitidas.ascx" />
     <Content Include="Areas\Mineria\Views\Hogares\pv_DetalleCorreponsabalidadNino.ascx" />
     <Content Include="Areas\Mineria\Views\Hogares\pv_gdvHistorialPagos.ascx" />
@@ -725,6 +739,7 @@
     <Content Include="Areas\Mineria\Views\Hogares\v_ResultadoFichas.aspx" />
     <Content Include="Areas\Mineria\Views\Home\Index.aspx" />
     <Content Include="Areas\Mineria\Views\Indicadores\v_Indicadores.aspx" />
+    <Content Include="Areas\Mineria\Views\PlanillasPago\Home.aspx" />
     <Content Include="Areas\Mineria\Views\PlanillasPago\pv_chrComparacionPlanillas.ascx" />
     <Content Include="Areas\Mineria\Views\PlanillasPago\pv_chrConsolidadoPago.ascx" />
     <Content Include="Areas\Mineria\Views\PlanillasPago\pv_ControlesAcumuladoPlanillas.ascx" />
@@ -754,10 +769,12 @@
     <Content Include="Areas\Mineria\Views\PlanillasPago\v_ElegiblesContraProgramados.aspx" />
     <Content Include="Areas\Mineria\Views\PlanillasPago\v_HogaresPagadosPeriodoTiempo.aspx" />
     <Content Include="Areas\Mineria\Views\PlanillasPago\v_ListadoNinosPago.aspx" />
+    <Content Include="Areas\Mineria\Views\PlanillasPago\v_NinosPagadosPorCiclo_2cc.aspx" />
     <Content Include="Areas\Mineria\Views\PlanillasPago\v_NinosPagadosPorCiclo.aspx" />
     <Content Include="Areas\Mineria\Views\PlanillasPago\v_NucleoFamiliarMuestra.aspx" />
     <Content Include="Areas\Mineria\Views\PlanillasPago\v_RazonesExclusionHogares.aspx" />
     <Content Include="Areas\Mineria\Views\PlanillasPago\v_TitularesPago.aspx" />
+    <Content Include="Areas\Mineria\Views\Proyecciones\Home.aspx" />
     <Content Include="Areas\Mineria\Views\Proyecciones\pv_pvgElegiblesVsProgramado.ascx" />
     <Content Include="Areas\Mineria\Views\Proyecciones\pv_pvgRazonesExclusionHogares.ascx" />
     <Content Include="Areas\Mineria\Views\Proyecciones\v_ElegiblesContraProgramados.aspx" />
@@ -898,19 +915,70 @@
     <Content Include="Areas\Planilla\Views\Shared\UbicacionSIG\_GridViewPartialCaserio.ascx" />
     <Content Include="Areas\Planilla\Views\Shared\UbicacionSIG\_GridViewPartialDepartamento.ascx" />
     <Content Include="Areas\Planilla\Views\Shared\UbicacionSIG\_GridViewPartialMunicipio.ascx" />
+    <Content Include="Areas\Seguridad\Scripts\actividad.js" />
     <Content Include="Areas\Seguridad\Scripts\cambioContraseña.js" />
+    <Content Include="Areas\Seguridad\Scripts\accesos.js" />
+    <Content Include="Areas\Seguridad\Scripts\modulos.js" />
+    <Content Include="Areas\Seguridad\Scripts\rol.js" />
     <Content Include="Areas\Seguridad\Scripts\usuarios.js" />
+    <Content Include="Areas\Seguridad\Views\Accesos\PartialViewGridPantallasAccesos.ascx" />
+    <Content Include="Areas\Seguridad\Views\Accesos\PartialViewGridRolesAccesos.ascx" />
+    <Content Include="Areas\Seguridad\Views\Accesos\ViewAdministraciondeAccesos.aspx">
+      <BrowseToURL>~/Seguridad/Accesos/ViewAdministraciondeAccesos</BrowseToURL>
+    </Content>
     <Content Include="Areas\Seguridad\Views\Home\Index.aspx" />
-    <Content Include="Areas\Seguridad\Views\Usuarios\PartialViewGridPermisos.ascx" />
+    <Content Include="Areas\Seguridad\Views\Accesos\PartialViewCbModulos.ascx" />
+    <Content Include="Areas\Seguridad\Views\Accesos\PartialViewCbOpciones.ascx" />
+    <Content Include="Areas\Seguridad\Views\Accesos\PartialViewCbPantallas.ascx" />
+    <Content Include="Areas\Seguridad\Views\Modulos\PartialViewGridModulos.ascx" />
+    <Content Include="Areas\Seguridad\Views\Modulos\PartialViewGridOpciones.ascx" />
+    <Content Include="Areas\Seguridad\Views\Modulos\PartialViewGridPantallas.ascx" />
+    <Content Include="Areas\Seguridad\Views\Modulos\ViewAdministraciondeModulos.aspx" />
+    <Content Include="Areas\Seguridad\Views\Monitoreo\PVGV_Actividad.ascx" />
+    <Content Include="Areas\Seguridad\Views\Monitoreo\PVGV_InicioSesion.ascx" />
+    <Content Include="Areas\Seguridad\Views\Monitoreo\PVGV_Intentos.ascx" />
+    <Content Include="Areas\Seguridad\Views\Monitoreo\ViewInicioSesion.aspx" />
+    <Content Include="Areas\Seguridad\Views\Monitoreo\ViewIntentos.aspx" />
+    <Content Include="Areas\Seguridad\Views\Monitoreo\ViewVerActividad.aspx" />
+    <Content Include="Areas\Seguridad\Views\Roles\PartialViewCbEditarModulo.ascx" />
+    <Content Include="Areas\Seguridad\Views\Roles\PartialViewCbNuevoModulo.ascx" />
+    <Content Include="Areas\Seguridad\Views\Roles\PartialViewGridRoles.ascx" />
+    <Content Include="Areas\Seguridad\Views\Roles\ViewAdministraciondeRoles.aspx" />
+    <Content Include="Areas\Seguridad\Views\Usuarios\PartialViewCbJefeInmediato.ascx" />
+    <Content Include="Areas\Seguridad\Views\Usuarios\PartialViewCbProyecto.ascx" />
+    <Content Include="Areas\Seguridad\Views\Usuarios\Pgv_Admon_Usuarios.ascx" />
+    <Content Include="Areas\Seguridad\Views\Usuarios\PVGDepartamentos.ascx" />
+    <Content Include="Areas\Seguridad\Views\Usuarios\PVGPermisosEditarUsuario.ascx" />
+    <Content Include="Areas\Seguridad\Views\Usuarios\PVGPermisosNuevoUsuario.ascx" />
+    <Content Include="Areas\Seguridad\Views\Usuarios\PartialViewGridUsuarios.ascx" />
     <Content Include="Areas\Seguridad\Views\Usuarios\PartialViewTreeListPermisos.ascx" />
-    <Content Include="Areas\Seguridad\Views\Usuarios\ViewAdministrarUsuarios.aspx" />
+    <Content Include="Areas\Seguridad\Views\Usuarios\ViewAdmonUsuarios.aspx" />
+    <Content Include="Areas\Seguridad\Views\Usuarios\ViewReportesUsuarios.aspx" />
+    <Content Include="Areas\Seguridad\Views\Usuarios\ViewDepartamentos.aspx" />
+    <Content Include="Areas\Seguridad\Views\Usuarios\ViewNuevoUsuario.aspx" />
     <Content Include="Areas\Seguridad\Views\Usuarios\ViewCambioContraseña.aspx" />
+    <Content Include="Css\bootstrap.min.css" />
+    <Content Include="Css\icon.css" />
+    <Content Include="Css\materialize.min.css" />
+    <Content Include="Css\Mineria\Menu.css" />
+    <Content Include="Css\Style.css" />
+    <Content Include="Scripts\forgot.js" />
+    <Content Include="Scripts\Home.js" />
+    <Content Include="Scripts\jquery-3.2.1.slim.min.js" />
+    <Content Include="Scripts\jquery.validate.min.js" />
+    <None Include="Scripts\jquery\jquery-2.1.4.intellisense.js" />
+    <Content Include="Scripts\jquery\jquery-2.1.4.js" />
+    <Content Include="Scripts\jquery\jquery-2.1.4.min.js" />
+    <Content Include="Scripts\jquery\jquery.min.js" />
+    <Content Include="Scripts\jquery\jquery.signalR-2.2.0.js" />
+    <Content Include="Scripts\jquery\jquery.signalR-2.2.0.min.js" />
+    <Content Include="Scripts\materialize.min.js" />
+    <Content Include="Scripts\popper.min.js" />
+    <Content Include="Views\Home\RecordarContrasena.aspx" />
     <Content Include="Css\font-awesome.min.css" />
     <Content Include="Css\home.css" />
-    <Content Include="Css\materialize.min.css" />
     <Content Include="Css\Menu.css" />
     <Content Include="Css\modulos.css" />
-    <Content Include="Css\Style.css" />
     <Content Include="Fonts\fontawesome-webfont.svg" />
     <Content Include="Global.asax" />
     <Content Include="Imagen\BannerLogin.png" />
@@ -927,6 +995,7 @@
     <Content Include="Areas\Seguridad\Views\Shared\Main.Master" />
     <Content Include="Areas\Planilla\Views\Shared\Main.Master" />
     <Content Include="Areas\Planilla\Views\Web.config" />
+    <Content Include="Css\flUhRq6tzZclQEJ-Vdg-IuiaDsNc.woff2" />
     <None Include="My Project\PublishProfiles\CarpetaSIG.pubxml" />
     <None Include="My Project\PublishProfiles\perfil.pubxml" />
     <None Include="My Project\PublishProfiles\SIG.pubxml" />
@@ -945,7 +1014,6 @@
     <Content Include="Scripts\jquery.signalR-2.2.0.js" />
     <Content Include="Scripts\jquery.signalR-2.2.0.min.js" />
     <Content Include="Scripts\main.js" />
-    <Content Include="Scripts\materialize.min.js" />
     <Content Include="Scripts\Menu.js" />
     <Content Include="Views\Home\Index.aspx" />
     <Content Include="Views\Home\Login.aspx" />
@@ -961,6 +1029,7 @@
     </Content>
     <Content Include="Views\Web.config" />
     <Content Include="Scripts\jquery-2.1.4.min.map" />
+    <Content Include="Scripts\jquery\jquery-2.1.4.min.map" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

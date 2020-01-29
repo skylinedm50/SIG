@@ -18,6 +18,24 @@ Namespace SIG.Areas.Mineria.Controllers
         Dim planillas As SIG.Areas.Mineria.Models.Cl_PlanillasPago = New SIG.Areas.Mineria.Models.Cl_PlanillasPago
         Dim share As SIG.Areas.Mineria.Models.Cl_Shared = New SIG.Areas.Mineria.Models.Cl_Shared
 
+        Function Home() As ActionResult
+
+            Response.Cookies("opciones").Expires = DateTime.Now.AddDays(-1)
+            Response.Cookies("actividad").Expires = DateTime.Now.AddDays(-1)
+
+            If login.Fnc_loggeado() IsNot Nothing Then
+                'Menu.Fnc_MenuModulo()  
+                If login.fnc_validarModulo(7) Then
+                    login.Fnc_MenuModulo(7)
+                    Return View()
+                End If
+            Else
+                Return Redirect("/Home/Login")
+            End If
+
+        End Function
+
+
 #Region "funciones para la página del listado de titulares"
 
         Function v_TitularesPago() As ActionResult
@@ -507,7 +525,7 @@ Namespace SIG.Areas.Mineria.Controllers
 
 #Region "Funciones niños pagados por ciclo"
 
-        Function v_NinosPagadosPorCiclo() As ActionResult
+        Function v_NinosPagadosPorCiclo(variante As Int16) As ActionResult
 
             Response.Cookies("opciones").Expires = DateTime.Now.AddDays(-1)
             Response.Cookies("actividad").Expires = DateTime.Now.AddDays(-1)
@@ -516,6 +534,7 @@ Namespace SIG.Areas.Mineria.Controllers
                 'Menu.Fnc_MenuModulo()  
                 If login.fnc_validarModulo(7) Then
                     login.Fnc_MenuModulo(7)
+                    ViewData("variante") = variante
                     Return View()
                 End If
             Else
@@ -524,27 +543,30 @@ Namespace SIG.Areas.Mineria.Controllers
 
         End Function
 
-        Function pv_pgvNinosPagadosPorCiclos(ByVal pago As String) As ActionResult
+
+
+        Function pv_pgvNinosPagadosPorCiclos(ByVal pago As String, ByVal variante As Integer) As ActionResult
             ViewData("pago") = pago
+            ViewData("variante") = variante
             Return PartialView(planillas.Fnc_ninos_pagados_ciclo(pago))
         End Function
 
-        Function exportarNinosPagadosPorCiclo() As ActionResult
+        Function exportarNinosPagadosPorCiclo(ByVal variante As Integer) As ActionResult
 
             Dim export As String = ComboBoxExtension.GetValue(Of String)("cbxExpotar")
             Dim settings As PivotGridSettings = SIG.Areas.Mineria.Controllers.exportPvgRazonExclusionHogares.ExportPivotGridSettings
             Dim pago As String = ComboBoxExtension.GetValue(Of String)("cbxPagosAno")
 
             If export = "Excel" Then
-                Return PivotGridExtension.ExportToXlsx(SIG.Areas.Mineria.Controllers.exportPvgNinosPagadosPorCiclo.exportPvgSettings, planillas.Fnc_ninos_pagados_ciclo(pago), "Cantidad de Niños Pagados Por Ciclo")
+                Return PivotGridExtension.ExportToXlsx(SIG.Areas.Mineria.Controllers.exportPvgNinosPagadosPorCiclo.exportPvgSettings(variante), planillas.Fnc_ninos_pagados_ciclo(pago), "Cantidad de Niños Pagados Por Ciclo")
             ElseIf export = "Pdf" Then
-                Return PivotGridExtension.ExportToPdf(SIG.Areas.Mineria.Controllers.exportPvgNinosPagadosPorCiclo.exportPvgSettings, planillas.Fnc_ninos_pagados_ciclo(pago), "Cantidad de Niños Pagados Por Ciclo")
+                Return PivotGridExtension.ExportToPdf(SIG.Areas.Mineria.Controllers.exportPvgNinosPagadosPorCiclo.exportPvgSettings(variante), planillas.Fnc_ninos_pagados_ciclo(pago), "Cantidad de Niños Pagados Por Ciclo")
             ElseIf export = "Rtf" Then
-                Return PivotGridExtension.ExportToRtf(SIG.Areas.Mineria.Controllers.exportPvgNinosPagadosPorCiclo.exportPvgSettings, planillas.Fnc_ninos_pagados_ciclo(pago), "Cantidad de Niños Pagados Por Ciclo")
+                Return PivotGridExtension.ExportToRtf(SIG.Areas.Mineria.Controllers.exportPvgNinosPagadosPorCiclo.exportPvgSettings(variante), planillas.Fnc_ninos_pagados_ciclo(pago), "Cantidad de Niños Pagados Por Ciclo")
             ElseIf export = "Html" Then
-                Return PivotGridExtension.ExportToHtml(SIG.Areas.Mineria.Controllers.exportPvgNinosPagadosPorCiclo.exportPvgSettings, planillas.Fnc_ninos_pagados_ciclo(pago), "Cantidad de Niños Pagados Por Ciclo")
+                Return PivotGridExtension.ExportToHtml(SIG.Areas.Mineria.Controllers.exportPvgNinosPagadosPorCiclo.exportPvgSettings(variante), planillas.Fnc_ninos_pagados_ciclo(pago), "Cantidad de Niños Pagados Por Ciclo")
             ElseIf export = "Csv" Then
-                Return PivotGridExtension.ExportToCsv(SIG.Areas.Mineria.Controllers.exportPvgNinosPagadosPorCiclo.exportPvgSettings, planillas.Fnc_ninos_pagados_ciclo(pago), "Cantidad de Niños Pagados Por Ciclo")
+                Return PivotGridExtension.ExportToCsv(SIG.Areas.Mineria.Controllers.exportPvgNinosPagadosPorCiclo.exportPvgSettings(variante), planillas.Fnc_ninos_pagados_ciclo(pago), "Cantidad de Niños Pagados Por Ciclo")
             End If
 
             Return Nothing
@@ -987,6 +1009,7 @@ Namespace SIG.Areas.Mineria.Controllers
             settings.Width = Unit.Percentage(120)
             settings.OptionsPager.RowsPerPage = 20
             settings.OptionsView.HorizontalScrollBarMode = ScrollBarMode.Auto
+ 
 
             settings.SettingsExport.OptionsPrint.PrintRowHeaders = DefaultBoolean.True
             settings.SettingsExport.OptionsPrint.PrintColumnHeaders = DefaultBoolean.True
@@ -1757,21 +1780,22 @@ Namespace SIG.Areas.Mineria.Controllers
         Private Sub New()
         End Sub
 
-        Public Shared ReadOnly Property exportPvgSettings() As PivotGridSettings
+        Public Shared ReadOnly Property exportPvgSettings(variante As Integer) As PivotGridSettings
 
             Get
-                exportSettings = CreateExportPvgNinosPagadosPorCiclo()
+                exportSettings = CreateExportPvgNinosPagadosPorCiclo(variante)
                 Return exportSettings
             End Get
 
         End Property
 
-        Private Shared Function CreateExportPvgNinosPagadosPorCiclo() As PivotGridSettings
+        Private Shared Function CreateExportPvgNinosPagadosPorCiclo(variante As Integer) As PivotGridSettings
 
             Dim settings As New PivotGridSettings()
 
             settings.Name = "pvgNinosPagadosPorCiclo"
-            settings.Width = Unit.Percentage(100)
+            settings.Width = 1000
+            settings.OptionsPager.RowsPerPage = 20
             settings.OptionsView.HorizontalScrollBarMode = ScrollBarMode.Auto
 
             settings.SettingsExport.OptionsPrint.PrintRowHeaders = DefaultBoolean.True
@@ -1779,6 +1803,7 @@ Namespace SIG.Areas.Mineria.Controllers
             settings.SettingsExport.OptionsPrint.PrintHeadersOnEveryPage = True
             settings.SettingsExport.OptionsPrint.PrintFilterHeaders = DefaultBoolean.False
             settings.SettingsExport.OptionsPrint.PrintDataHeaders = DefaultBoolean.False
+
 
             'settings.OptionsView.ShowRowGrandTotals = False
             'settings.OptionsView.ShowColumnGrandTotalHeader = False
@@ -1788,89 +1813,267 @@ Namespace SIG.Areas.Mineria.Controllers
             settings.EnableCallbackAnimation = True
             settings.EnablePagingCallbackAnimation = True
             settings.OptionsView.DataHeadersDisplayMode = PivotDataHeadersDisplayMode.Popup
+            If (variante = 1) Then
+                settings.Fields.Add(
+                     Sub(field)
+                         field.Area = PivotArea.RowArea
+                         field.Index = 0
+                         field.Caption = "Ciclo"
+                         field.FieldName = "descripcion_ciclo"
+                     End Sub)
+                settings.Fields.Add(
+                    Sub(field)
+                        field.Area = PivotArea.DataArea
+                        field.Index = 0
+                        field.Caption = "Total"
+                        field.FieldName = "total_niños"
+                    End Sub)
+                settings.Fields.Add(
+                    Sub(field)
+                        field.Area = PivotArea.DataArea
+                        field.Index = 1
+                        field.Caption = "Cumpliendo"
+                        field.FieldName = "total_niños_cumpliendo"
+                    End Sub)
+                settings.Fields.Add(
+                    Sub(field)
+                        field.Area = PivotArea.DataArea
+                        field.Index = 2
+                        field.Caption = "Apercibidos"
+                        field.FieldName = "total_niños_apercibidos"
+                    End Sub)
+                settings.Fields.Add(
+                    Sub(field)
+                        field.Area = PivotArea.DataArea
+                        field.Index = 3
+                        field.Caption = "No Cumpliendo"
+                        field.FieldName = "total_niños_no_cumpliendo"
+                    End Sub)
+                settings.Fields.Add(
+                    Sub(field)
+                        field.Area = PivotArea.DataArea
+                        field.Index = 4
+                        field.Caption = "Programados"
+                        field.FieldName = "total_niños_programados"
+                    End Sub)
+                settings.Fields.Add(
+                    Sub(field)
+                        field.Area = PivotArea.DataArea
+                        field.Index = 5
+                        field.Caption = "Pagados"
+                        field.FieldName = "total_niños_pagados"
+                    End Sub)
+                settings.Fields.Add(
+                    Sub(field)
+                        field.Area = PivotArea.DataArea
+                        field.Index = 6
+                        field.Caption = "No Pagados"
+                        field.FieldName = "total_niños_no_pagados"
+                    End Sub)
 
-            settings.Fields.Add(
-                Sub(field)
-                    field.Area = PivotArea.RowArea
-                    field.Index = 0
-                    field.Caption = "Ciclo"
-                    field.FieldName = "descripcion_ciclo"
-                End Sub)
-            settings.Fields.Add(
-                Sub(field)
-                    field.Area = PivotArea.DataArea
-                    field.Index = 0
-                    field.Caption = "Total"
-                    field.FieldName = "total_niños"
-                End Sub)
-            settings.Fields.Add(
-                Sub(field)
-                    field.Area = PivotArea.DataArea
-                    field.Index = 1
-                    field.Caption = "Cumpliendo"
-                    field.FieldName = "total_niños_cumpliendo"
-                End Sub)
-            settings.Fields.Add(
-                Sub(field)
-                    field.Area = PivotArea.DataArea
-                    field.Index = 2
-                    field.Caption = "Apercibidos"
-                    field.FieldName = "total_niños_apercibidos"
-                End Sub)
-            settings.Fields.Add(
-                Sub(field)
-                    field.Area = PivotArea.DataArea
-                    field.Index = 3
-                    field.Caption = "No Cumpliendo"
-                    field.FieldName = "total_niños_no_cumpliendo"
-                End Sub)
-            settings.Fields.Add(
-                Sub(field)
-                    field.Area = PivotArea.DataArea
-                    field.Index = 4
-                    field.Caption = "Programados"
-                    field.FieldName = "total_niños_programados"
-                End Sub)
-            settings.Fields.Add(
-                Sub(field)
-                    field.Area = PivotArea.DataArea
-                    field.Index = 5
-                    field.Caption = "Pagados"
-                    field.FieldName = "total_niños_pagados"
-                End Sub)
-            settings.Fields.Add(
-                Sub(field)
-                    field.Area = PivotArea.DataArea
-                    field.Index = 6
-                    field.Caption = "No Pagados"
-                    field.FieldName = "total_niños_no_pagados"
-                End Sub)
+                settings.Fields.Add(
+                    Sub(field)
+                        field.Area = PivotArea.RowArea
+                        field.Index = 0
+                        field.Caption = "Departamento"
+                        field.FieldName = "desc_departamento"
+                    End Sub)
+                settings.Fields.Add(
+                    Sub(field)
+                        field.Area = PivotArea.FilterArea
+                        field.Caption = "Municipio"
+                        field.FieldName = "desc_municipio"
+                    End Sub)
+                settings.Fields.Add(
+                    Sub(field)
+                        field.Area = PivotArea.FilterArea
+                        field.Caption = "Aldea"
+                        field.FieldName = "desc_aldea"
+                    End Sub)
+                settings.Fields.Add(
+                    Sub(field)
+                        field.Area = PivotArea.FilterArea
+                        field.Caption = "Caserio"
+                        field.FieldName = "desc_caserio"
+                    End Sub)
 
-            settings.Fields.Add(
-                Sub(field)
-                    field.Area = PivotArea.RowArea
-                    field.Index = 0
-                    field.Caption = "Departamento"
-                    field.FieldName = "desc_departamento"
-                End Sub)
-            settings.Fields.Add(
-                Sub(field)
-                    field.Area = PivotArea.FilterArea
-                    field.Caption = "Municipio"
-                    field.FieldName = "desc_municipio"
-                End Sub)
-            settings.Fields.Add(
-                Sub(field)
-                    field.Area = PivotArea.FilterArea
-                    field.Caption = "Aldea"
-                    field.FieldName = "desc_aldea"
-                End Sub)
-            settings.Fields.Add(
-                Sub(field)
-                    field.Area = PivotArea.FilterArea
-                    field.Caption = "Caserio"
-                    field.FieldName = "desc_caserio"
-                End Sub)
+
+            ElseIf variante = 2 Then
+
+
+                settings.Fields.Add(
+                     Sub(field)
+                         field.Area = PivotArea.ColumnArea
+                         field.Index = 1
+                         field.Caption = "Ciclo"
+                         field.FieldName = "descripcion_ciclo"
+                     End Sub)
+                settings.Fields.Add(
+                    Sub(field)
+                        field.Area = PivotArea.DataArea
+                        field.Index = 0
+                        field.Caption = "Total"
+                        field.FieldName = "total_niños"
+                    End Sub)
+
+                settings.Fields.Add(
+                    Sub(field)
+                        field.Area = PivotArea.RowArea
+                        field.Index = 0
+                        field.Caption = "Departamento"
+                        field.FieldName = "desc_departamento"
+                    End Sub)
+
+
+            ElseIf variante = 3 Then
+
+
+                settings.Fields.Add(
+                    Sub(field)
+                        field.Area = PivotArea.DataArea
+                        field.Index = 0
+                        field.Caption = "Total"
+                        field.FieldName = "total_niños"
+                    End Sub)
+                settings.Fields.Add(
+                    Sub(field)
+                        field.Area = PivotArea.DataArea
+                        field.Index = 1
+                        field.Caption = "Cumpliendo"
+                        field.FieldName = "total_niños_cumpliendo"
+                    End Sub)
+                settings.Fields.Add(
+                    Sub(field)
+                        field.Area = PivotArea.DataArea
+                        field.Index = 2
+                        field.Caption = "Apercibidos"
+                        field.FieldName = "total_niños_apercibidos"
+                    End Sub)
+                settings.Fields.Add(
+                    Sub(field)
+                        field.Area = PivotArea.DataArea
+                        field.Index = 3
+                        field.Caption = "No Cumpliendo"
+                        field.FieldName = "total_niños_no_cumpliendo"
+                    End Sub)
+                settings.Fields.Add(
+                    Sub(field)
+                        field.Area = PivotArea.DataArea
+                        field.Index = 4
+                        field.Caption = "Programados"
+                        field.FieldName = "total_niños_programados"
+                    End Sub)
+                settings.Fields.Add(
+                    Sub(field)
+                        field.Area = PivotArea.DataArea
+                        field.Index = 5
+                        field.Caption = "Pagados"
+                        field.FieldName = "total_niños_pagados"
+                    End Sub)
+                settings.Fields.Add(
+                    Sub(field)
+                        field.Area = PivotArea.DataArea
+                        field.Index = 6
+                        field.Caption = "No Pagados"
+                        field.FieldName = "total_niños_no_pagados"
+                    End Sub)
+
+                settings.Fields.Add(
+                    Sub(field)
+                        field.Area = PivotArea.RowArea
+                        field.Index = 0
+                        field.Caption = "Departamento"
+                        field.FieldName = "desc_departamento"
+                    End Sub)
+
+
+            ElseIf variante = 4 Then
+
+
+                settings.Fields.Add(
+                    Sub(field)
+                        field.Area = PivotArea.ColumnArea
+                        field.Index = 0
+                        field.Caption = "Ciclo"
+                        field.FieldName = "descripcion_ciclo"
+                    End Sub)
+                settings.Fields.Add(
+                    Sub(field)
+                        field.Area = PivotArea.DataArea
+                        field.Index = 0
+                        field.Caption = "Total"
+                        field.FieldName = "total_niños"
+                    End Sub)
+                settings.Fields.Add(
+                    Sub(field)
+                        field.Area = PivotArea.DataArea
+                        field.Index = 1
+                        field.Caption = "Cumpliendo"
+                        field.FieldName = "total_niños_cumpliendo"
+                    End Sub)
+                settings.Fields.Add(
+                    Sub(field)
+                        field.Area = PivotArea.DataArea
+                        field.Index = 2
+                        field.Caption = "Apercibidos"
+                        field.FieldName = "total_niños_apercibidos"
+                    End Sub)
+                settings.Fields.Add(
+                    Sub(field)
+                        field.Area = PivotArea.DataArea
+                        field.Index = 3
+                        field.Caption = "No Cumpliendo"
+                        field.FieldName = "total_niños_no_cumpliendo"
+                    End Sub)
+                settings.Fields.Add(
+                    Sub(field)
+                        field.Area = PivotArea.DataArea
+                        field.Index = 4
+                        field.Caption = "Programados"
+                        field.FieldName = "total_niños_programados"
+                    End Sub)
+                settings.Fields.Add(
+                    Sub(field)
+                        field.Area = PivotArea.DataArea
+                        field.Index = 5
+                        field.Caption = "Pagados"
+                        field.FieldName = "total_niños_pagados"
+                    End Sub)
+                settings.Fields.Add(
+                    Sub(field)
+                        field.Area = PivotArea.DataArea
+                        field.Index = 6
+                        field.Caption = "No Pagados"
+                        field.FieldName = "total_niños_no_pagados"
+                    End Sub)
+
+                settings.Fields.Add(
+                    Sub(field)
+                        field.Area = PivotArea.RowArea
+                        field.Index = 0
+                        field.Caption = "Departamento"
+                        field.FieldName = "desc_departamento"
+                    End Sub)
+                settings.Fields.Add(
+                    Sub(field)
+                        field.Area = PivotArea.FilterArea
+                        field.Caption = "Municipio"
+                        field.FieldName = "desc_municipio"
+                    End Sub)
+                settings.Fields.Add(
+                    Sub(field)
+                        field.Area = PivotArea.FilterArea
+                        field.Caption = "Aldea"
+                        field.FieldName = "desc_aldea"
+                    End Sub)
+                settings.Fields.Add(
+                    Sub(field)
+                        field.Area = PivotArea.FilterArea
+                        field.Caption = "Caserio"
+                        field.FieldName = "desc_caserio"
+                    End Sub)
+            End If
+
 
             Return settings
 
