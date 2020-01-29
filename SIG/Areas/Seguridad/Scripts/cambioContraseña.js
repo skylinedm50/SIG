@@ -15,10 +15,13 @@ function btnActualizarClick(s, e) {
         success: function (response) {
 
             if (response == 1) {
-                alert("Contraseña actualizada correctamente.");
-                window.location = "/Home/Login";
+                lblmensaje.SetText("Contraseña actualizada correctamente");
+                popupMensaje.Show();
+            
             } else {
-                alert("No se pudo actualizar la contraseña.");
+               
+                lblmensaje.SetText("Hay un error, intente nuevamente");
+                popupMensaje.Show();
             }
 
         }
@@ -26,78 +29,93 @@ function btnActualizarClick(s, e) {
 
 }
 
-function btnCancelarClick(s, e) {
 
-    
-
-}
 
 function txtConfirmacionClaveChange(s, e) {
-
-    if (txtClave.GetText() == txtConfirmacionClave.GetText()) {
-        btnActualizar.SetEnabled(true);
+    if (ratingControl.GetValue() > 3) {
+        if (txtClave.GetText() == txtConfirmacionClave.GetText()) {
+            btnActualizar.SetEnabled(true);
+            lblMensaje2.SetVisible(true);
+        } else {
+            lblMensaje2.SetVisible(false);
+            btnActualizar.SetEnabled(false);
+        }
+    } else {
+        btnActualizar.SetEnabled(false);
         lblMensaje2.SetVisible(false);
+    }
+}
+
+
+var passwordMinLength = 8;
+function GetPasswordRating(password) {
+    var result = 0;
+    if (password) {
+        result++;
+        if (password.length >= passwordMinLength) {
+            if (/[a-z]/.test(password))
+                result++;
+            if (/[A-Z]/.test(password))
+                result++;
+            if (/\d/.test(password))
+                result++;
+            if (!(/^[a-z0-9]+$/i.test(password)))
+                result++;
+        }
+    }
+    return result;
+}
+
+function OnPasswordTextBoxInit(s, e) {
+    ApplyCurrentPasswordRating();
+
+    
+}
+
+function OnPassChanged(s, e) {
+    ApplyCurrentPasswordRating();
+    if (ratingControl.GetValue() > 3) {
+        if (txtClave.GetText() == txtConfirmacionClave.GetText()) {
+            btnActualizar.SetEnabled(true);
+            lblMensaje2.SetVisible(true);
+        } else {
+          //  lblMensaje2.SetVisible(true);
+            btnActualizar.SetEnabled(false);
+        }
     } else {
-        lblMensaje2.SetVisible(true);
+        btnActualizar.SetEnabled(false);
+        lblMensaje2.SetVisible(false);
     }
-
 }
 
-function txtClaveChange(s, e) {
-
-    var pass = txtClave.GetText();
-
-    if (pass.length < 8) {
-        lblMensaje.SetText('La contraseña debe poseer al menos 8 caracteres.');
-        lblMensaje.SetVisible(true);
-    } else if (tiene_mayusculas(pass) == 0) {
-        lblMensaje.SetText('La contraseña debe poseer al menos una letra mayuscula.');
-        lblMensaje.SetVisible(true);
-    } else if (tiene_minusculas(pass) == 0) {
-        lblMensaje.SetText('La contraseña debe poseer al menos una letra minuscula.');
-        lblMensaje.SetVisible(true);
-    } else if (tiene_numeros(pass) == 0) {
-        lblMensaje.SetText('La contraseña debe tener al menos un número.');
-        lblMensaje.SetVisible(true);
-    } else {
-        lblMensaje.SetText();
-        lblMensaje.SetVisible(false);
-    }   
+function ApplyCurrentPasswordRating() {
+    var password = txtClave.GetText();
+    var passwordRating = GetPasswordRating(password);
+    ApplyPasswordRating(passwordRating);
 }
 
-function tiene_numeros(texto) {
-
-    var numeros = "0123456789";
-
-    for (i = 0; i < texto.length; i++) {
-        if (numeros.indexOf(texto.charAt(i), 0) != -1) {
-            return 1;
-        }
+function ApplyPasswordRating(value) {
+    ratingControl.SetValue(value);
+    switch (value) {
+        case 0:
+            ratingLabel.SetValue("");
+            break;
+        case 1:
+            ratingLabel.SetValue("Muy simple");
+            break;
+        case 2:
+            ratingLabel.SetValue("No segura");
+            break;
+        case 3:
+            ratingLabel.SetValue("Normal");
+            break;
+        case 4:
+            ratingLabel.SetValue("Segura");
+            break;
+        case 5:
+            ratingLabel.SetValue("Muy Segura");
+            break;
+        default:
+            ratingLabel.SetValue("");
     }
-    return 0;
 }
-
-function tiene_minusculas(texto) {
-
-    var letras = "abcdefghyjklmnñopqrstuvwxyz";
-
-    for (i = 0; i < texto.length; i++) {
-        if (letras.indexOf(texto.charAt(i), 0) != -1) {
-            return 1;
-        }
-    }
-    return 0;
-}
-
-function tiene_mayusculas(texto) {
-
-    var letras_mayusculas = "ABCDEFGHYJKLMNÑOPQRSTUVWXYZ";
-
-    for (i = 0; i < texto.length; i++) {
-        if (letras_mayusculas.indexOf(texto.charAt(i), 0) != -1) {
-            return 1;
-        }
-    }
-    return 0;
-}
-

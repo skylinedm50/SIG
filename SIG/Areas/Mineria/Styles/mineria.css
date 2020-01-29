@@ -1,0 +1,23 @@
+﻿body{
+    background-color:aliceblue;
+}
+
+.Container{
+
+}
+
+html {               
+    background: rgba(255,252,252,1);
+    background: -moz-linear-gradient(left, rgba(255,252,252,1) 0%, rgba(234,236,237,1) 100%);
+    background: -webkit-gradient(left top, right top, color-stop(0%, rgba(255,252,252,1)), color-stop(100%, rgba(234,236,237,1)));
+    background: -webkit-linear-gradient(left, rgba(255,252,252,1) 0%, rgba(234,236,237,1) 100%);
+    background: -o-linear-gradient(left, rgba(255,252,252,1) 0%, rgba(234,236,237,1) 100%);
+    background: -ms-linear-gradient(left, rgba(255,252,252,1) 0%, rgba(234,236,237,1) 100%);
+    background: linear-gradient(to right, rgba(255,252,252,1) 0%, rgba(234,236,237,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fffcfc', endColorstr='#eaeced', GradientType=1 );
+    font-family: "Helvetica Neue", FontAwesome, Helvetica, Arial, sans-serif;
+    padding:0;
+    margin:0;
+    position: relative;
+    min-height: 100%;
+}

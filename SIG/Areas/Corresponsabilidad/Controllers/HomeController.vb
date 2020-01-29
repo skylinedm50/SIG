@@ -10,22 +10,30 @@
 
             If login.Fnc_loggeado() IsNot Nothing Then
                 'Menu.Fnc_MenuModulo()
+
                 login.Fnc_MenuModulo(2)
                 Return View("Index")
             Else
-                Return Redirect("/Home/Login")
+                Return Me.Redirect("/Home/Login")
             End If
 
         End Function
 
         Function Logout() As ActionResult
+
             Session.Remove("MenuModulo")
+            Session.Remove("Actividades")
             Session.Remove("modulo")
             Session.Remove("Rol")
             Session.Remove("usuario")
             Session.Remove("Asignacion")
             Session.Remove("menu")
-            Return RedirectToAction("Index")
+            Session.RemoveAll()
+            Session.Clear()
+            Session.Abandon()
+
+            Return RedirectToAction("Index", "Home")
+
         End Function
     End Class
 End Namespace

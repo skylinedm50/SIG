@@ -20,6 +20,23 @@ Namespace SIG.Areas.Mineria.Controllers
         Dim login As New Global.SIG.Cl_Login
         Dim hogares As SIG.Areas.Mineria.Models.Cl_Hogares = New SIG.Areas.Mineria.Models.Cl_Hogares
 
+        Function Home() As ActionResult
+
+            Response.Cookies("opciones").Expires = DateTime.Now.AddDays(-1)
+            Response.Cookies("actividad").Expires = DateTime.Now.AddDays(-1)
+
+            If login.Fnc_loggeado() IsNot Nothing Then
+                If login.fnc_validarModulo(7) Then
+                    login.Fnc_MenuModulo(7)
+                    Return View()
+                End If
+            Else
+                Return Redirect("/Home/Login")
+            End If
+
+        End Function
+
+
 #Region "Funciones para el historial de pagos del participante"
 
         Function v_HistorialPagos() As ActionResult

@@ -6,7 +6,7 @@
 <script type="text/javascript" src='<%: ResolveUrl("~/Areas/Mineria/Scripts/hn-all.js")%>'></script>
 <script type="text/javascript" src='<%: ResolveUrl("~/Areas/Mineria/Scripts/Municipios.js")%>'></script>
 
-<div id="container" style="width: 700px; height: 500px; margin: 0 auto"></div>
+<div id="container" style="width: 800px; height: 500px; margin: 0 auto"></div>
 
 <script>
 

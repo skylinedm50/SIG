@@ -380,7 +380,7 @@ function btnAnularPlanillaClick(s, e) {
         })
         .done(function (response) {
 
-            if (response === 1) {
+            if (response === "1") {
                 $('.success').html("La planilla se anulo exitosamente.");
                 $('.success').show();
             } else {

@@ -3,6 +3,12 @@ Imports DevExpress.Web
 Imports DevExpress.Utils
 Imports Newtonsoft.Json
 
+
+Imports DevExpress.Web.ASPxPivotGrid
+Imports DevExpress.XtraPivotGrid
+Imports DevExpress.Data.PivotGrid
+Imports DevExpress.Export
+
 Namespace SIG.Areas.Mineria.Controllers
     Public Class CorresponsabilidadController
         Inherits System.Web.Mvc.Controller
@@ -13,6 +19,23 @@ Namespace SIG.Areas.Mineria.Controllers
         Dim login As New Global.SIG.Cl_Login
         Dim corr As SIG.Areas.Mineria.Models.Cl_Corresponsabilidad = New SIG.Areas.Mineria.Models.Cl_Corresponsabilidad
         Dim share As SIG.Areas.Mineria.Models.Cl_Shared = New SIG.Areas.Mineria.Models.Cl_Shared
+
+        Function Home() As ActionResult
+
+            Response.Cookies("opciones").Expires = DateTime.Now.AddDays(-1)
+            Response.Cookies("actividad").Expires = DateTime.Now.AddDays(-1)
+
+            If login.Fnc_loggeado() IsNot Nothing Then
+                'Menu.Fnc_MenuModulo()  
+                If login.fnc_validarModulo(7) Then
+                    login.Fnc_MenuModulo(7)
+                    Return View()
+                End If
+            Else
+                Return Redirect("/Home/Login")
+            End If
+
+        End Function
 
 #Region "Funciones para porcentaje de niños que incumplen corresponsabilidad"
 
@@ -321,7 +344,10 @@ Namespace SIG.Areas.Mineria.Controllers
             Dim settings As New GridViewSettings()
 
             settings.Name = "gdvNinosIncumpliendoComp"
-
+            settings.Width = 900
+            settings.SettingsPager.PageSize = 20
+            settings.SettingsBehavior.AllowFixedGroups = True
+            settings.Settings.ShowGroupPanel = True
             settings.SettingsPager.Position = PagerPosition.Bottom
             settings.SettingsPager.FirstPageButton.Visible = True
             settings.SettingsPager.LastPageButton.Visible = True
@@ -352,7 +378,12 @@ Namespace SIG.Areas.Mineria.Controllers
                 Sub(ag)
                     ag.Caption = "Área Geográfica"
                     ag.HeaderStyle.HorizontalAlign = HorizontalAlign.Center
-                    ag.Columns.Add("desc_departamento", "Departamento").Settings.HeaderFilterMode = HeaderFilterMode.CheckedList
+                    ag.Columns.Add(Sub(colum)
+                                       colum.Caption = "Departamento"
+                                       colum.FieldName = "desc_departamento"
+                                       colum.GroupIndex = 0
+                                   End Sub)
+                    'ag.Columns.Add("desc_departamento", "Departamento").Settings.HeaderFilterMode = HeaderFilterMode.CheckedList
                     ag.Columns.Add("desc_municipio", "Municipio").Settings.HeaderFilterMode = HeaderFilterMode.CheckedList
                     ag.Columns.Add("desc_aldea", "Aldea").Settings.HeaderFilterMode = HeaderFilterMode.CheckedList
 
@@ -419,14 +450,15 @@ Namespace SIG.Areas.Mineria.Controllers
             Dim settings As New PivotGridSettings()
 
             settings.Name = "pvgInfo"
-            settings.Width = Unit.Percentage(100)
+            settings.Width = 1000
+            settings.OptionsPager.RowsPerPage = 20
             settings.OptionsView.ShowHorizontalScrollBar = True
-
             settings.SettingsExport.OptionsPrint.PrintRowHeaders = DefaultBoolean.True
             settings.SettingsExport.OptionsPrint.PrintColumnHeaders = DefaultBoolean.True
             settings.SettingsExport.OptionsPrint.PrintHeadersOnEveryPage = DefaultBoolean.True
             settings.SettingsExport.OptionsPrint.PrintFilterHeaders = DefaultBoolean.False
             settings.SettingsExport.OptionsPrint.PrintDataHeaders = DefaultBoolean.False
+            settings.OptionsView.DataHeadersDisplayMode = PivotDataHeadersDisplayMode.Popup
 
             settings.Fields.Add(
                 Sub(field)

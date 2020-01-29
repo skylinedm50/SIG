@@ -13,6 +13,22 @@ Namespace SIG.Areas.Mineria.Controllers
         Dim proyecciones As SIG.Areas.Mineria.Models.Cl_Proyecciones = New SIG.Areas.Mineria.Models.Cl_Proyecciones
 
 
+        Function Home() As ActionResult
+            Response.Cookies("opciones").Expires = DateTime.Now.AddDays(-1)
+            Response.Cookies("actividad").Expires = DateTime.Now.AddDays(-1)
+
+            If login.Fnc_loggeado() IsNot Nothing Then
+                'Menu.Fnc_MenuModulo()  
+                If login.fnc_validarModulo(7) Then
+                    login.Fnc_MenuModulo(7)
+                    Return View()
+                End If
+            Else
+                Return Redirect("/Home/Login")
+            End If
+
+        End Function
+
 #Region "Funciones para los elegibles contro programados"
 
         Function v_ElegiblesContraProgramados() As ActionResult

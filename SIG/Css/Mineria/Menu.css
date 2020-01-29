@@ -1,0 +1,115 @@
+﻿html {               
+    background: rgba(255,252,252,1);
+    background: -moz-linear-gradient(left, rgba(255,252,252,1) 0%, rgba(234,236,237,1) 100%);
+    background: -webkit-gradient(left top, right top, color-stop(0%, rgba(255,252,252,1)), color-stop(100%, rgba(234,236,237,1)));
+    background: -webkit-linear-gradient(left, rgba(255,252,252,1) 0%, rgba(234,236,237,1) 100%);
+    background: -o-linear-gradient(left, rgba(255,252,252,1) 0%, rgba(234,236,237,1) 100%);
+    background: -ms-linear-gradient(left, rgba(255,252,252,1) 0%, rgba(234,236,237,1) 100%);
+    background: linear-gradient(to right, rgba(255,252,252,1) 0%, rgba(234,236,237,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fffcfc', endColorstr='#eaeced', GradientType=1 );
+    font-family: "Helvetica Neue", FontAwesome, Helvetica, Arial, sans-serif;
+    padding:0;
+    margin:0;
+    position: relative;
+    min-height: 100%;
+}
+
+
+
+#NavBarMineria li {
+    display: table-cell;
+}
+
+
+#ModuloNombre {
+    padding-left: 20px;
+}
+
+
+#NombrePantalla {
+    width: 80%;
+    text-align: center;
+    color: white;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+
+#UsuarioNombre {
+    float: right;
+    margin-top: -2.15%;
+    margin-right: 14%;
+    font-weight: bold;
+    font-size: 16px;
+    text-transform: capitalize;
+    color: white;
+}
+
+
+
+
+header {
+    background: rgba(100,162,255,1);
+    background: -moz-linear-gradient(left, rgba(100,162,255,1) 0%, rgba(187,252,254,1) 100%);
+    background: -webkit-gradient(left top, right top, color-stop(0%, rgba(100,162,255,1)), color-stop(100%, rgba(187,252,254,1)));
+    background: -webkit-linear-gradient(left, rgba(100,162,255,1) 0%, rgba(187,252,254,1) 100%);
+    background: -o-linear-gradient(left, rgba(100,162,255,1) 0%, rgba(187,252,254,1) 100%);
+    background: -ms-linear-gradient(left, rgba(100,162,255,1) 0%, rgba(187,252,254,1) 100%);
+    background: linear-gradient(to right, rgba(100,162,255,1) 0%, rgba(187,252,254,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#64a2ff', endColorstr='#bbfcfe', GradientType=1 );
+    box-shadow: 0 0 5px rgba(0,0,0,0.1);
+
+    border-color: #e5e5e5;
+    width: 100%;
+    height: 65px;
+}
+
+
+#TitModulo 
+{
+    color:white;
+    line-height:65px;
+    margin:auto;
+    font-weight: bold;
+    font-size:17px;
+}
+
+h2 
+{
+    margin: 0 40px;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+ 
+
+#btnLogout {
+    width: 150px;
+    height: 40px;
+    outline: none;
+    border: none;
+    color: white;
+    font-size: 15px;
+    font-weight: bold;
+    margin: 12px 50px;
+    cursor: pointer;
+    float: right;
+    position:relative;
+    clear: both;
+    padding: 10px;
+    background-color: #F89682;
+}
+
+#btnLogout:hover{
+
+background-color: #F89682;
+
+ }
+ 

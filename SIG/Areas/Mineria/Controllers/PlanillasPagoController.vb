@@ -18,6 +18,24 @@ Namespace SIG.Areas.Mineria.Controllers
         Dim planillas As SIG.Areas.Mineria.Models.Cl_PlanillasPago = New SIG.Areas.Mineria.Models.Cl_PlanillasPago
         Dim share As SIG.Areas.Mineria.Models.Cl_Shared = New SIG.Areas.Mineria.Models.Cl_Shared
 
+        Function Home() As ActionResult
+
+            Response.Cookies("opciones").Expires = DateTime.Now.AddDays(-1)
+            Response.Cookies("actividad").Expires = DateTime.Now.AddDays(-1)
+
+            If login.Fnc_loggeado() IsNot Nothing Then
+                'Menu.Fnc_MenuModulo()  
+                If login.fnc_validarModulo(7) Then
+                    login.Fnc_MenuModulo(7)
+                    Return View()
+                End If
+            Else
+                Return Redirect("/Home/Login")
+            End If
+
+        End Function
+
+
 #Region "funciones para la página del listado de titulares"
 
         Function v_TitularesPago() As ActionResult
@@ -264,6 +282,10 @@ Namespace SIG.Areas.Mineria.Controllers
         Function pv_chrComparacionPlanillas() As ActionResult
 
             ViewData("tipo") = share.fnc_obtener_tipo_grafico(Request.Params("tipoGrafico"))
+            'If ViewData("tipo") Then
+            '    ViewData("tipo") = tipoGrafico
+            'End If
+
             Dim pagos() As Integer = Array.ConvertAll(Split(Request.Params("strPagos"), ","), Function(s) Int32.Parse(s))
             Dim pago1 As Integer = Math.Min(pagos(0), pagos(1))
             Dim pago2 As Integer = Math.Max(pagos(0), pagos(1))
@@ -987,6 +1009,7 @@ Namespace SIG.Areas.Mineria.Controllers
             settings.Width = Unit.Percentage(120)
             settings.OptionsPager.RowsPerPage = 20
             settings.OptionsView.HorizontalScrollBarMode = ScrollBarMode.Auto
+ 
 
             settings.SettingsExport.OptionsPrint.PrintRowHeaders = DefaultBoolean.True
             settings.SettingsExport.OptionsPrint.PrintColumnHeaders = DefaultBoolean.True
@@ -1172,7 +1195,7 @@ Namespace SIG.Areas.Mineria.Controllers
             Dim settings As New PivotGridSettings()
 
             settings.Name = "pvgComparacionPlanillas"
-            settings.Width = Unit.Percentage(100)
+            settings.Width = 1000 'Unit.Percentage(100)
             settings.OptionsView.HorizontalScrollBarMode = ScrollBarMode.Auto
             settings.OptionsPager.RowsPerPage = 20
 
@@ -1181,6 +1204,7 @@ Namespace SIG.Areas.Mineria.Controllers
             settings.SettingsExport.OptionsPrint.PrintHeadersOnEveryPage = DefaultBoolean.True
             settings.SettingsExport.OptionsPrint.PrintFilterHeaders = DefaultBoolean.False
             settings.SettingsExport.OptionsPrint.PrintDataHeaders = DefaultBoolean.False
+            settings.OptionsView.DataHeadersDisplayMode = PivotDataHeadersDisplayMode.Popup
 
             settings.ClientSideEvents.EndCallback = "UpdateChart"
 
@@ -1191,6 +1215,7 @@ Namespace SIG.Areas.Mineria.Controllers
                     field.Index = 2
                     field.Caption = "Departamento"
                     field.FieldName = "desc_departamento"
+                    field.Width = 50
                 End Sub)
             settings.Fields.Add(
                 Sub(field)

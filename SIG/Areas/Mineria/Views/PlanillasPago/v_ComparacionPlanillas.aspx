@@ -96,79 +96,120 @@ Arrastre, Altas y Bajas entre Pagos
             from {opacity: 0}
             to {opacity: 1}
         }
+
+
+        #divGridView, #grafico1 {
+            padding-right:20px
+        }
+
+        #divMapa, #grafico2 {
+            padding-left:20px
+        }
+
+        #reportes, #graficos {
+            margin:auto;
+            margin-top:50px;
+        }
+
+        #exportar {
+            margin-left:25%;
+            margin-top:50px;
+        }
     </style>
     <h2>Arrastre, Altas y Bajas entre Pagos</h2>
     <% Html.BeginForm("exportarComparacionPlanillas", "PlanillasPago")%>
     <div>
         <% Html.DevExpress().FormLayout(
-               Sub(frmLayoutComparacion)
-                   frmLayoutComparacion.Name = "frmLayoutComparacion"
-                   frmLayoutComparacion.Items.AddGroupItem(
-                       Sub(groupComparacion)
-                           groupComparacion.Caption = "Planillas"
-                           groupComparacion.Items.Add(
-                               Sub(item)
-                                   item.Caption = "Pagos"
-                                   item.HelpText = "Debe de seleccionar solamente dos pagos."
-                                   item.SetNestedContent(
-                                       Sub()
-                                           Html.RenderAction("pv_cbxGridPagos", "Shared")
-                                           Html.DevExpress().Label(
-                                               Sub(lbl)
-                                                   lbl.Width = 260
-                                                   lbl.Text = "Los pagos seleccionados se mostraran año-número, año-número."
-                                               End Sub).GetHtml()
-                                       End Sub)
-                               End Sub)
-                       End Sub)
-               End Sub).GetHtml()%>
+                 Sub(frmLayoutComparacion)
+                     frmLayoutComparacion.Width = 900
+                     frmLayoutComparacion.Name = "frmLayoutComparacion"
+                     frmLayoutComparacion.Items.AddGroupItem(
+                         Sub(groupComparacion)
+                             groupComparacion.Caption = "Planillas"
+                             groupComparacion.Items.Add(
+                                 Sub(item)
+                                     item.Caption = "Pagos"
+                                     item.HelpText = "Debe de seleccionar solamente dos pagos."
+                                     item.SetNestedContent(
+                                         Sub()
+                                             Html.RenderAction("pv_cbxGridPagos", "Shared")
+                                             Html.DevExpress().Label(
+                                                 Sub(lbl)
+                                                     lbl.Width = 900
+                                                     lbl.Text = "Los pagos seleccionados se mostraran año-número, año-número."
+                                                 End Sub).GetHtml()
+                                         End Sub)
+                                 End Sub)
+                         End Sub)
+                 End Sub).GetHtml()%>
     </div>
     <br />
     <div>
          <% Html.DevExpress().FormLayout(
-               Sub(frmLayoutButtons)
-                   frmLayoutButtons.Name = "frmLayoutButtons"
-                   frmLayoutButtons.ColCount = 3
-                   frmLayoutButtons.Width = Unit.Percentage(50)
+                Sub(frmLayoutButtons)
+                    frmLayoutButtons.Name = "frmLayoutButtons"
+                    frmLayoutButtons.ColCount = 3
+                    frmLayoutButtons.Width = 900 'Unit.Percentage(50)
                    frmLayoutButtons.Items.Add(
-                       Sub(item)
-                           item.ShowCaption = DefaultBoolean.False
-                           item.SetNestedContent(
-                               Sub()
-                                   Html.DevExpress().Button(
-                                       Sub(btnConsultar)
-                                           btnConsultar.Name = "btnConsultarHogPagados"
-                                           btnConsultar.UseSubmitBehavior = False
-                                           btnConsultar.Text = "Consultar"
-                                           btnConsultar.ClientSideEvents.Click = "btnConsultarComparacionClick"
-                                       End Sub).GetHtml()
-                               End Sub)
-                       End Sub)
-                   frmLayoutButtons.Items.Add(
-                       Sub(item)
-                           item.ShowCaption = DefaultBoolean.False
-                           item.ClientVisible = False
-                           item.Name = "itemBtnRazonCaida"
-                           item.SetNestedContent(
-                               Sub()
-                                   Html.DevExpress().Button(
-                                       Sub(btn)
-                                           btn.Name = "btnRazonCaidaHogares"
-                                           btn.ClientSideEvents.Click = "btnRazonCaidaHogaresClick"
-                                           btn.Text = "Razón de Caída"
-                                       End Sub).GetHtml()
-                               End Sub)
-                       End Sub)
-               End Sub).GetHtml()%>
+                        Sub(item)
+                            item.ShowCaption = DefaultBoolean.False
+                            item.SetNestedContent(
+                                Sub()
+                                    Html.DevExpress().Button(
+                                        Sub(btnConsultar)
+                                            btnConsultar.Name = "btnConsultarHogPagados"
+                                            btnConsultar.UseSubmitBehavior = False
+                                            btnConsultar.Width = 450
+                                            btnConsultar.Text = "Consultar"
+                                            btnConsultar.ClientSideEvents.Click = "btnConsultarComparacionClick"
+                                        End Sub).GetHtml()
+                                End Sub)
+                        End Sub)
+                    frmLayoutButtons.Items.Add(
+                        Sub(item)
+                            item.ShowCaption = DefaultBoolean.False
+                            item.ClientVisible = False
+                            item.Name = "itemBtnRazonCaida"
+                            item.SetNestedContent(
+                                Sub()
+                                    Html.DevExpress().Button(
+                                        Sub(btn)
+                                            btn.Name = "btnRazonCaidaHogares"
+                                            btn.Width = 450
+                                            btn.ClientSideEvents.Click = "btnRazonCaidaHogaresClick"
+                                            btn.Text = "Razón de Caída"
+                                        End Sub).GetHtml()
+                                End Sub)
+                        End Sub)
+                End Sub).GetHtml()%>
     </div>
     <br />
-    <div id="divMapa"></div>
+
+    <table id="reportes">
+        <tr>
+            <td>
+                <div id="divGridView"></div>
+                <div>
+                    <%--<% Html.RenderAction("pv_ControlesExportar", "Shared")%>--%>
+                </div>
+            </td>
+            <td> 
+                <div id="divMapa"></div>
+            </td>
+        </tr>
+    </table>
+
+
+
+    <%--<div id="divMapa"></div>
     <br />
     <div>
         <% Html.RenderAction("pv_ControlesExportar", "Shared")%>
     </div>
-    <div id="divGridView"></div>
-    <br />
+    <div id="divGridView"></div>--%>
+
+
+    <%--<br />
     <div id="divChart" style="display: none;">
         <% Html.RenderAction("pv_ControlesTiposGrafico", "Shared") %>   
         <% Html.RenderPartial("pv_ControlesExportChart", "Shared")%>
@@ -176,13 +217,39 @@ Arrastre, Altas y Bajas entre Pagos
         <div>
             <% Html.RenderPartial("pv_chrComparacionPlanillas")%>
         </div> 
-    </div>
+    </div>--%>
+
+
+    <table id="graficos">
+        <tr>
+            <td>
+                <div id="divChart" style="display: none;">
+                     <div style="display: none;"><% Html.RenderAction("pv_ControlesTiposGrafico", "Shared") %> </div>
+        <%--<% Html.RenderPartial("pv_ControlesExportChart", "Shared")%>--%>
+                    <% Html.RenderPartial("pv_chrComparacionPlanillas")%>
+                    
+                </div>
+            </td>
+            <td> 
+                <div id="grafico2">
+                   <%-- <% Html.RenderPartial("pv_chrComparacionPlanillas")%>--%>
+                </div>
+            </td>
+        </tr>
+    </table>
+
+
+
+
+
+
+
     <% Html.DevExpress().TextBox(
-           Sub(txt)
-               txt.Name = "txtPagosSeleccionados2"
-               txt.Text = "text"
-               txt.ClientVisible = False
-           End Sub).GetHtml()%>
+                       Sub(txt)
+                           txt.Name = "txtPagosSeleccionados2"
+                           txt.Text = "text"
+                           txt.ClientVisible = False
+                       End Sub).GetHtml()%>
     <% Html.EndForm()%>
     <div id="myModal" class="modal2">
         <!-- Modal content -->

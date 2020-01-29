@@ -5,34 +5,47 @@
 <html>
 <head runat="server">
     <meta name="viewport" content="width=device-width" />
-    <!----ESTILOS MENU--> 
-    <link rel="stylesheet" type="text/css" href="<%: ResolveUrl("~/Css/Menu.css")%>"/>
-    <link rel="stylesheet" type="text/css" href="<%: ResolveUrl("~/Css/font-awesome.min.css")%>"/>
-    <script type="text/javascript" src="<%: ResolveUrl("~/Scripts/jquery.min.js")%>"></script>
-    <script type="text/javascript" src="<%: ResolveUrl("~/Scripts/Main.js")%>" async></script>
+    <link rel="stylesheet" type="text/css" href="<%: ResolveUrl("~/Css/font-awesome.min.css")%>"/>    
+    <link rel="stylesheet" type="text/css" href="<%: ResolveUrl("~/Areas/Mineria/Styles/mineria.css")%>"/>
+    <link rel="stylesheet" type="text/css" href="<%: ResolveUrl("~/Areas/Mineria/Styles/bootstrap.min.css")%>"/>
+    <script type="text/javascript" src="<%: ResolveUrl("~/Areas/Mineria/Scripts/bootstrap.min.js")%>"></script>
+    <script type="text/javascript" src="<%: ResolveUrl("~/Scripts/jquery/jquery.min.js")%>"></script>
+    <script type="text/javascript" src="<%: ResolveUrl("~/Scripts/Main.js")%>" async></script> 
     <title><asp:ContentPlaceHolder ID="TitleContent" runat="server" /></title>    
 </head>
-<body>
-    <input type="button" value="Cerrar Sesión" id="btnLogout" onclick="location.href = '/Home/Logout'" />
-    <div id="Container">
-        <header>
-            <h2>SIG | Módulo de Minería de Datos
-                <center >
-                    <i class="fa fa-user"></i>
-                    <label id="Sysname" > <%: Session("username") %></label>
-                <center>
-            </h2>
-        </header>
-        <nav id="MenuContainer">
-            <!-- información del menu -->
-            <%: MvcHtmlString.Create(Session("menu"))%>
-        </nav>
-        <div id="content">
+<body style="padding-bottom:40px">
+         <header>
+                <nav class="navbar navbar-expand-lg navbar-light" style=" background: rgba(100,162,255,1);
+                                                                           background: -moz-linear-gradient(left, rgba(100,162,255,1) 0%, rgba(187,252,254,1) 100%);
+                                                                           background: -webkit-gradient(left top, right top, color-stop(0%, rgba(100,162,255,1)), color-stop(100%, rgba(187,252,254,1)));
+                                                                           background: -webkit-linear-gradient(left, rgba(100,162,255,1) 0%, rgba(187,252,254,1) 100%);
+                                                                           background: -o-linear-gradient(left, rgba(100,162,255,1) 0%, rgba(187,252,254,1) 100%);
+                                                                           background: -ms-linear-gradient(left, rgba(100,162,255,1) 0%, rgba(187,252,254,1) 100%);
+                                                                           background: linear-gradient(to right, rgba(100,162,255,1) 0%, rgba(187,252,254,1) 100%);
+                                                                           filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#64a2ff', endColorstr='#bbfcfe', GradientType=1 );"
+                   >
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav mr-auto" >
+                            <li class="nav-item active">
+                                <asp:ContentPlaceHolder ID="ButtonNavBar" runat="server" />
+                            </li>
+                            <li>
+                                <span class="navbar-brand mb-0 h1">SIG | Módulo de Mineria de Datos</span>
+                            </li>
+                        </ul>
+
+                        <form class="form-inline my-2 my-lg-0">
+                            <span class="navbar-text mr-sm-2" id="Sysname"><%: Session("username") %></span>
+                            <button class="btn btn-danger my-2 my-sm-0" type="button" onclick="location.href = '/Home/Logout'">Cerrar Sesión</button>
+                        </form>
+                    </div>
+                </nav>
+            </header>
+        <div  style="margin-top:40px;">
             <asp:ContentPlaceHolder ID="MainContent" runat="server">
-                <div class="ContenedorBanner" ></div>
+        
             </asp:ContentPlaceHolder>
         </div>
-    </div>    
     <footer></footer>
 </body>
 </html>

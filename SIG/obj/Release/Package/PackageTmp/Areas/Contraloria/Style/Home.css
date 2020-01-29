@@ -12,13 +12,7 @@
 body {
 }
 
- #Container {    
-    background-repeat: no-repeat;
-    width: 95%;
-    margin: 0 auto 0 auto;
-    /*border: 1px solid red;*/
-    padding:30px 30px 30px 30px;
-}
+
 
 header {
     background: white;
@@ -265,12 +259,3 @@ background-color: #1787C8;
     background-image:url("../Images/BannerLogin.png");
 }
 
-#content {
-    display: inline-block;
-    vertical-align:top;
-    width:76%;  
-    /*border: 1px solid green;*/
-    /*height:750px;*/
-    margin:-20px auto;
-    /*overflow:auto;*/
-}

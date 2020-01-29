@@ -13,7 +13,7 @@
 
     <link rel="stylesheet" type="text/css" href="/Css/Menu.css"/>
     <link rel="stylesheet" type="text/css" href="/Css/font-awesome.min.css"/>
-    <script type="text/javascript" src="/Scripts/jquery.min.js"></script>
+    <script type="text/javascript" src="/Scripts/jquery/jquery.min.js"></script>
     <script type="text/javascript" src="/Scripts/Main.js"></script>
 
     <link href="../../Style/estilo_corresponsabilidad.css" rel="stylesheet" />
@@ -32,11 +32,11 @@
 
     <div id="Container">
         <header>
-            <h2>SIG | Módulo de Corresponsabilidad y Seguimiento
-            <center >
+            <h2 id="TitModulo">SIG | Módulo de Corresponsabilidad y Seguimiento
+            <center>
                 <i class="fa fa-user"></i>
                 <label id="Sysname" > <%: Session("username") %></label>
-            <center> 
+            </center> 
              </h2> 
         </header>
    

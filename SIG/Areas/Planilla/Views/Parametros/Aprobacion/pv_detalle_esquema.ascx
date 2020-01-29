@@ -65,7 +65,7 @@
                 End Sub)
             gdv.Columns.AddBand(
                 Sub(band)
-                    band.Caption = "Salud"
+                    band.Caption = "Nivel 1"
                     band.Columns.Add(
                         Sub(col)
                             col.FieldName = "confm_nivel1_1"
@@ -81,7 +81,7 @@
                 End Sub)
             gdv.Columns.AddBand(
                 Sub(band)
-                    band.Caption = "1er y 2do Ciclo Educación"
+                    band.Caption = "Nivel 2"
                     band.Columns.Add(
                         Sub(col)
                             col.FieldName = "confm_nivel2_1"
@@ -97,7 +97,7 @@
                 End Sub)
             gdv.Columns.AddBand(
                 Sub(band)
-                    band.Caption = "3er Ciclo Educación"
+                    band.Caption = "Nivel 3"
                     band.Columns.Add(
                         Sub(col)
                             col.FieldName = "confm_nivel3_1"
