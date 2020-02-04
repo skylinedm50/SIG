@@ -62,11 +62,7 @@ Mineria de Datos
                         <i class="fa fa-file-text-o fa-3x" aria-hidden="true"></i>
                     </div>
                     <div class="pt-4 pb-3" style="letter-spacing: 0px">
-<<<<<<< HEAD
                         <h4>Listados</h4>
-=======
-                        <h4>Proyecciones</h4>
->>>>>>> 951c825fa1e75313dcfacc2e2df6d3d158a54c40
                     </div>
               
                     <div class="pb-4">
