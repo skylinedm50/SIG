@@ -21,3 +21,20 @@ html {
     position: relative;
     min-height: 100%;
 }
+
+#titleNavBar {
+    color:black;
+    font-weight:bold;
+    margin: auto;
+    width: 44%;
+    padding: 10px;
+    font-size:25px;
+   
+}
+
+#Sysname{
+    padding-right:15px;
+    font-weight:bold;
+    color:black;
+
+}

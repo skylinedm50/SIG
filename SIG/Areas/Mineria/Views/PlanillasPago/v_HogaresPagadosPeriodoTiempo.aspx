@@ -4,6 +4,14 @@
 Hogares Pagados
 </asp:Content>
 
+<asp:Content ID="Content3" ContentPlaceHolderID="titleNavBarText" runat="server">
+  Reporte de Cantidad de Hogares Pagados
+</asp:Content>
+
+<asp:Content ID="Content4" ContentPlaceHolderID="ButtonNavBar" runat="server">
+    <a class="navbar-brand" href="/Mineria/PlanillasPago/Home"><i class="fa fa-arrow-left fa-2x" aria-hidden="true"></i></a>
+</asp:Content>
+
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
     <% Html.DevExpress().GetStyleSheets(
         New StyleSheet With {.ExtensionSuite = ExtensionSuite.GridView},
@@ -15,7 +23,7 @@ Hogares Pagados
         New Script With {.ExtensionSuite = ExtensionSuite.Editors})%>
     <script type="text/javascript" src='<%: ResolveUrl("~/Areas/Mineria/Scripts/planillasPago.js")%>'></script>
 
-<h2>Reporte de Cantidad de Hogares Pagados</h2>
+
     <% Html.BeginForm("exportarHogaresPagados", "PlanillasPago")%>
     <% Html.DevExpress().FormLayout(
          Sub(frmLayoutHogaresPagados)

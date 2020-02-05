@@ -3,6 +3,13 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="TitleContent" runat="server">
 Totales Componente
 </asp:Content>
+<asp:Content ID="Content3" ContentPlaceHolderID="titleNavBarText" runat="server">
+    Totales Componente
+</asp:Content>
+
+<asp:Content ID="Content4" ContentPlaceHolderID="ButtonNavBar" runat="server">
+    <a class="navbar-brand" href="/Mineria/Corresponsabilidad/Home"><i class="fa fa-arrow-left fa-2x" aria-hidden="true"></i></a>
+</asp:Content>
 
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
     <% Html.DevExpress().GetStyleSheets(

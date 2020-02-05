@@ -4,6 +4,15 @@
 Fichas no Remitidas
 </asp:Content>
 
+<asp:Content ID="Content3" ContentPlaceHolderID="titleNavBarText" runat="server">
+   Fichas No Procesadas por CENISS
+</asp:Content>
+
+<asp:Content ID="Content4" ContentPlaceHolderID="ButtonNavBar" runat="server">
+    <a class="navbar-brand" href="/Mineria/Hogares/Home"><i class="fa fa-arrow-left fa-2x" aria-hidden="true"></i></a>
+</asp:Content>
+
+
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
     <% Html.DevExpress().RenderStyleSheets(Page,
         New StyleSheet With {.ExtensionSuite = ExtensionSuite.Editors},
@@ -13,7 +22,7 @@ Fichas no Remitidas
         New Script With {.ExtensionSuite = ExtensionSuite.Chart})%>
     <script type="text/javascript" src='<%: ResolveUrl("~/Areas/Mineria/Scripts/hogares.js")%>'></script>
 
-<h2>Fichas No Procesadas por CENISS</h2>
+
 
     <div id="divControles">
         <% Html.DevExpress.FormLayout(

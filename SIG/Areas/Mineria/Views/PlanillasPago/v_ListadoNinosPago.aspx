@@ -4,6 +4,14 @@
 Listado de Niños en Pago
 </asp:Content>
 
+<asp:Content ID="Content3" ContentPlaceHolderID="titleNavBarText" runat="server">
+  Listado de Niños en Pago con Corresponsabilidad
+</asp:Content>
+
+<asp:Content ID="Content4" ContentPlaceHolderID="ButtonNavBar" runat="server">
+    <a class="navbar-brand" href="/Mineria/PlanillasPago/Home"><i class="fa fa-arrow-left fa-2x" aria-hidden="true"></i></a>
+</asp:Content>
+
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
     <% Html.DevExpress().GetStyleSheets(
         New StyleSheet With {.ExtensionSuite = ExtensionSuite.GridView},
@@ -13,7 +21,7 @@ Listado de Niños en Pago
         New Script With {.ExtensionSuite = ExtensionSuite.Editors})%>
     <script type="text/javascript" src='<%: ResolveUrl("~/Areas/Mineria/Scripts/planillasPago.js")%>'></script>
 
-    <h2>Listado de Niños en Pago con Corresponsabilidad</h2>
+
     <% Html.BeginForm("exportarListadoNinoPago", "PlanillasPago")%>
     <div>
         <% Html.DevExpress.FormLayout(

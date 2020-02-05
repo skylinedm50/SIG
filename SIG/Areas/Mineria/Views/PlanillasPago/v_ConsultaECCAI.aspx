@@ -4,6 +4,14 @@
 ECCAI
 </asp:Content>
 
+<asp:Content ID="Content3" ContentPlaceHolderID="titleNavBarText" runat="server">
+  Estado Cuenta de Cumplimiento, Apercibimiento e Incumplimiento
+</asp:Content>
+
+<asp:Content ID="Content4" ContentPlaceHolderID="ButtonNavBar" runat="server">
+    <a class="navbar-brand" href="/Mineria/PlanillasPago/Home"><i class="fa fa-arrow-left fa-2x" aria-hidden="true"></i></a>
+</asp:Content>
+
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
     <% Html.DevExpress().GetStyleSheets(
               New StyleSheet With {.ExtensionSuite = ExtensionSuite.Editors},
@@ -14,7 +22,7 @@ ECCAI
     <script type="text/javascript" src='<%: ResolveUrl("~/Areas/Mineria/Scripts/planillasPago.js")%>'></script>
     <link type="text/css" rel="stylesheet" href="/Areas/Mineria/Styles/styles_mineria.css" />
 
-    <h2>Estado Cuenta de Cumplimiento, Apercibimiento e Incumplimiento</h2>
+
     <% Html.BeginForm("exportarECCAI", "PlanillasPago")%>
 
     <div>

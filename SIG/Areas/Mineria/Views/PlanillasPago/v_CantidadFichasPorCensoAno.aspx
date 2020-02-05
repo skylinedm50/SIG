@@ -4,6 +4,14 @@
 Fichas Por Censo y Año
 </asp:Content>
 
+<asp:Content ID="Content3" ContentPlaceHolderID="titleNavBarText" runat="server">
+  Cantidad de Fichas Por Censo y Año Evaludas en Pago
+</asp:Content>
+
+<asp:Content ID="Content4" ContentPlaceHolderID="ButtonNavBar" runat="server">
+    <a class="navbar-brand" href="/Mineria/PlanillasPago/Home"><i class="fa fa-arrow-left fa-2x" aria-hidden="true"></i></a>
+</asp:Content>
+
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
     <% Html.DevExpress().GetStyleSheets(
         New StyleSheet With {.ExtensionSuite = ExtensionSuite.Editors},
@@ -13,7 +21,7 @@ Fichas Por Censo y Año
         New Script With {.ExtensionSuite = ExtensionSuite.PivotGrid})%>
     <script type="text/javascript" src='<%: ResolveUrl("~/Areas/Mineria/Scripts/planillasPago.js")%>'></script>
 
-    <h2>Cantidad de Fichas Por Censo y Año Evaludas en Pago</h2>
+
     <% Html.BeginForm("exportarFichasPorCensoAno", "PlanillasPago")%>
     <div>
         <% Html.DevExpress.FormLayout(

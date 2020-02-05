@@ -4,6 +4,14 @@
 Nucleo Familiar
 </asp:Content>
 
+<asp:Content ID="Content3" ContentPlaceHolderID="titleNavBarText" runat="server">
+  Nucleo Familiar
+</asp:Content>
+
+<asp:Content ID="Content4" ContentPlaceHolderID="ButtonNavBar" runat="server">
+    <a class="navbar-brand" href="/Mineria/PlanillasPago/Home"><i class="fa fa-arrow-left fa-2x" aria-hidden="true"></i></a>
+</asp:Content>
+
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
     <% Html.DevExpress().GetStyleSheets(
         New StyleSheet With {.ExtensionSuite = ExtensionSuite.PivotGrid},
@@ -14,7 +22,6 @@ Nucleo Familiar
     <script type="text/javascript" src='<%: ResolveUrl("~/Areas/Mineria/Scripts/planillasPago.js")%>'></script>
     <link type="text/css" rel="stylesheet" href="/Areas/Mineria/Styles/styles_mineria.css" />
 
-    <h2>Nucleo Familiar</h2>
     <% Html.BeginForm("exportarNucleoFamiliarMuestra", "PlanillasPago")%>
     <div>
         <% Html.DevExpress.FormLayout(

@@ -4,6 +4,14 @@
 Arrastre, Altas y Bajas entre Pagos
 </asp:Content>
 
+<asp:Content ID="Content3" ContentPlaceHolderID="titleNavBarText" runat="server">
+  Arrastre, Altas y Bajas entre Pagos
+</asp:Content>
+
+<asp:Content ID="Content4" ContentPlaceHolderID="ButtonNavBar" runat="server">
+    <a class="navbar-brand" href="/Mineria/PlanillasPago/Home"><i class="fa fa-arrow-left fa-2x" aria-hidden="true"></i></a>
+</asp:Content>
+
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
     <% Html.DevExpress().GetStyleSheets(
         New StyleSheet With {.ExtensionSuite = ExtensionSuite.GridView},
@@ -116,7 +124,7 @@ Arrastre, Altas y Bajas entre Pagos
             margin-top:50px;
         }
     </style>
-    <h2>Arrastre, Altas y Bajas entre Pagos</h2>
+
     <% Html.BeginForm("exportarComparacionPlanillas", "PlanillasPago")%>
     <div>
         <% Html.DevExpress().FormLayout(

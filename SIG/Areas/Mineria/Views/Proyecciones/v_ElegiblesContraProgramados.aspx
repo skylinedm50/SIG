@@ -4,6 +4,14 @@
  Proyección Elegibles Contra Programados
 </asp:Content>
 
+<asp:Content ID="Content3" ContentPlaceHolderID="titleNavBarText" runat="server">
+  Elegibles Contra Programados de Proyección
+</asp:Content>
+
+<asp:Content ID="Content4" ContentPlaceHolderID="ButtonNavBar" runat="server">
+    <a class="navbar-brand" href="/Mineria/Proyecciones/Home"><i class="fa fa-arrow-left fa-2x" aria-hidden="true"></i></a>
+</asp:Content>
+
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
     <% Html.DevExpress().GetStyleSheets(
         New StyleSheet With {.ExtensionSuite = ExtensionSuite.Editors},
@@ -13,7 +21,6 @@
         New Script With {.ExtensionSuite = ExtensionSuite.PivotGrid})%>
     <script type="text/javascript" src='<%: ResolveUrl("~/Areas/Mineria/Scripts/proyecciones.js")%>'></script>
 
-    <h2>Elegibles Contra Programados de Proyección</h2>
     <% Html.BeginForm("exportarElegiblesContraProgramado", "Proyecciones")%>
     <div>
         <% Html.DevExpress.FormLayout(

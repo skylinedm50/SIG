@@ -1,8 +1,39 @@
 ﻿<%@ Page Title="" Language="VB" MasterPageFile="~/Areas/Mineria/Views/Shared/Main.Master" Inherits="System.Web.Mvc.ViewPage" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="TitleContent" runat="server">
-Niños Pagados Por Ciclo
+
+    <% If (ViewData("variante") = 1) Then %>
+            Global de niños pagados
+    <% ElseIf (ViewData("variante") = 2) Then %>
+            Niños pagados por ciclo
+    <% ElseIf (ViewData("variante") = 3) Then %>
+            Cumplimiento de niños
+    <% ElseIf (ViewData("variante") = 4) Then %>
+            Niños pagados desagregados
+    <% End If %>
+
+
 </asp:Content>
+
+
+<asp:Content ID="Content3" ContentPlaceHolderID="titleNavBarText" runat="server">
+
+    <% If (ViewData("variante") = 1) Then %>
+            Global de niños pagados
+    <% ElseIf (ViewData("variante") = 2) Then %>
+            Niños pagados por ciclo
+    <% ElseIf (ViewData("variante") = 3) Then %>
+            Cumplimiento de niños
+    <% ElseIf (ViewData("variante") = 4) Then %>
+            Niños pagados desagregados
+    <% End If %>
+
+</asp:Content>
+
+<asp:Content ID="Content4" ContentPlaceHolderID="ButtonNavBar" runat="server">
+    <a class="navbar-brand" href="/Mineria/PlanillasPago/Home"><i class="fa fa-arrow-left fa-2x" aria-hidden="true"></i></a>
+</asp:Content>
+
 
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
     <% Html.DevExpress().GetStyleSheets(
@@ -33,7 +64,7 @@ Niños Pagados Por Ciclo
         }
     </style>
     <div id="hide">
-      <%--  <h2>Cantidad de Niños Pagados Por Ciclo</h2>--%>
+
         <% Html.BeginForm("exportarNinosPagadosPorCiclo", "PlanillasPago", New With {Key .variante = ViewData("variante")})%>
         <div>
             <% Html.DevExpress.FormLayout(

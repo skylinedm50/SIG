@@ -1,7 +1,16 @@
 ﻿<%@ Page Title="" Language="VB" MasterPageFile="~/Areas/Mineria/Views/Shared/Main.Master" Inherits="System.Web.Mvc.ViewPage" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="TitleContent" runat="server">
-Consolidado de Pago
+    Consolidado de Pago
+</asp:Content>
+
+
+<asp:Content ID="Content3" ContentPlaceHolderID="titleNavBarText" runat="server">
+  Consolidado de pago por planilla
+</asp:Content>
+
+<asp:Content ID="Content4" ContentPlaceHolderID="ButtonNavBar" runat="server">
+    <a class="navbar-brand" href="/Mineria/PlanillasPago/Home"><i class="fa fa-arrow-left fa-2x" aria-hidden="true"></i></a>
 </asp:Content>
 
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
@@ -13,7 +22,7 @@ Consolidado de Pago
         New Script With {.ExtensionSuite = ExtensionSuite.PivotGrid})%>
     <script type="text/javascript" src='<%: ResolveUrl("~/Areas/Mineria/Scripts/planillasPago.js")%>'></script>
 
-    <h2>Consolidado de pago por planilla</h2>
+
     <% Html.BeginForm("exportarConsolidadoPago", "PlanillasPago")%>
     <div>
         <% Html.DevExpress.FormLayout(

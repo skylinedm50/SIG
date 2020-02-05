@@ -1,7 +1,15 @@
 ﻿<%@ Page Title="" Language="VB" MasterPageFile="~/Areas/Mineria/Views/Shared/Main.Master" Inherits="System.Web.Mvc.ViewPage" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="TitleContent" runat="server">
-Listado de Titulares
+    Listado de Titulares
+</asp:Content>
+
+<asp:Content ID="Content3" ContentPlaceHolderID="titleNavBarText" runat="server">
+  Listado de Titulares
+</asp:Content>
+
+<asp:Content ID="Content4" ContentPlaceHolderID="ButtonNavBar" runat="server">
+    <a class="navbar-brand" href="/Mineria/PlanillasPago/Home"><i class="fa fa-arrow-left fa-2x" aria-hidden="true"></i></a>
 </asp:Content>
 
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
@@ -13,7 +21,7 @@ Listado de Titulares
         New Script With {.ExtensionSuite = ExtensionSuite.Editors})%>
     <script type="text/javascript" src='<%: ResolveUrl("~/Areas/Mineria/Scripts/planillasPago.js")%>'></script>
 
-    <h2>Listado de Titulares</h2>
+
     <% Html.BeginForm("exportarListadoTitulares", "PlanillasPago")%>
     <div id="divControles">
         <% Html.DevExpress.FormLayout(

@@ -769,7 +769,6 @@
     <Content Include="Areas\Mineria\Views\PlanillasPago\v_ElegiblesContraProgramados.aspx" />
     <Content Include="Areas\Mineria\Views\PlanillasPago\v_HogaresPagadosPeriodoTiempo.aspx" />
     <Content Include="Areas\Mineria\Views\PlanillasPago\v_ListadoNinosPago.aspx" />
-    <Content Include="Areas\Mineria\Views\PlanillasPago\v_NinosPagadosPorCiclo_2cc.aspx" />
     <Content Include="Areas\Mineria\Views\PlanillasPago\v_NinosPagadosPorCiclo.aspx" />
     <Content Include="Areas\Mineria\Views\PlanillasPago\v_NucleoFamiliarMuestra.aspx" />
     <Content Include="Areas\Mineria\Views\PlanillasPago\v_RazonesExclusionHogares.aspx" />
