@@ -365,25 +365,25 @@
         Public Function Fnc_elegibles_contra_programados(ByVal pago As String) As DataTable
 
             Dim MyResult As New DataSet
-            Dim sql As String = "" + vbCr + _
-                "SELECT geo.cod_departamento, 	geo.desc_departamento, geo.cod_municipio, 	geo.desc_municipio, geo.cod_aldea, geo.desc_aldea, geo.cod_caserio, geo.desc_caserio," + vbCr + _
-                "       info.total_hogares," + vbCr + _
-                "       info.total_hogares_evaluados," + vbCr + _
-                "       info.total_hogares_elegibles," + vbCr + _
-                "       info.total_hogares_programados," + vbCr + _
-                "       info.hogares_elegibles_educacion," + vbCr + _
-                "       info.hogares_elegibles_educacion_salud," + vbCr + _
-                "       info.hogares_elegibles_salud," + vbCr + _
-                "       info.hogares_programados_educacion," + vbCr + _
-                "       info.hogares_programados_educacion_salud," + vbCr + _
-                "       info.hogares_programados_salud," + vbCr + _
-                "       info.hogares_elegibles_primer_pago," + vbCr + _
-                "       info.hogares_elegibles_repago," + vbCr + _
-                "       info.hogares_programados_primer_pago," + vbCr + _
-                "       info.hogares_programados_repago" + vbCr + _
-                "	FROM SIG_C.dbo.t_sig_info_planillas AS info" + vbCr + _
-                "		INNER JOIN SIG_C.dbo.t_sig_ubicaciones_geograficas AS geo ON geo.cod_caserio = info.cod_caserio" + vbCr + _
-                "            WHERE info.cod_pago = " + pago + vbCr + _
+            Dim sql As String = "" + vbCr +
+                "SELECT geo.cod_departamento, 	geo.desc_departamento, geo.cod_municipio, 	geo.desc_municipio, geo.cod_aldea, geo.desc_aldea, geo.cod_caserio, geo.desc_caserio," + vbCr +
+                "       info.total_hogares," + vbCr +
+                "       info.total_hogares_evaluados," + vbCr +
+                "       info.total_hogares_elegibles," + vbCr +
+                "       info.total_hogares_programados," + vbCr +
+                "       info.hogares_elegibles_educacion," + vbCr +
+                "       info.hogares_elegibles_educacion_salud," + vbCr +
+                "       info.hogares_elegibles_salud," + vbCr +
+                "       info.hogares_programados_educacion," + vbCr +
+                "       info.hogares_programados_educacion_salud," + vbCr +
+                "       info.hogares_programados_salud," + vbCr +
+                "       info.hogares_elegibles_primer_pago," + vbCr +
+                "       info.hogares_elegibles_repago," + vbCr +
+                "       info.hogares_programados_primer_pago," + vbCr +
+                "       info.hogares_programados_repago" + vbCr +
+                "	FROM SIG_C.dbo.t_sig_info_planillas AS info" + vbCr +
+                "		INNER JOIN SIG_C.dbo.t_sig_ubicaciones_geograficas AS geo ON geo.cod_caserio = info.cod_caserio" + vbCr +
+                "            WHERE info.cod_pago = " + If(IsNothing(pago), "0", pago) + vbCr +
                 "	ORDER BY geo.cod_departamento, geo.cod_municipio, geo.cod_aldea, geo.cod_caserio"
 
             Try

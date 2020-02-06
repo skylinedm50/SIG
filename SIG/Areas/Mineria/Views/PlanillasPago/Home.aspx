@@ -113,10 +113,21 @@ Planillas de Pago
             <div class="col-lg-4 col-md-6 col-sm-10 pb-4 d-block m-auto">
                 <div style="box-shadow: 0px 0px 30px -7px rgba(0,0,0,0.29);">
                     <div class="pt-4 pb-3" style="letter-spacing: 2px">
-                        <h4>Elegibles Contra Programados</h4>
+                        <h4>Elegibles y Programados</h4>
                     </div>
                     <div class="pb-4">
-                        <button type="button" class="btn btn-outline-primary bt-sm" onclick="location.href='/Mineria/PlanillasPago/v_ElegiblesContraProgramados'">Acceder</button>
+                        <button type="button" class="btn btn-outline-primary bt-sm" onclick="location.href='/Mineria/PlanillasPago/v_ElegiblesContraProgramados?variante=1'">Acceder</button>
+                    </div>
+                </div>
+            </div>
+
+             <div class="col-lg-4 col-md-6 col-sm-10 pb-4 d-block m-auto">
+                <div style="box-shadow: 0px 0px 30px -7px rgba(0,0,0,0.29);">
+                    <div class="pt-4 pb-3" style="letter-spacing: 2px">
+                        <h4>Elegibles por componente</h4>
+                    </div>
+                    <div class="pb-4">
+                        <button type="button" class="btn btn-outline-primary bt-sm" onclick="location.href='/Mineria/PlanillasPago/v_ElegiblesContraProgramados?variante=2'">Acceder</button>
                     </div>
                 </div>
             </div>

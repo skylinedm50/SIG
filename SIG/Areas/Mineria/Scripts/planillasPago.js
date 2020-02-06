@@ -214,9 +214,12 @@ function OnBeginChartComparacionCallback(s, e) {
     }
 }
 
-////////////////////////////////////////////////////////////////////////////////////////////////
+/////////////////////////////////////'' MODIFICACIÓN PARA PASAR AL PROYECTO FINAL///////////////////////////////////////////////////////////
 
-function btnConsultarElegibleVsProgramadosClick(s, e) {
+
+
+
+function btnConsultarElegibleVsProgramadosClick(s, e, variante) {
 
     var pago = cbxPagosAno.GetValue();
 
@@ -225,7 +228,7 @@ function btnConsultarElegibleVsProgramadosClick(s, e) {
             url: "/Mineria/PlanillasPago/pv_pvgElegiblesVsProgramado",
             type: 'POST',
             dataType: 'html',
-            data: { pago: pago },
+            data: { pago: pago, variante: variante },
             beforeSend: function () {
                 $(".modal").show();
             },
@@ -235,7 +238,9 @@ function btnConsultarElegibleVsProgramadosClick(s, e) {
         })
         .done(function (response) {
             //console.log("success");
+           
             $('#divGridView').html(response);
+            $('#divMapa').show();
         })
         .fail(function () {
             console.log("error");
@@ -243,6 +248,15 @@ function btnConsultarElegibleVsProgramadosClick(s, e) {
         .always(function () {
             console.log("complete");
         });
+    }
+}
+
+function OnBeginChartElegibleVsProgramadosCallback(s, e) {
+    try {
+        pvgComparacionPlanillas.FillStateObject(e.customArgs);
+        e.customArgs['pago'] = cbxPagosAno.GetValue();
+    } catch (err) {
+        console.log("No se encontro el consolidado de arrastre, altas y bajas entre pagos");
     }
 }
 

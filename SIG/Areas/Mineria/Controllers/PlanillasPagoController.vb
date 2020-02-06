@@ -294,6 +294,7 @@ Namespace SIG.Areas.Mineria.Controllers
 
         End Function
 
+
         Function exportarComparacionPlanillas() As ActionResult
 
             Dim strPagos As String = TextBoxExtension.GetValue(Of String)("txtPagosSeleccionados2")
@@ -382,10 +383,13 @@ Namespace SIG.Areas.Mineria.Controllers
 
 #Region "Funciones para los elegibles contro programados"
 
-        Function v_ElegiblesContraProgramados() As ActionResult
+        '' MODIFICACIÓN PARA PASAR AL PROYECTO FINAL
+
+        Function v_ElegiblesContraProgramados(variante As Integer) As ActionResult
 
             Response.Cookies("opciones").Expires = DateTime.Now.AddDays(-1)
             Response.Cookies("actividad").Expires = DateTime.Now.AddDays(-1)
+            ViewData("variante") = variante
 
             If login.Fnc_loggeado() IsNot Nothing Then
                 If login.fnc_validarModulo(7) Then
@@ -400,15 +404,22 @@ Namespace SIG.Areas.Mineria.Controllers
 
         End Function
 
-        Function pv_pvgElegiblesVsProgramado(ByVal pago As String) As ActionResult
+        '' MODIFICACIÓN PARA PASAR AL PROYECTO FINAL
+
+        Function pv_pvgElegiblesVsProgramado(ByVal pago As String, ByVal variante As Integer) As ActionResult
             ViewData("pago") = pago
+            ViewData("variante") = variante
             Return PartialView(planillas.Fnc_elegibles_contra_programados(pago))
         End Function
 
-        Function exportarElegiblesContraProgramado() As ActionResult
+
+
+
+        '' MODIFICACIÓN PARA PASAR AL PROYECTO FINAL
+        Function exportarElegiblesContraProgramado(ByVal variante As Integer) As ActionResult
 
             Dim export As String = ComboBoxExtension.GetValue(Of String)("cbxExpotar")
-            Dim settings As PivotGridSettings = SIG.Areas.Mineria.Controllers.exportPvgElegiblesControProgramado.ExportPivotGridSettings
+            Dim settings As PivotGridSettings = SIG.Areas.Mineria.Controllers.exportPvgElegiblesControProgramado.ExportPivotGridSettings(variante)
             Dim pago As String = ComboBoxExtension.GetValue(Of String)("cbxPagosAno")
             Dim nombre As String = "Elegibles contra programados del pago " + share.Fnc_obtener_nombre_pago(pago)
             Dim dt As DataTable = planillas.Fnc_elegibles_contra_programados(pago)
@@ -1372,22 +1383,29 @@ Namespace SIG.Areas.Mineria.Controllers
         Private Sub New()
         End Sub
 
-        Public Shared ReadOnly Property ExportPivotGridSettings() As PivotGridSettings
+        '' MODIFICACIÓN PARA PASAR AL PROYECTO FINAL
+
+        Public Shared ReadOnly Property ExportPivotGridSettings(ByVal variante As Integer) As PivotGridSettings
 
             Get
-                exportSettings = CreateExportPvgElegibleContraProgramado()
+                exportSettings = CreateExportPvgElegibleContraProgramado(variante)
                 Return exportSettings
             End Get
 
         End Property
 
-        Private Shared Function CreateExportPvgElegibleContraProgramado() As PivotGridSettings
+
+        '' MODIFICACIÓN PARA PASAR AL PROYECTO FINAL
+
+
+        Private Shared Function CreateExportPvgElegibleContraProgramado(ByVal variante As Integer) As PivotGridSettings
 
             Dim settings As New PivotGridSettings()
 
             settings.Name = "pvgComparacionPlanillas"
-            settings.Width = Unit.Percentage(100)
+            settings.Width = 800
 
+            settings.OptionsView.EnableFilterControlPopupMenuScrolling = True
 
             settings.SettingsExport.OptionsPrint.PrintRowHeaders = DefaultBoolean.True
             settings.SettingsExport.OptionsPrint.PrintColumnHeaders = DefaultBoolean.True
@@ -1396,206 +1414,131 @@ Namespace SIG.Areas.Mineria.Controllers
             settings.SettingsExport.OptionsPrint.PrintDataHeaders = DefaultBoolean.False
 
             settings.EnableCallbackAnimation = True
+            settings.OptionsPager.RowsPerPage = 20
             settings.EnablePagingCallbackAnimation = True
-
             settings.OptionsView.HorizontalScrollBarMode = ScrollBarMode.Auto
             settings.OptionsView.DataHeadersDisplayMode = PivotDataHeadersDisplayMode.Popup
-            settings.OptionsView.DataHeadersPopupMinCount = 6
-            settings.OptionsView.DataHeadersPopupMaxColumnCount = 6
+            'settings.OptionsView.DataHeadersPopupMinCount = 6
+            'settings.OptionsView.DataHeadersPopupMaxColumnCount = 6
             settings.OptionsView.RowTreeOffset = 2
             settings.OptionsView.RowTotalsLocation = PivotRowTotalsLocation.Far
 
             settings.OptionsData.DataFieldUnboundExpressionMode = DataFieldUnboundExpressionMode.UseSummaryValues
 
-            settings.Fields.Add(
-                Sub(field)
-                    field.Area = PivotArea.RowArea
-                    field.Index = 0
-                    field.Caption = "Departamento"
-                    field.FieldName = "desc_departamento"
-                End Sub)
-            settings.Fields.Add(
+
+            If (variante = 1) Then
+
+                settings.Fields.Add(
+                   Sub(field)
+                       field.Area = PivotArea.RowArea
+                       field.Index = 0
+                       field.Caption = "Departamento"
+                       field.FieldName = "desc_departamento"
+                   End Sub)
+                settings.Fields.Add(
+                    Sub(field)
+                        field.Area = PivotArea.FilterArea
+                        field.Caption = "Municipio"
+                        field.FieldName = "desc_municipio"
+                    End Sub)
+                settings.Fields.Add(
+                    Sub(field)
+                        field.Area = PivotArea.FilterArea
+                        field.Caption = "Aldea"
+                        field.FieldName = "desc_aldea"
+                    End Sub)
+                settings.Fields.Add(
+                    Sub(field)
+                        field.Area = PivotArea.FilterArea
+                        field.Caption = "Caserío"
+                        field.FieldName = "desc_caserio"
+                    End Sub)
+                settings.Fields.Add(
+                    Sub(field)
+                        field.Area = PivotArea.DataArea
+                        field.Index = 0
+                        field.Caption = "Total Hogares"
+                        field.FieldName = "total_hogares"
+                    End Sub)
+                settings.Fields.Add(
+                    Sub(field)
+                        field.Area = PivotArea.DataArea
+                        field.Index = 1
+                        field.Caption = "Hogares Evaluados"
+                        field.FieldName = "total_hogares_evaluados"
+                    End Sub)
+                settings.Fields.Add(
+                    Sub(field)
+                        field.Area = PivotArea.DataArea
+                        field.Index = 2
+                        field.Caption = "Hogares Elegibles"
+                        field.FieldName = "total_hogares_elegibles"
+                    End Sub)
+                settings.Fields.Add(
+                    Sub(field)
+                        field.Area = PivotArea.DataArea
+                        field.Index = 3
+                        field.Caption = "Hogares Programados"
+                        field.FieldName = "total_hogares_programados"
+                    End Sub)
+            ElseIf (variante = 2) Then
+
+                settings.Fields.Add(
+                 Sub(field)
+                     field.Area = PivotArea.RowArea
+                     field.Index = 0
+                     field.Caption = "Departamento"
+                     field.FieldName = "desc_departamento"
+                 End Sub)
+                settings.Fields.Add(
                 Sub(field)
                     field.Area = PivotArea.FilterArea
                     field.Caption = "Municipio"
                     field.FieldName = "desc_municipio"
                 End Sub)
-            settings.Fields.Add(
-                Sub(field)
-                    field.Area = PivotArea.FilterArea
-                    field.Caption = "Aldea"
-                    field.FieldName = "desc_aldea"
-                End Sub)
-            settings.Fields.Add(
-                Sub(field)
-                    field.Area = PivotArea.FilterArea
-                    field.Caption = "Caserío"
-                    field.FieldName = "desc_caserio"
-                End Sub)
-            settings.Fields.Add(
-                Sub(field)
-                    field.Area = PivotArea.DataArea
-                    field.Index = 0
-                    field.Caption = "Total Hogares"
-                    field.FieldName = "total_hogares"
-                End Sub)
-            settings.Fields.Add(
-                Sub(field)
-                    field.Area = PivotArea.DataArea
-                    field.Index = 1
-                    field.Caption = "Hogares Evaluados"
-                    field.FieldName = "total_hogares_evaluados"
-                End Sub)
-            settings.Fields.Add(
-                Sub(field)
-                    field.Area = PivotArea.DataArea
-                    field.Index = 2
-                    field.Caption = "Hogares Elegibles"
-                    field.FieldName = "total_hogares_elegibles"
-                End Sub)
-            settings.Fields.Add(
-                Sub(field)
-                    field.Area = PivotArea.DataArea
-                    field.Index = 3
-                    field.Caption = "Hogares Programados"
-                    field.FieldName = "total_hogares_programados"
-                End Sub)
-            settings.Fields.Add(
-                Sub(field)
-                    field.Area = PivotArea.DataArea
-                    field.Index = 4
-                    field.Caption = "Programados / Elegibles"
-                    field.UnboundType = DevExpress.Data.UnboundColumnType.Decimal
-                    field.UnboundExpression = String.Format("([{0}] * 100)/[{1}]", settings.Fields("total_hogares_programados").ID, settings.Fields("total_hogares_elegibles").ID)
-                    field.UnboundFieldName = "programados_/_elegibles_"
-                    field.CellFormat.FormatType = FormatType.Numeric
-                    field.CellFormat.FormatString = "n2"
-                End Sub)
-            settings.Fields.Add(
-                Sub(field)
-                    field.Area = PivotArea.DataArea
-                    field.Index = 5
-                    field.Caption = "Elegibles Educación"
-                    field.FieldName = "hogares_elegibles_educacion"
-                End Sub)
-            settings.Fields.Add(
-                Sub(field)
-                    field.Area = PivotArea.DataArea
-                    field.Index = 6
-                    field.Caption = "Programados Educación"
-                    field.FieldName = "hogares_programados_educacion"
-                End Sub)
-            settings.Fields.Add(
-                Sub(field)
-                    field.Area = PivotArea.DataArea
-                    field.Index = 7
-                    field.Caption = "progra_edu / elegi_edu"
-                    field.UnboundType = DevExpress.Data.UnboundColumnType.Decimal
-                    field.UnboundExpression = String.Format("([{0}] * 100)/[{1}]", settings.Fields("hogares_programados_educacion").ID, settings.Fields("hogares_elegibles_educacion").ID)
-                    field.UnboundFieldName = "programados_/_elegibles_educacion"
-                    field.CellFormat.FormatType = FormatType.Numeric
-                    field.CellFormat.FormatString = "n2"
-                End Sub)
-            settings.Fields.Add(
-                Sub(field)
-                    field.Area = PivotArea.DataArea
-                    field.Index = 8
-                    field.Caption = "Elegibles Educación y Salud"
-                    field.FieldName = "hogares_elegibles_educacion_salud"
-                End Sub)
-            settings.Fields.Add(
-                Sub(field)
-                    field.Area = PivotArea.DataArea
-                    field.Index = 9
-                    field.Caption = "Programados Educación y Salud"
-                    field.FieldName = "hogares_programados_educacion_salud"
-                End Sub)
-            settings.Fields.Add(
-                Sub(field)
-                    field.Area = PivotArea.DataArea
-                    field.Index = 10
-                    field.Caption = "progra_edu_sal / elegi_edu_sal"
-                    field.UnboundType = DevExpress.Data.UnboundColumnType.Decimal
-                    field.UnboundExpression = String.Format("([{0}] * 100)/[{1}]", settings.Fields("hogares_programados_educacion_salud").ID, settings.Fields("hogares_elegibles_educacion_salud").ID)
-                    field.UnboundFieldName = "programados_/_elegibles_educacion_salud"
-                    field.CellFormat.FormatType = FormatType.Numeric
-                    field.CellFormat.FormatString = "n2"
-                End Sub)
-            settings.Fields.Add(
-                Sub(field)
-                    field.Area = PivotArea.DataArea
-                    field.Index = 11
-                    field.Caption = "Elegible Salud"
-                    field.FieldName = "hogares_elegibles_salud"
-                End Sub)
-            settings.Fields.Add(
-                Sub(field)
-                    field.Area = PivotArea.DataArea
-                    field.Index = 12
-                    field.Caption = "Programados Salud"
-                    field.FieldName = "hogares_programados_salud"
-                End Sub)
-            settings.Fields.Add(
-                Sub(field)
-                    field.Area = PivotArea.DataArea
-                    field.Index = 13
-                    field.Caption = "progra_sal / elegi_sal"
-                    field.UnboundType = DevExpress.Data.UnboundColumnType.Decimal
-                    field.UnboundExpression = String.Format("([{0}] * 100)/[{1}]", settings.Fields("hogares_programados_salud").ID, settings.Fields("hogares_elegibles_salud").ID)
-                    field.UnboundFieldName = "programados_/_elegibles_salud"
-                    field.CellFormat.FormatType = FormatType.Numeric
-                    field.CellFormat.FormatString = "n2"
-                End Sub)
-            settings.Fields.Add(
-                Sub(field)
-                    field.Area = PivotArea.DataArea
-                    field.Index = 14
-                    field.Caption = "Elegibles Primer Pago"
-                    field.FieldName = "hogares_elegibles_primer_pago"
-                End Sub)
-            settings.Fields.Add(
-                Sub(field)
-                    field.Area = PivotArea.DataArea
-                    field.Index = 15
-                    field.Caption = "Programados Primer Pago"
-                    field.FieldName = "hogares_programados_primer_pago"
-                End Sub)
-            settings.Fields.Add(
-                Sub(field)
-                    field.Area = PivotArea.DataArea
-                    field.Index = 16
-                    field.Caption = "progra_prime / elegi_prime"
-                    field.UnboundType = DevExpress.Data.UnboundColumnType.Decimal
-                    field.UnboundExpression = String.Format("([{0}] * 100)/[{1}]", settings.Fields("hogares_programados_primer_pago").ID, settings.Fields("hogares_elegibles_primer_pago").ID)
-                    field.UnboundFieldName = "programados_/_elegibles_primer_pago"
-                    field.CellFormat.FormatType = FormatType.Numeric
-                    field.CellFormat.FormatString = "n2"
-                End Sub)
-            settings.Fields.Add(
-                Sub(field)
-                    field.Area = PivotArea.DataArea
-                    field.Index = 17
-                    field.Caption = "Elegibles Repago"
-                    field.FieldName = "hogares_elegibles_repago"
-                End Sub)
-            settings.Fields.Add(
-                Sub(field)
-                    field.Area = PivotArea.DataArea
-                    field.Index = 18
-                    field.Caption = "Programados Repago"
-                    field.FieldName = "hogares_programados_repago"
-                End Sub)
-            settings.Fields.Add(
-                Sub(field)
-                    field.Area = PivotArea.DataArea
-                    field.Index = 19
-                    field.Caption = "progra_repa / elegi_repa"
-                    field.UnboundType = DevExpress.Data.UnboundColumnType.Decimal
-                    field.UnboundExpression = String.Format("([{0}] * 100)/[{1}]", settings.Fields("hogares_programados_repago").ID, settings.Fields("hogares_elegibles_repago").ID)
-                    field.UnboundFieldName = "programados_/_elegibles_repago"
-                    field.CellFormat.FormatType = FormatType.Numeric
-                    field.CellFormat.FormatString = "n2"
-                End Sub)
+                settings.Fields.Add(
+                    Sub(field)
+                        field.Area = PivotArea.FilterArea
+                        field.Caption = "Aldea"
+                        field.FieldName = "desc_aldea"
+                    End Sub)
+                settings.Fields.Add(
+                    Sub(field)
+                        field.Area = PivotArea.FilterArea
+                        field.Caption = "Caserío"
+                        field.FieldName = "desc_caserio"
+                    End Sub)
+                settings.Fields.Add(
+                    Sub(field)
+                        field.Area = PivotArea.DataArea
+                        field.Index = 0
+                        field.Caption = "Total Hogares"
+                        field.FieldName = "total_hogares"
+                    End Sub)
+                settings.Fields.Add(
+                    Sub(field)
+                        field.Area = PivotArea.DataArea
+                        field.Index = 11
+                        field.Caption = "Elegible Salud"
+                        field.FieldName = "hogares_elegibles_salud"
+                    End Sub)
+                settings.Fields.Add(
+                    Sub(field)
+                        field.Area = PivotArea.DataArea
+                        field.Index = 8
+                        field.Caption = "Elegibles Educación y Salud"
+                        field.FieldName = "hogares_elegibles_educacion_salud"
+                    End Sub)
+                settings.Fields.Add(
+                    Sub(field)
+                        field.Area = PivotArea.DataArea
+                        field.Index = 5
+                        field.Caption = "Elegibles Educación"
+                        field.FieldName = "hogares_elegibles_educacion"
+                    End Sub)
+            End If
+
+
             Return settings
 
         End Function
